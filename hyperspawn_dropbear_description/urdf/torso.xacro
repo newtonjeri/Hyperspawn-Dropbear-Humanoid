@@ -1,0 +1,2085 @@
+<?xml version="1.0" ?>
+<robot name="torso" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    
+<xacro:macro name="torso_macro" params="prefix">
+<link name="${prefix}_base_link">
+  <inertial>
+    <origin xyz="0.0981782330419093 0.0797704320930119 0.0697203941653183" rpy="0 0 0"/>
+    <mass value="0.01082462598101"/>
+    <inertia ixx="7.18352932372132e-08" iyy="1.3050361377453e-06" izz="1.27830345276228e-06" ixy="1.013729031273947e-17" iyz="1.206174916890124e-18" ixz="3.903127820947816e-18"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="powder_coat_pink"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_neck-chest-interface2_1">
+  <inertial>
+    <origin xyz="-0.10115130404822321 -0.0013901307420720321 -7.459259791786632e-07" rpy="0 0 0"/>
+    <mass value="0.126130802436428"/>
+    <inertia ixx="0.000571429421903256" iyy="0.00102697519508203" izz="0.00049743865951245" ixy="2.57728767652942e-05" iyz="1.25944896265523e-09" ixz="-4.46044744643539e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.098178 -0.07727 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/neck-chest-interface2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.098178 -0.07727 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/neck-chest-interface2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_300mm_1">
+  <inertial>
+    <origin xyz="-0.0031110107947205923 -0.15030056139629216 3.94154897290222e-07" rpy="0 0 0"/>
+    <mass value="0.058775242333686"/>
+    <inertia ixx="0.000439879035055009" iyy="8.1202968865348e-06" izz="0.000443209322315601" ixy="-3.8065357460721e-05" iyz="-1.451375369714014e-14" ixz="-1.269817584415023e-15"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.132584 -0.102438 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_300mm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.132584 -0.102438 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_300mm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_back-top__1__1">
+  <inertial>
+    <origin xyz="0.002173032179684342 0.004452995164452911 0.0030003670892173318" rpy="0 0 0"/>
+    <mass value="0.0222252802260453"/>
+    <inertia ixx="1.29691121396962e-05" iyy="8.89165295533652e-06" izz="4.68451847811452e-06" ixy="4.54982026550836e-07" iyz="-5.237203249200406e-12" ixz="2.731626367160137e-12"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.152508 -0.100695 -0.06672" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-top__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.152508 -0.100695 -0.06672" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-top__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_150mm__1__1">
+  <inertial>
+    <origin xyz="-0.017385441656935202 0.016288209473969 -0.039465020220583666" rpy="0 0 0"/>
+    <mass value="0.0293876211668431"/>
+    <inertia ixx="5.45456941046893e-05" iyy="4.56073892447861e-05" izz="1.48405056523957e-05" ixy="4.33004611349094e-06" iyz="2.10540570174205e-05" ixz="-8.52654939374398e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.14599 -0.119704 -0.031396" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.14599 -0.119704 -0.031396" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_150mm__5__1">
+  <inertial>
+    <origin xyz="-0.01738544165648795 0.016288209468769244 0.039464808542728685" rpy="0 0 0"/>
+    <mass value="0.0293876211668431"/>
+    <inertia ixx="5.45456941047969e-05" iyy="4.56073892475919e-05" izz="1.48405056494959e-05" ixy="4.33004611280605e-06" iyz="-2.10540570153881e-05" ixz="8.52654939380553e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.14599 -0.119704 -0.108045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.14599 -0.119704 -0.108045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_back-middle-strap__1__1">
+  <inertial>
+    <origin xyz="-0.0032900520058746774 -0.02115855528966027 -3.4574544295062903e-06" rpy="0 0 0"/>
+    <mass value="0.0262372211177878"/>
+    <inertia ixx="1.982335288664e-05" iyy="1.82992796683519e-05" izz="2.35877307376933e-06" ixy="-2.22462018065e-07" iyz="6.235668795553928e-11" ixz="-4.7152715770566e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.153878 -0.070461 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-middle-strap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.153878 -0.070461 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-middle-strap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_handle__1__1">
+  <inertial>
+    <origin xyz="0.033545453726379126 -0.02394250922159291 0.14220014199231246" rpy="0 0 0"/>
+    <mass value="0.173681668465082"/>
+    <inertia ixx="0.000697476256353113" iyy="0.000710355316417133" izz="4.70010358517396e-05" ixy="-4.04120420576578e-06" iyz="1.99110985332025e-07" ixz="-8.3003997066464e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.123358 -0.175587 0.072402" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/handle__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.123358 -0.175587 0.072402" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/handle__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_front-left-shoulder_1">
+  <inertial>
+    <origin xyz="-0.003340520261220975 -0.0031728962616694723 -0.002206500259344546" rpy="0 0 0"/>
+    <mass value="0.0316826724275328"/>
+    <inertia ixx="2.70398030146589e-05" iyy="1.01315426205723e-05" izz="3.00868899567274e-05" ixy="8.41620047027571e-06" iyz="2.26457665917476e-06" ixz="-1.83988676127667e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125333 -0.17071 0.075285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/front-left-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125333 -0.17071 0.075285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/front-left-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_front-right-shoulder_1">
+  <inertial>
+    <origin xyz="-0.0013655224592560716 -0.008049895685484393 0.005089288887780347" rpy="0 0 0"/>
+    <mass value="0.0316826665930141"/>
+    <inertia ixx="2.70398026792494e-05" iyy="1.0131541715158e-05" izz="3.00868887917591e-05" ixy="8.41620022215138e-06" iyz="-2.26457656509783e-06" ixz="1.83988664519174e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.123358 -0.175587 -0.211843" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/front-right-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.123358 -0.175587 -0.211843" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/front-right-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_back-bottom-strap-spine__1__1">
+  <inertial>
+    <origin xyz="-0.0018677266662027459 -0.027510258199163314 2.343229955070747e-07" rpy="0 0 0"/>
+    <mass value="0.020634870126565"/>
+    <inertia ixx="1.46308745909298e-05" iyy="1.2122216327081e-05" izz="2.98692224509351e-06" ixy="-4.14524954754454e-07" iyz="7.389288740503546e-11" ixz="-8.591045572419603e-12"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.150392 -0.030613 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-bottom-strap-spine__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.150392 -0.030613 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-bottom-strap-spine__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_100mm__4__1">
+  <inertial>
+    <origin xyz="-0.013822453991830075 -0.0008631902706863898 -0.017555874488185984" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.64848472921023e-05" iyy="1.69955209630741e-05" izz="2.36588390323071e-06" ixy="-2.87620680125751e-07" iyz="-1.38126267367318e-06" ixz="-3.07325103255458e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.140065 -0.047251 -0.019907" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.140065 -0.047251 -0.019907" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_100mm__1__1">
+  <inertial>
+    <origin xyz="-0.013822453991421929 -0.0008631902752021386 0.01755566280436699" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.6484847292366e-05" iyy="1.69955209626834e-05" izz="2.36588390338836e-06" ixy="-2.87620680362351e-07" iyz="1.38126267462075e-06" ixz="3.07325103250325e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.140065 -0.047251 -0.119534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.140065 -0.047251 -0.119534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_100mm__3__1">
+  <inertial>
+    <origin xyz="-0.013046210172285078 -0.008368890707491595 -0.016116713703844786" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.6651738332847e-05" iyy="1.21534569103533e-05" izz="7.04105691526179e-06" ixy="-1.53352653067958e-06" iyz="-7.08022691291437e-06" ixz="-2.18406474188697e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.140089 0.011689 -0.027609" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.140089 0.011689 -0.027609" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_100mm__2__1">
+  <inertial>
+    <origin xyz="-0.013046210171921674 -0.008368890711397731 0.016116502015533316" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.66517383330439e-05" iyy="1.21534569092816e-05" izz="7.04105691610979e-06" ixy="-1.53352653089129e-06" iyz="7.0802269131724e-06" ixz="2.18406474170176e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.140089 0.011689 -0.111832" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.140089 0.011689 -0.111832" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm_1">
+  <inertial>
+    <origin xyz="-0.009999850929391957 -0.06893692335883117 0.01215561283786424" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="0.000132208319505974" iyy="7.08361740355185e-06" izz="0.000128318041852856" ixy="-3.165257769430219e-14" iyz="2.20628609293886e-05" ixz="5.581201733412255e-15"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125077 -0.10857 0.073273" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125077 -0.10857 0.073273" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__4__1">
+  <inertial>
+    <origin xyz="-0.009999850928621781 -0.06893692336763081 -0.012155824522103398" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="0.00013220831950599" iyy="7.08361740651888e-06" izz="0.000128318041849901" ixy="-3.178260063983751e-14" iyz="-2.20628609375456e-05" ixz="-5.604132609360324e-15"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125077 -0.10857 -0.212714" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125077 -0.10857 -0.212714" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_left-front-rib-lower_1">
+  <inertial>
+    <origin xyz="0.00642856334341238 -0.0016855960785315885 0.014603743257945383" rpy="0 0 0"/>
+    <mass value="0.0238100067939991"/>
+    <inertia ixx="1.39392869533367e-05" iyy="4.36796225460973e-06" izz="1.0262254324419e-05" ixy="-6.0679059360084e-07" iyz="6.93255236354345e-07" ixz="-4.47715222969951e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125077 0.059369 0.046707" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/left-front-rib-lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125077 0.059369 0.046707" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/left-front-rib-lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-front-rib-lower_1">
+  <inertial>
+    <origin xyz="0.0064285633440116785 -0.0027275960853695436 -0.008694954949047179" rpy="0 0 0"/>
+    <mass value="0.0238100067939965"/>
+    <inertia ixx="1.39392869533441e-05" iyy="4.36796225470985e-06" izz="1.02622543243256e-05" ixy="-6.06790593635074e-07" iyz="-6.93255236743485e-07" ixz="4.47715222907474e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125077 0.058327 -0.180239" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-front-rib-lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125077 0.058327 -0.180239" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-front-rib-lower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_150mm_1">
+  <inertial>
+    <origin xyz="-0.011564571949541122 -0.038644982354382865 0.02231133199576217" rpy="0 0 0"/>
+    <mass value="0.0293876211668431"/>
+    <inertia ixx="5.6233638026418e-05" iyy="1.5920317183112e-05" izz="4.28396337923341e-05" ixy="-1.628202680685e-06" iyz="2.33128120329341e-05" ixz="9.40043255925388e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.124527 0.103445 0.019102" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.124527 0.103445 0.019102" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_150mm__2__1">
+  <inertial>
+    <origin xyz="-0.011564571949165936 -0.03864498235886894 -0.022311543692188268" rpy="0 0 0"/>
+    <mass value="0.0293876211668431"/>
+    <inertia ixx="5.6233638026056e-05" iyy="1.59203171863519e-05" izz="4.28396337894459e-05" ixy="-1.62820268076496e-06" iyz="-2.33128120348876e-05" ixz="-9.40043256117764e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.124527 0.103445 -0.158543" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.124527 0.103445 -0.158543" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_naval-strap__1__1">
+  <inertial>
+    <origin xyz="0.003141173438039796 0.001454264015759904 -0.002999475420829553" rpy="0 0 0"/>
+    <mass value="0.0415844639449449"/>
+    <inertia ixx="4.41205298229623e-05" iyy="3.08841571360258e-05" izz="1.4636485482074e-05" ixy="-5.96929587009859e-07" iyz="1.72840634166116e-10" ixz="2.493622116520738e-12"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.126362 0.198163 -0.07272" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/naval-strap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.126362 0.198163 -0.07272" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/naval-strap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_left-middle-rib_1">
+  <inertial>
+    <origin xyz="-0.009714548586492261 -0.005175242856999426 -0.012074375329445317" rpy="0 0 0"/>
+    <mass value="0.0231517238935812"/>
+    <inertia ixx="7.56497734236448e-06" iyy="1.52393455771765e-05" izz="9.61875092251625e-06" ixy="-4.85781804075383e-07" iyz="-6.61431377388779e-07" ixz="-4.04621570227002e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.126082 -0.043838 0.048663" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/left-middle-rib_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.126082 -0.043838 0.048663" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/left-middle-rib_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__8__1">
+  <inertial>
+    <origin xyz="-0.06829895508912136 -0.00973403313622748 0.015507375614408486" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="6.55328659046214e-06" iyy="0.000129656159320049" izz="0.000131400532851874" ixy="-1.79078689998846e-05" iyz="1.43582761395133e-06" ixz="1.00748428577761e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.072721 -0.035645 0.06298" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__8__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.072721 -0.035645 0.06298" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__8__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_rear-left-rib_1">
+  <inertial>
+    <origin xyz="-0.006267684242607277 -0.015344957045141787 0.009082304658716504" rpy="0 0 0"/>
+    <mass value="0.039904039555128"/>
+    <inertia ixx="1.89670769667761e-05" iyy="2.54400497000058e-05" izz="2.49552631295093e-05" ixy="6.68143894540527e-07" iyz="1.06938299231046e-06" ixz="8.90048808826989e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.095474 -0.014705 0.049529" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-left-rib_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.095474 -0.014705 0.049529" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-left-rib_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__2__1">
+  <inertial>
+    <origin xyz="0.06497043375703493 -0.02551946740379953 0.011293786008682041" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="2.09767005408374e-05" iyy="0.000114469672800335" izz="0.000132163605421204" ixy="4.44195721643349e-05" iyz="8.9059943458495e-07" ixz="-2.23016143850463e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.055952 0.018814 0.047021" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.055952 0.018814 0.047021" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_left-lower-rib-side_1">
+  <inertial>
+    <origin xyz="0.005241809157458366 0.005244020586440523 -0.006687434993275808" rpy="0 0 0"/>
+    <mass value="0.0235687581228622"/>
+    <inertia ixx="1.06344338578878e-05" iyy="5.91756469117195e-06" izz="1.30392544885293e-05" ixy="-4.00382610295371e-07" iyz="3.55248766750231e-06" ixz="2.8723768907905e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.103011 0.079067 0.043975" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/left-lower-rib-side_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.103011 0.079067 0.043975" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/left-lower-rib-side_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_left-battery-mount_1">
+  <inertial>
+    <origin xyz="0.059553129843724024 -0.024059862118720108 0.010560310791238849" rpy="0 0 0"/>
+    <mass value="0.11164596813535"/>
+    <inertia ixx="4.65021004331689e-05" iyy="7.26862701838648e-05" izz="8.87830630176738e-05" ixy="9.81186532009606e-06" iyz="7.90793280972374e-06" ixz="-9.01373755071628e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.065757 -0.015909 0.05589" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/left-battery-mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="0.065757 -0.015909 0.05589" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/left-battery-mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-middle-rib_1">
+  <inertial>
+    <origin xyz="-0.009258603305518753 0.0007717308732641606 0.012725124758151407" rpy="0 0 0"/>
+    <mass value="0.0231516445472311"/>
+    <inertia ixx="7.56490497157722e-06" iyy="1.52392609653787e-05" izz="9.61871628787946e-06" ixy="-4.85772317658211e-07" iyz="6.61441369460375e-07" ixz="4.04622467901656e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.125626 -0.037891 -0.187453" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-middle-rib_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.125626 -0.037891 -0.187453" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-middle-rib_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__1__1">
+  <inertial>
+    <origin xyz="-0.06829895508848073 -0.009734033143917402 -0.015507587298945802" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="6.55328659034354e-06" iyy="0.000129656159320643" izz="0.000131400532851407" ixy="-1.79078689992436e-05" iyz="-1.43582761395926e-06" ixz="-1.00748428582374e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.072721 -0.035645 -0.202421" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.072721 -0.035645 -0.202421" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_rear-right-rib_1">
+  <inertial>
+    <origin xyz="-0.007114617553634267 -0.009404906159935588 -0.009081541300429652" rpy="0 0 0"/>
+    <mass value="0.039904387436873"/>
+    <inertia ixx="1.89676851004225e-05" iyy="2.54402756250246e-05" izz="2.49555806564302e-05" ixy="6.68137628094695e-07" iyz="-1.06940660968151e-06" ixz="-8.90050142983835e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.094627 -0.008765 -0.188969" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-right-rib_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.094627 -0.008765 -0.188969" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-right-rib_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__9__1">
+  <inertial>
+    <origin xyz="0.06497043375765169 -0.025519467410714248 -0.01129399769795461" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="2.0976700540887e-05" iyy="0.00011446967280086" izz="0.00013216360542063" ixy="4.44195721642989e-05" iyz="-8.90599435991214e-07" ixz="2.23016144213133e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.055952 0.018814 -0.186462" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__9__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.055952 0.018814 -0.186462" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__9__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-battery-mount_1">
+  <inertial>
+    <origin xyz="0.059553129107422394 -0.024059862084543304 -0.01056052246571798" rpy="0 0 0"/>
+    <mass value="0.11164597419981"/>
+    <inertia ixx="4.65021007578386e-05" iyy="7.26862832514589e-05" izz="8.8783075894232e-05" ixy="9.81186446700993e-06" iyz="-7.90793279314015e-06" ixz="9.01373768924044e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.065757 -0.015909 -0.195331" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-battery-mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="0.065757 -0.015909 -0.195331" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-battery-mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-lower-rib-side_1">
+  <inertial>
+    <origin xyz="0.007469813078495494 0.010810047004377696 0.006925224736331809" rpy="0 0 0"/>
+    <mass value="0.0235687321789057"/>
+    <inertia ixx="1.06344247332835e-05" iyy="5.91757001514428e-06" izz="1.3039241072553e-05" ixy="-4.00380006568025e-07" iyz="-3.55248712628856e-06" ixz="-2.8723764504071e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.100783 0.084633 -0.183178" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-lower-rib-side_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.100783 0.084633 -0.183178" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-lower-rib-side_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__5__1">
+  <inertial>
+    <origin xyz="-0.07015664807333664 0.00883491519637522 4.272772771568567e-07" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="1.21851692452117e-05" iyy="0.000123216490011209" izz="0.000132208319506009" ixy="3.28516012169647e-05" iyz="-4.005042825161453e-16" ixz="1.463615334615018e-15"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07878 -0.200065 0.083844" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07878 -0.200065 0.083844" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-shoulder-motor-adapter_MIR_1">
+  <inertial>
+    <origin xyz="-0.10582427037666911 -0.008614943991539059 0.009997293892207715" rpy="0 0 0"/>
+    <mass value="0.0994692791631927"/>
+    <inertia ixx="8.86756871544114e-05" iyy="0.000151640371594604" izz="0.000237695632704545" ixy="3.45042613049874e-05" iyz="2.32403112654508e-06" ixz="5.57712473170515e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.107716 -0.192145 0.075594" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-motor-adapter_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.107716 -0.192145 0.075594" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-motor-adapter_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__7__1">
+  <inertial>
+    <origin xyz="-0.07015664807242458 0.008834915186065578 3.610504858975183e-07" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="1.2185169245219e-05" iyy="0.00012321649001163" izz="0.000132208319505573" ixy="3.28516012170358e-05" iyz="-3.929148673087468e-16" ixz="1.435104205610438e-15"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07878 -0.200065 -0.223284" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__7__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07878 -0.200065 -0.223284" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__7__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-shoulder-motor-adapter_1">
+  <inertial>
+    <origin xyz="-0.10582428550796251 -0.008614936097885245 -0.009996504105619752" rpy="0 0 0"/>
+    <mass value="0.0994693013932255"/>
+    <inertia ixx="8.86757832556945e-05" iyy="0.000151640468567394" izz="0.000237695750686179" ixy="3.4504292979287e-05" iyz="-2.32403627939458e-06" ixz="-5.57702650872838e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.107716 -0.192145 -0.215034" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-motor-adapter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.107716 -0.192145 -0.215034" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-motor-adapter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_RMD-X10__1_Stator_1">
+  <inertial>
+    <origin xyz="0.00017006216858482526 -0.05250035213186166 -0.01413657956103355" rpy="0 0 0"/>
+    <mass value="0.107412403354581"/>
+    <inertia ixx="0.000131700447546005" iyy="0.000136911969242203" izz="0.000224096006945882" ixy="1.82875194116916e-06" iyz="1.59350159223892e-07" ixz="5.08925600298206e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.034923 -0.174456 0.06958" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/RMD-X10__1_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.034923 -0.174456 0.06958" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/RMD-X10__1_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_RMD-X10__1_Rotor_1">
+  <inertial>
+    <origin xyz="1.7210950097740207e-07 1.474634413051179e-07 0.005697853015208351" rpy="0 0 0"/>
+    <mass value="0.0174363520652153"/>
+    <inertia ixx="2.82606628561311e-06" iyy="2.82606628283395e-06" izz="4.78703999597395e-06" ixy="-1.010205374213369e-15" iyz="-6.478107980600889e-17" ixz="6.708500942254059e-19"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.03493 -0.121456 0.10478" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/RMD-X10__1_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque223223223"/>
+  </visual>
+  <collision>
+    <origin xyz="0.03493 -0.121456 0.10478" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/RMD-X10__1_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="${prefix}_RMD-X10Stator_1">
+  <inertial>
+    <origin xyz="-0.00015745361490628745 -0.05350789059788322 0.014137367883188867" rpy="0 0 0"/>
+    <mass value="0.107412403354581"/>
+    <inertia ixx="0.000131762745274528" iyy="0.000136849671513674" izz="0.000224096006945882" ixy="1.91444995212395e-06" iyz="1.58817057181997e-07" ixz="5.25325446069968e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.034923 -0.174456 -0.20902" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/RMD-X10Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.034923 -0.174456 -0.20902" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/RMD-X10Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_RMD-X10Rotot_1">
+  <inertial>
+    <origin xyz="1.720538281013706e-07 1.4744714180170426e-07 -0.005697064693052395" rpy="0 0 0"/>
+    <mass value="0.0174363520652153"/>
+    <inertia ixx="2.82606628561311e-06" iyy="2.82606628283387e-06" izz="4.787039995974e-06" ixy="-1.010191821686213e-15" iyz="-6.722053469410127e-17" ixz="3.659182332138577e-18"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.03493 -0.121456 -0.24422" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/RMD-X10Rotot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque223223223"/>
+  </visual>
+  <collision>
+    <origin xyz="0.03493 -0.121456 -0.24422" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/RMD-X10Rotot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<link name="${prefix}_right-shoulder-top1_1">
+  <inertial>
+    <origin xyz="-0.001865885403670317 -0.0021046564191408434 0.008905351325241076" rpy="0 0 0"/>
+    <mass value="0.01851854186528"/>
+    <inertia ixx="5.00762723080442e-06" iyy="7.35447402180252e-06" izz="4.54526358496473e-06" ixy="-5.42090323411317e-07" iyz="1.63020922462701e-06" ixz="2.26223788394777e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.085189 -0.244945 0.080844" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-top1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.085189 -0.244945 0.080844" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-top1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-shoulder-under1_1">
+  <inertial>
+    <origin xyz="-0.003928938015407821 -0.011151310450754293 0.008521613473048403" rpy="0 0 0"/>
+    <mass value="0.0152271574280533"/>
+    <inertia ixx="2.17803853401152e-06" iyy="5.21387953875946e-06" izz="4.10512572276923e-06" ixy="-3.8305812228315e-07" iyz="6.80717222391585e-07" ixz="1.23294748799579e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.090469 -0.225655 0.086844" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-under1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.090469 -0.225655 0.086844" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-under1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-rear-shoulder_MIR_1">
+  <inertial>
+    <origin xyz="-0.012355744361756071 -0.0047914502674175075 0.009279912028420337" rpy="0 0 0"/>
+    <mass value="0.0208669395872986"/>
+    <inertia ixx="7.14166844520739e-06" iyy="1.29567406115858e-05" izz="8.27488948007635e-06" ixy="-7.57561367725409e-08" iyz="1.05345145499079e-06" ixz="4.72737447629798e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.087037 -0.238193 0.093844" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-rear-shoulder_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.087037 -0.238193 0.093844" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-rear-shoulder_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_150mm__4__1">
+  <inertial>
+    <origin xyz="-0.011408551683497636 -0.02816966600660878 0.034659979782100905" rpy="0 0 0"/>
+    <mass value="0.0293876211668431"/>
+    <inertia ixx="5.45456941001502e-05" iyy="4.56073892493616e-05" izz="1.48405056523983e-05" ixy="-4.33004611770664e-06" iyz="2.10540570132595e-05" ixz="8.526549404255e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.102233 -0.223062 0.042729" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.102233 -0.223062 0.042729" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_rear-left-spine-support_1">
+  <inertial>
+    <origin xyz="0.009369761149258665 0.002964771942910005 -0.0588240635780379" rpy="0 0 0"/>
+    <mass value="0.0436849327263415"/>
+    <inertia ixx="4.55762276525878e-05" iyy="1.69834165292976e-05" izz="3.300788168817e-05" ixy="-5.07072157243031e-06" iyz="1.19650752310049e-05" ixz="3.90553659451482e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.133242 -0.154487 -0.052901" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-left-spine-support_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.133242 -0.154487 -0.052901" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-left-spine-support_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_back-top_1">
+  <inertial>
+    <origin xyz="-0.0022930255559133472 0.0012431199189220643 0.01345642124470308" rpy="0 0 0"/>
+    <mass value="0.0222252802260453"/>
+    <inertia ixx="1.29691121394654e-05" iyy="8.89165295556724e-06" izz="4.68451847811442e-06" ixy="-4.5498202758446e-07" iyz="5.237617089169644e-12" ixz="2.731559363465877e-12"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.137425 -0.162805 -0.056264" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.137425 -0.162805 -0.056264" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-shoulder-under_1">
+  <inertial>
+    <origin xyz="-0.003928944709563065 -0.011151311045819151 -0.008520823250860177" rpy="0 0 0"/>
+    <mass value="0.0152271641855195"/>
+    <inertia ixx="2.17804276785136e-06" iyy="5.21388242985207e-06" izz="4.10512716142008e-06" ixy="-3.8305911003177e-07" iyz="-6.80717435041903e-07" ixz="-1.23294634352583e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.090469 -0.225655 -0.226284" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-under_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.090469 -0.225655 -0.226284" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-under_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-rear-shoulder_1">
+  <inertial>
+    <origin xyz="-0.012355757301481932 -0.004791417552428262 -0.009279097019659843" rpy="0 0 0"/>
+    <mass value="0.0208669844287198"/>
+    <inertia ixx="7.14169877849904e-06" iyy="1.29567531530475e-05" izz="8.27490522682466e-06" ixy="-7.57565424664656e-08" iyz="-1.05345839692783e-06" ixz="-4.7273708325359e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.087037 -0.238193 -0.233284" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-rear-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.087037 -0.238193 -0.233284" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-rear-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_right-shoulder-top_1">
+  <inertial>
+    <origin xyz="-0.0018658755028928414 -0.0021046578627119117 -0.014904566780848921" rpy="0 0 0"/>
+    <mass value="0.0185185316739025"/>
+    <inertia ixx="5.00744955887538e-06" iyy="7.35445675658123e-06" izz="4.54525776452338e-06" ixy="-5.42042388951313e-07" iyz="-1.63020902971777e-06" ixz="-2.26223973478145e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.085189 -0.244945 -0.226284" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.085189 -0.244945 -0.226284" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/right-shoulder-top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_150mm__3__1">
+  <inertial>
+    <origin xyz="-0.011408551683069534 -0.028169666011832073 -0.034660191454531614" rpy="0 0 0"/>
+    <mass value="0.0293876211668431"/>
+    <inertia ixx="5.45456941000502e-05" iyy="4.56073892521566e-05" izz="1.48405056496629e-05" ixy="-4.3300461172413e-06" iyz="-2.10540570111729e-05" ixz="-8.52654940474833e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.102233 -0.223062 -0.18217" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.102233 -0.223062 -0.18217" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_150mm__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_rear-left-spine-support_MIR_1">
+  <inertial>
+    <origin xyz="0.003807803338640947 0.005216552306533367 0.05882404146176726" rpy="0 0 0"/>
+    <mass value="0.0436844877139563"/>
+    <inertia ixx="4.55770989710763e-05" iyy="1.69838124524974e-05" izz="3.30099851053795e-05" ixy="-5.07079524621505e-06" iyz="-1.19655826046712e-05" ixz="-3.90526454525269e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.12768 -0.152235 -0.08654" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-left-spine-support_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.12768 -0.152235 -0.08654" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-left-spine-support_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_350mm_1">
+  <inertial>
+    <origin xyz="0.02259991092387366 -0.1435763043291834 3.9415675201492917e-07" rpy="0 0 0"/>
+    <mass value="0.068571116055967"/>
+    <inertia ixx="0.000697494944716024" iyy="1.08843818672902e-05" izz="0.000702790982019722" ixy="6.05339835553683e-05" iyz="-2.343744230810796e-14" ixz="2.050443148604586e-15"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.134931 -0.129709 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_350mm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.134931 -0.129709 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_350mm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_back-middle-strap_1">
+  <inertial>
+    <origin xyz="0.0030522199944195416 -0.018439922657780772 -3.4574427467959357e-06" rpy="0 0 0"/>
+    <mass value="0.0262372211177878"/>
+    <inertia ixx="1.98534829471542e-05" iyy="1.82691496078375e-05" izz="2.35877307376911e-06" ixy="5.15859538995946e-08" iyz="2.047153213006331e-11" ixz="4.75191525234689e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.138915 -0.129361 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-middle-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.138915 -0.129361 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-middle-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_100mm__8__1">
+  <inertial>
+    <origin xyz="0.01346263956266601 0.0032509671678030566 -0.017555874465558324" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.65986180542041e-05" iyy="1.68817502008354e-05" izz="2.36588390342771e-06" ixy="-3.57605371966731e-07" iyz="1.89394263295669e-06" ixz="2.7867076970355e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125856 -0.114768 -0.019907" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__8__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125856 -0.114768 -0.019907" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__8__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_100mm__5__1">
+  <inertial>
+    <origin xyz="0.013462639556880623 0.0032509671590708056 0.01755566277275153" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.65986180541213e-05" iyy="1.68817502010755e-05" izz="2.36588390321348e-06" ixy="-3.57605371791578e-07" iyz="-1.89394263196157e-06" ixz="-2.78670769716781e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125856 -0.114768 -0.119534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125856 -0.114768 -0.119534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_rear-right-shoulder_1">
+  <inertial>
+    <origin xyz="0.020143060474379665 -0.004284392266024797 0.004022939693993005" rpy="0 0 0"/>
+    <mass value="0.0420687971712212"/>
+    <inertia ixx="8.44725580082103e-06" iyy="1.99808586240969e-05" izz="1.7792738448247e-05" ixy="4.68109063279563e-07" iyz="-2.45147233491954e-07" ixz="-4.60400411693581e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.113262 -0.126494 -0.187453" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-right-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.113262 -0.126494 -0.187453" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-right-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_rear-right-shoulder_MIR_1">
+  <inertial>
+    <origin xyz="0.02014120197303937 -0.004284243442541358 -0.004023402310161524" rpy="0 0 0"/>
+    <mass value="0.0420717752993361"/>
+    <inertia ixx="8.44741460310865e-06" iyy="1.99829526398112e-05" izz="1.77949121403852e-05" ixy="4.68283758981803e-07" iyz="2.45156978164254e-07" ixz="4.60123958759441e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.113262 -0.126494 0.048012" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-right-shoulder_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.113262 -0.126494 0.048012" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/rear-right-shoulder_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_head-power-supply-bracket_1">
+  <inertial>
+    <origin xyz="0.009688236645549117 -0.024337868846462135 0.0030003941618105823" rpy="0 0 0"/>
+    <mass value="0.0140823150182462"/>
+    <inertia ixx="6.27780975302988e-06" iyy="6.20285541067309e-06" izz="5.89661821418419e-07" ixy="6.60823643917376e-09" iyz="1.885969679038535e-16" ixz="-1.654763565756001e-17"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.117621 -0.161338 -0.06672" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/head-power-supply-bracket_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.117621 -0.161338 -0.06672" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/head-power-supply-bracket_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_Power_Converter__1__1">
+  <inertial>
+    <origin xyz="0.01530160397822461 0.001338830476888292 -0.032499605838198733" rpy="0 0 0"/>
+    <mass value="0.158146990279371"/>
+    <inertia ixx="0.000135209784050735" iyy="7.28385066747826e-05" izz="9.00145031369377e-05" ixy="5.49886951131695e-06" iyz="-5.932754287840680e-16" ixz="5.215012449655276e-17"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.100492 -0.137651 -0.10222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/Power_Converter__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.100492 -0.137651 -0.10222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/Power_Converter__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_back-bottom-strap-spine_1">
+  <inertial>
+    <origin xyz="0.001867733279543149 -0.027510133622699086 5.545453799354894e-07" rpy="0 0 0"/>
+    <mass value="0.020634870126565"/>
+    <inertia ixx="1.46308745911399e-05" iyy="1.21222163268711e-05" izz="2.98692224509378e-06" ixy="4.14524954118572e-07" iyz="-7.389227317316453e-11" ixz="-8.591017735528825e-12"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.135429 -0.089513 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-bottom-strap-spine_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.135429 -0.089513 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/back-bottom-strap-spine_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_100mm__6__1">
+  <inertial>
+    <origin xyz="0.013046216752798961 -0.008368766188866845 -0.016116713701129094" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.66517383346112e-05" iyy="1.21534569086754e-05" izz="7.04105691516209e-06" ixy="1.53352652846213e-06" iyz="-7.08022691393607e-06" ixz="2.18406473821611e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125126 -0.047211 -0.027609" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125126 -0.047211 -0.027609" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_100mm__7__1">
+  <inertial>
+    <origin xyz="0.01304621675313139 -0.008368766192805528 0.016116502018181225" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.66517383343896e-05" iyy="1.21534569078471e-05" izz="7.04105691620748e-06" ixy="1.53352652855096e-06" iyz="7.08022691436907e-06" ixz="-2.18406473820565e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125126 -0.047211 -0.111832" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__7__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125126 -0.047211 -0.111832" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_100mm__7__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__3__1">
+  <inertial>
+    <origin xyz="0.010518924196566623 -0.06629341327746538 0.02223682834953921" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="0.000132201221783404" iyy="1.62203058469306e-05" izz="0.000119188451132129" ixy="9.07331663683899e-07" iyz="3.8860631373365e-05" ixz="-3.0399245752609e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.112968 0.038679 0.018589" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.112968 0.038679 0.018589" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_2020_200mm__6__1">
+  <inertial>
+    <origin xyz="0.01051892421147492 -0.06629341324245949 -0.022237040040814088" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="0.000132201221782907" iyy="1.6220305851131e-05" izz="0.00011918845112835" ixy="9.07331692955244e-07" iyz="-3.88606313782289e-05" ixz="3.03992467382366e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.112968 0.038679 -0.15803" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.112968 0.038679 -0.15803" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/2020_200mm__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_6band__2__1">
+  <inertial>
+    <origin xyz="-0.0003644255951393838 0.02278071948101698 0.019362889255910204" rpy="0 0 0"/>
+    <mass value="0.0380504692284723"/>
+    <inertia ixx="1.19459655041319e-05" iyy="1.26890534411778e-05" izz="1.38272751568562e-05" ixy="7.84511520702733e-08" iyz="-5.08367607121802e-07" ixz="8.07615596753065e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.101707 0.199789 -0.104025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/6band__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.101707 0.199789 -0.104025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/6band__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_6band__1__1">
+  <inertial>
+    <origin xyz="8.333702177037994e-06 0.022783147380914054 -0.019361524782465313" rpy="0 0 0"/>
+    <mass value="0.0380488032281732"/>
+    <inertia ixx="1.19481055156376e-05" iyy="1.26871642583245e-05" izz="1.3828105590553e-05" ixy="-9.05445801537659e-08" iyz="5.0932531688433e-07" ixz="7.31828476932555e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.101707 0.199789 -0.035415" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/6band__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.101707 0.199789 -0.035415" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/6band__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_battery-monitor-holder_1">
+  <inertial>
+    <origin xyz="0.014346360507995579 -0.1745967975761272 -0.01796726304975938" rpy="0 0 0"/>
+    <mass value="0.0153616088284135"/>
+    <inertia ixx="2.06427218765508e-05" iyy="8.05194399423182e-06" izz="1.38266755302951e-05" ixy="1.359369948811e-06" iyz="-1.70251406784505e-06" ixz="-1.33178138241686e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.137545 -0.159595 -0.06672" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/battery-monitor-holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.137545 -0.159595 -0.06672" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/battery-monitor-holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_voltage-meter_1">
+  <inertial>
+    <origin xyz="0.008809576195568117 0.0007709223741320936 0.02250039415655973" rpy="0 0 0"/>
+    <mass value="0.0854931327412287"/>
+    <inertia ixx="6.65318502489414e-05" iyy="1.86760612288976e-05" izz="5.56474434388037e-05" ixy="4.21913339366511e-06" iyz="-1.242848055374446e-15" ixz="1.418136441611040e-16"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.129699 0.021882 -0.01172" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/voltage-meter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.129699 0.021882 -0.01172" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/voltage-meter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_button-holder_1">
+  <inertial>
+    <origin xyz="0.0011247038427605605 -0.01001039852193603 0.024444495391891793" rpy="0 0 0"/>
+    <mass value="0.0146119151395945"/>
+    <inertia ixx="6.98961841658514e-06" iyy="4.17670261853719e-06" izz="3.00206185327139e-06" ixy="2.48039569579816e-07" iyz="4.90186278280818e-09" ixz="-1.49611940201597e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.12843 -0.009511 -0.06922" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/button-holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.12843 -0.009511 -0.06922" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/button-holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_killswitch-spine-interface_1">
+  <inertial>
+    <origin xyz="0.014278545075256333 -0.01928744128549665 0.03561120322004074" rpy="0 0 0"/>
+    <mass value="0.0367563567772642"/>
+    <inertia ixx="1.91772202381458e-05" iyy="1.719461232857e-05" izz="8.952826715822e-06" ixy="1.93021319127239e-08" iyz="-1.29024030752945e-07" ixz="-3.35325629428212e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.122449 0.024435 -0.05972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/killswitch-spine-interface_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.122449 0.024435 -0.05972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/killswitch-spine-interface_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_killswitch_1">
+  <inertial>
+    <origin xyz="0.01307785241692877 2.403516709131859e-07 3.941557156217357e-07" rpy="0 0 0"/>
+    <mass value="0.0711505793996182"/>
+    <inertia ixx="1.25191345132067e-05" iyy="4.31797885468751e-05" izz="4.54897885273923e-05" ixy="-4.212125440106185e-17" iyz="-7.773729576721067e-17" ixz="9.725293487194975e-17"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.112914 0.043601 -0.10472" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/killswitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque20400"/>
+  </visual>
+  <collision>
+    <origin xyz="0.112914 0.043601 -0.10472" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/killswitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_lumbar-strap_1">
+  <inertial>
+    <origin xyz="-0.023929067947884963 -0.0004791829098020617 4.494147003847315e-07" rpy="0 0 0"/>
+    <mass value="0.0680497603480782"/>
+    <inertia ixx="9.53677171335186e-05" iyy="6.20495727159634e-05" izz="3.72393240432819e-05" ixy="-5.13274392123573e-06" iyz="7.456741192395089e-11" ixz="-8.053584925685198e-12"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.097079 0.188201 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/lumbar-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.097079 0.188201 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/lumbar-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_dumWaist_1">
+  <inertial>
+    <origin xyz="0.0025000153689011817 9.997183142429478e-08 3.9415642408280327e-07" rpy="0 0 0"/>
+    <mass value="0.00197292018645446"/>
+    <inertia ixx="1.57833604723883e-08" iyy="1.20019296054411e-08" izz="1.2001931643809e-08" ixy="2.032879073410321e-20" iyz="4.404571325722362e-20" ixz="3.049318610115481e-20"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.120332 0.210156 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/dumWaist_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="powder_coat_pink"/>
+  </visual>
+  <collision>
+    <origin xyz="0.120332 0.210156 -0.06972" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/dumWaist_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}_dumBattery_1">
+  <inertial>
+    <origin xyz="-1.0488940403625968e-06 7.229654312707404e-06 0.0024998341055858866" rpy="0 0 0"/>
+    <mass value="0.000493230046613612"/>
+    <inertia ixx="1.520792475643e-09" iyy="1.52078833150564e-09" izz="9.86464466799959e-10" ixy="5.923294782704422e-16" iyz="-1.522588087142320e-12" ixz="2.171707755995246e-13"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03066 0.012206 0.02016" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/dumBattery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="powder_coat_pink"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03066 0.012206 0.02016" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hyperspawn_dropbear_description/meshes/torso/dumBattery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="${prefix}_Rigid 1" type="fixed">
+  <origin xyz="0.098178 0.07727 0.06972" rpy="0 0 0"/>
+  <parent link="${prefix}_base_link"/>
+  <child link="${prefix}_neck-chest-interface2_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 2" type="fixed">
+  <origin xyz="0.034406 0.025168 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}_neck-chest-interface2_1"/>
+  <child link="${prefix}_2020_300mm_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 3" type="fixed">
+  <origin xyz="0.019924 -0.001743 -0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_300mm_1"/>
+  <child link="${prefix}_back-top__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 4" type="fixed">
+  <origin xyz="-0.006518 0.019009 -0.035324" rpy="0 0 0"/>
+  <parent link="${prefix}_back-top__1__1"/>
+  <child link="${prefix}_2020_150mm__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 5" type="fixed">
+  <origin xyz="-0.006518 0.019009 0.041325" rpy="0 0 0"/>
+  <parent link="${prefix}_back-top__1__1"/>
+  <child link="${prefix}_2020_150mm__5__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 6" type="fixed">
+  <origin xyz="0.00137 -0.030234 0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_back-top__1__1"/>
+  <child link="${prefix}_back-middle-strap__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 7" type="fixed">
+  <origin xyz="-0.022632 0.055883 -0.103798" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_150mm__1__1"/>
+  <child link="${prefix}_handle__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 8" type="fixed">
+  <origin xyz="-0.020657 0.051006 -0.106681" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_150mm__1__1"/>
+  <child link="${prefix}_front-left-shoulder_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 9" type="fixed">
+  <origin xyz="-0.022632 0.055883 0.103798" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_150mm__5__1"/>
+  <child link="${prefix}_front-right-shoulder_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 10" type="fixed">
+  <origin xyz="-0.003486 -0.039848 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}_back-middle-strap__1__1"/>
+  <child link="${prefix}_back-bottom-strap-spine__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 11" type="fixed">
+  <origin xyz="-0.013813 -0.02321 -0.049813" rpy="0 0 0"/>
+  <parent link="${prefix}_back-middle-strap__1__1"/>
+  <child link="${prefix}_2020_100mm__4__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 12" type="fixed">
+  <origin xyz="-0.013813 -0.02321 0.049814" rpy="0 0 0"/>
+  <parent link="${prefix}_back-middle-strap__1__1"/>
+  <child link="${prefix}_2020_100mm__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 13" type="fixed">
+  <origin xyz="-0.010303 -0.042302 -0.042111" rpy="0 0 0"/>
+  <parent link="${prefix}_back-bottom-strap-spine__1__1"/>
+  <child link="${prefix}_2020_100mm__3__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 14" type="fixed">
+  <origin xyz="-0.010303 -0.042302 0.042112" rpy="0 0 0"/>
+  <parent link="${prefix}_back-bottom-strap-spine__1__1"/>
+  <child link="${prefix}_2020_100mm__2__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 15" type="fixed">
+  <origin xyz="-0.000256 -0.06214 0.002012" rpy="0 0 0"/>
+  <parent link="${prefix}_front-left-shoulder_1"/>
+  <child link="${prefix}_2020_200mm_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 16" type="fixed">
+  <origin xyz="0.001719 -0.067017 0.000871" rpy="0 0 0"/>
+  <parent link="${prefix}_front-right-shoulder_1"/>
+  <child link="${prefix}_2020_200mm__4__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 17" type="fixed">
+  <origin xyz="0.0 -0.167939 0.026566" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm_1"/>
+  <child link="${prefix}_left-front-rib-lower_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 18" type="fixed">
+  <origin xyz="0.0 -0.166897 -0.032475" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__4__1"/>
+  <child link="${prefix}_right-front-rib-lower_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 19" type="fixed">
+  <origin xyz="-0.00055 -0.044076 0.027605" rpy="0 0 0"/>
+  <parent link="${prefix}_left-front-rib-lower_1"/>
+  <child link="${prefix}_2020_150mm_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 20" type="fixed">
+  <origin xyz="-0.00055 -0.045118 -0.021696" rpy="0 0 0"/>
+  <parent link="${prefix}_right-front-rib-lower_1"/>
+  <child link="${prefix}_2020_150mm__2__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 21" type="fixed">
+  <origin xyz="-0.006222 -0.300601 0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_300mm_1"/>
+  <child link="${prefix}_naval-strap__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 22" type="fixed">
+  <origin xyz="-0.013983 -0.003413 -0.06857" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_100mm__4__1"/>
+  <child link="${prefix}_left-middle-rib_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 23" type="fixed">
+  <origin xyz="-0.053361 -0.008193 -0.014317" rpy="0 0 0"/>
+  <parent link="${prefix}_left-middle-rib_1"/>
+  <child link="${prefix}_2020_200mm__8__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 24" type="fixed">
+  <origin xyz="-0.168195 -0.02094 0.013451" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__8__1"/>
+  <child link="${prefix}_rear-left-rib_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 25" type="fixed">
+  <origin xyz="0.039522 -0.033519 0.002508" rpy="0 0 0"/>
+  <parent link="${prefix}_rear-left-rib_1"/>
+  <child link="${prefix}_2020_200mm__2__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 26" type="fixed">
+  <origin xyz="0.158963 -0.060253 0.003046" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__2__1"/>
+  <child link="${prefix}_left-lower-rib-side_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 27" type="fixed">
+  <origin xyz="0.029717 0.001204 -0.006361" rpy="0 0 0"/>
+  <parent link="${prefix}_rear-left-rib_1"/>
+  <child link="${prefix}_left-battery-mount_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 28" type="fixed">
+  <origin xyz="-0.014439 -0.00936 0.067919" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_100mm__1__1"/>
+  <child link="${prefix}_right-middle-rib_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 29" type="fixed">
+  <origin xyz="-0.052905 -0.002246 0.014968" rpy="0 0 0"/>
+  <parent link="${prefix}_right-middle-rib_1"/>
+  <child link="${prefix}_2020_200mm__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 30" type="fixed">
+  <origin xyz="-0.167348 -0.02688 -0.013452" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__1__1"/>
+  <child link="${prefix}_rear-right-rib_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 31" type="fixed">
+  <origin xyz="0.038675 -0.027579 -0.002507" rpy="0 0 0"/>
+  <parent link="${prefix}_rear-right-rib_1"/>
+  <child link="${prefix}_2020_200mm__9__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 32" type="fixed">
+  <origin xyz="0.02887 0.007144 0.006362" rpy="0 0 0"/>
+  <parent link="${prefix}_rear-right-rib_1"/>
+  <child link="${prefix}_right-battery-mount_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 33" type="fixed">
+  <origin xyz="0.156735 -0.065819 -0.003284" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__9__1"/>
+  <child link="${prefix}_right-lower-rib-side_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 34" type="fixed">
+  <origin xyz="-0.046553 0.029355 -0.008559" rpy="0 0 0"/>
+  <parent link="${prefix}_front-left-shoulder_1"/>
+  <child link="${prefix}_2020_200mm__5__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 35" type="fixed">
+  <origin xyz="0.028936 -0.00792 0.00825" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__5__1"/>
+  <child link="${prefix}_right-shoulder-motor-adapter_MIR_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 36" type="fixed">
+  <origin xyz="-0.044578 0.024478 0.011441" rpy="0 0 0"/>
+  <parent link="${prefix}_front-right-shoulder_1"/>
+  <child link="${prefix}_2020_200mm__7__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 37" type="fixed">
+  <origin xyz="0.028936 -0.00792 -0.00825" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__7__1"/>
+  <child link="${prefix}_right-shoulder-motor-adapter_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 38" type="fixed">
+  <origin xyz="-0.142639 -0.017689 0.006014" rpy="0 0 0"/>
+  <parent link="${prefix}_right-shoulder-motor-adapter_MIR_1"/>
+  <child link="${prefix}_RMD-X10__1_Stator_1"/>
+</joint>
+
+<!-- <joint name="${prefix}_Revolute 39" type="continuous">
+  <origin xyz="-7e-06 -0.053 -0.0352" rpy="0 0 0"/>
+  <parent link="${prefix}_RMD-X10__1_Stator_1"/>
+  <child link="${prefix}_RMD-X10__1_Rotor_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint> -->
+<joint name="LH_yaw" type="revolute">
+    <origin xyz="-7e-06 -0.053 -0.0352" rpy="0 0 0"/>
+    <parent link="${prefix}_RMD-X10__1_Stator_1"/>
+    <child link="${prefix}_RMD-X10__1_Rotor_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="10.0"/>
+</joint>
+
+<!-- <joint name="${prefix}_Rigid 40" type="fixed">
+  <origin xyz="0.0 0.0 -0.0005" rpy="0 0 0"/>
+  <parent link="${prefix}_RMD-X10__1_Rotor_1"/>
+  <child link="${prefix}_dumLeftArm_1"/>
+</joint> -->
+
+<joint name="${prefix}_Rigid 41" type="fixed">
+  <origin xyz="-0.142639 -0.017689 -0.006014" rpy="0 0 0"/>
+  <parent link="${prefix}_right-shoulder-motor-adapter_1"/>
+  <child link="${prefix}_RMD-X10Stator_1"/>
+</joint>
+
+<!-- <joint name="${prefix}_Revolute 42" type="continuous">
+  <origin xyz="-7e-06 -0.053 0.0352" rpy="0 0 0"/>
+  <parent link="${prefix}_RMD-X10Stator_1"/>
+  <child link="${prefix}_RMD-X10Rotot_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint> -->
+
+<joint name="RH_yaw" type="revolute">
+    <origin xyz="-7e-06 -0.053 0.0352" rpy="0 0 0"/>
+    <parent link="${prefix}_RMD-X10Stator_1"/>
+    <child link="${prefix}_RMD-X10Rotot_1"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="10.0"/>
+</joint>
+
+
+<!-- <joint name="${prefix}_Rigid 43" type="fixed">
+  <origin xyz="0.0 0.0 0.0005" rpy="0 0 0"/>
+  <parent link="${prefix}_RMD-X10Rotot_1"/>
+  <child link="${prefix}_dumRightArm_1"/>
+</joint> -->
+
+<joint name="${prefix}_Rigid 44" type="fixed">
+  <origin xyz="-0.163969 0.04488 0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__5__1"/>
+  <child link="${prefix}_right-shoulder-top1_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 45" type="fixed">
+  <origin xyz="-0.169249 0.02559 -0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__5__1"/>
+  <child link="${prefix}_right-shoulder-under1_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 46" type="fixed">
+  <origin xyz="-0.165817 0.038128 -0.01" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__5__1"/>
+  <child link="${prefix}_right-rear-shoulder_MIR_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 47" type="fixed">
+  <origin xyz="-0.017044 -0.021883 0.038115" rpy="0 0 0"/>
+  <parent link="${prefix}_right-shoulder-top1_1"/>
+  <child link="${prefix}_2020_150mm__4__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 48" type="fixed">
+  <origin xyz="-0.031009 -0.068575 0.09563" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_150mm__4__1"/>
+  <child link="${prefix}_rear-left-spine-support_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 49" type="fixed">
+  <origin xyz="-0.035192 -0.060257 0.098993" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_150mm__4__1"/>
+  <child link="${prefix}_back-top_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 50" type="fixed">
+  <origin xyz="-0.169249 0.02559 0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__7__1"/>
+  <child link="${prefix}_right-shoulder-under_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 51" type="fixed">
+  <origin xyz="-0.165817 0.038128 0.01" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__7__1"/>
+  <child link="${prefix}_right-rear-shoulder_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 52" type="fixed">
+  <origin xyz="-0.163969 0.04488 0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__7__1"/>
+  <child link="${prefix}_right-shoulder-top_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 53" type="fixed">
+  <origin xyz="-0.017044 -0.021883 -0.044114" rpy="0 0 0"/>
+  <parent link="${prefix}_right-shoulder-top_1"/>
+  <child link="${prefix}_2020_150mm__3__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 54" type="fixed">
+  <origin xyz="-0.025447 -0.070827 -0.09563" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_150mm__3__1"/>
+  <child link="${prefix}_rear-left-spine-support_MIR_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 55" type="fixed">
+  <origin xyz="0.002494 -0.033096 0.013456" rpy="0 0 0"/>
+  <parent link="${prefix}_back-top_1"/>
+  <child link="${prefix}_2020_350mm_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 56" type="fixed">
+  <origin xyz="-0.00149 -0.033444 0.013456" rpy="0 0 0"/>
+  <parent link="${prefix}_back-top_1"/>
+  <child link="${prefix}_back-middle-strap_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 57" type="fixed">
+  <origin xyz="0.013059 -0.014593 -0.049813" rpy="0 0 0"/>
+  <parent link="${prefix}_back-middle-strap_1"/>
+  <child link="${prefix}_2020_100mm__8__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 58" type="fixed">
+  <origin xyz="0.013059 -0.014593 0.049814" rpy="0 0 0"/>
+  <parent link="${prefix}_back-middle-strap_1"/>
+  <child link="${prefix}_2020_100mm__5__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 59" type="fixed">
+  <origin xyz="0.012594 0.011726 0.067919" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_100mm__5__1"/>
+  <child link="${prefix}_rear-right-shoulder_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 60" type="fixed">
+  <origin xyz="0.012594 0.011726 -0.067919" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_100mm__8__1"/>
+  <child link="${prefix}_rear-right-shoulder_MIR_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 61" type="fixed">
+  <origin xyz="0.01731 0.031629 -0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_350mm_1"/>
+  <child link="${prefix}_head-power-supply-bracket_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 62" type="fixed">
+  <origin xyz="0.017129 -0.023687 0.0355" rpy="0 0 0"/>
+  <parent link="${prefix}_head-power-supply-bracket_1"/>
+  <child link="${prefix}_Power_Converter__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 63" type="fixed">
+  <origin xyz="0.003486 -0.039848 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}_back-middle-strap_1"/>
+  <child link="${prefix}_back-bottom-strap-spine_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 64" type="fixed">
+  <origin xyz="0.010303 -0.042302 -0.042111" rpy="0 0 0"/>
+  <parent link="${prefix}_back-bottom-strap-spine_1"/>
+  <child link="${prefix}_2020_100mm__6__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 65" type="fixed">
+  <origin xyz="0.010303 -0.042302 0.042112" rpy="0 0 0"/>
+  <parent link="${prefix}_back-bottom-strap-spine_1"/>
+  <child link="${prefix}_2020_100mm__7__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 66" type="fixed">
+  <origin xyz="-0.017494 -0.053384 0.03094" rpy="0 0 0"/>
+  <parent link="${prefix}_rear-left-rib_1"/>
+  <child link="${prefix}_2020_200mm__3__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 67" type="fixed">
+  <origin xyz="-0.018341 -0.047444 -0.030939" rpy="0 0 0"/>
+  <parent link="${prefix}_rear-right-rib_1"/>
+  <child link="${prefix}_2020_200mm__6__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 68" type="fixed">
+  <origin xyz="0.011261 -0.16111 -0.054005" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__6__1"/>
+  <child link="${prefix}_6band__2__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 69" type="fixed">
+  <origin xyz="0.011261 -0.16111 0.054004" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_200mm__3__1"/>
+  <child link="${prefix}_6band__1__1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 70" type="fixed">
+  <origin xyz="-0.002614 0.029886 -0.003" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_350mm_1"/>
+  <child link="${prefix}_battery-monitor-holder_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 71" type="fixed">
+  <origin xyz="0.007846 -0.181477 -0.055" rpy="0 0 0"/>
+  <parent link="${prefix}_battery-monitor-holder_1"/>
+  <child link="${prefix}_voltage-meter_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 72" type="fixed">
+  <origin xyz="0.009115 -0.150084 0.0025" rpy="0 0 0"/>
+  <parent link="${prefix}_battery-monitor-holder_1"/>
+  <child link="${prefix}_button-holder_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 73" type="fixed">
+  <origin xyz="0.015096 -0.18403 -0.007" rpy="0 0 0"/>
+  <parent link="${prefix}_battery-monitor-holder_1"/>
+  <child link="${prefix}_killswitch-spine-interface_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 74" type="fixed">
+  <origin xyz="0.009535 -0.019166 0.045" rpy="0 0 0"/>
+  <parent link="${prefix}_killswitch-spine-interface_1"/>
+  <child link="${prefix}_killswitch_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 75" type="fixed">
+  <origin xyz="0.037852 -0.31791 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}_2020_350mm_1"/>
+  <child link="${prefix}_lumbar-strap_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 76" type="fixed">
+  <origin xyz="-0.023253 -0.021955 0.0" rpy="0 0 0"/>
+  <parent link="${prefix}_lumbar-strap_1"/>
+  <child link="${prefix}_dumWaist_1"/>
+</joint>
+
+<joint name="${prefix}_Rigid 77" type="fixed">
+  <origin xyz="0.096417 -0.028115 0.03573" rpy="0 0 0"/>
+  <parent link="${prefix}_left-battery-mount_1"/>
+  <child link="${prefix}_dumBattery_1"/>
+</joint>
+
+</xacro:macro>
+</robot>

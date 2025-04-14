@@ -1,0 +1,841 @@
+<?xml version="1.0" ?>
+<robot name="humanoidrightleg" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find humanoidrightleg_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find humanoidrightleg_description)/urdf/humanoidrightleg.trans" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.191552173924666 0.380845062266963 -0.172380256596757" rpy="0 0 0"/>
+    <mass value="0.0688919713115792"/>
+    <inertia ixx="8.05202310847145e-06" iyy="1.41808431909076e-05" izz="2.19458145304646e-05" ixy="-3.30654655814576e-07" iyz="-8.626208601592023e-11" ixz="-3.62199873999575e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque2550255"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-S2_MIR4__3_Rotor_1">
+  <inertial>
+    <origin xyz="-4.211488538186092e-07 1.6545859032823795e-05 0.011165718224118742" rpy="0 0 0"/>
+    <mass value="0.0300779967690979"/>
+    <inertia ixx="7.24243503722952e-06" iyy="7.30403052714057e-06" izz="9.54333063863961e-06" ixy="8.82931657777627e-09" iyz="2.93540681844083e-09" ixz="-1.87177796266008e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.191553 -0.380845 0.16988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/RMD-X10-S2_MIR4__3_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.191553 -0.380845 0.16988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/RMD-X10-S2_MIR4__3_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-S2_MIR4__3_Stator_1">
+  <inertial>
+    <origin xyz="-3.484340710929734e-06 0.0007997311977311905 0.03182044336824455" rpy="0 0 0"/>
+    <mass value="0.129422420703688"/>
+    <inertia ixx="0.000238037463389438" iyy="0.000243964589471545" izz="0.000308150569627567" ixy="3.40973319457732e-08" iyz="1.39173875302132e-06" ixz="-1.01472017754491e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.191553 -0.380845 0.16988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/RMD-X10-S2_MIR4__3_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.191553 -0.380845 0.16988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/RMD-X10-S2_MIR4__3_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg-pitch-elastic__1__1">
+  <inertial>
+    <origin xyz="0.004332040709800478 0.0010869976394618508 0.02831677234727012" rpy="0 0 0"/>
+    <mass value="0.0209650463897525"/>
+    <inertia ixx="8.3951316275678e-06" iyy="7.01827468855372e-06" izz="2.49590613360211e-06" ixy="3.52763472228051e-07" iyz="-2.31040866033273e-07" ixz="8.54257859011489e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.262756 -0.369904 0.167899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/leg-pitch-elastic__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.262756 -0.369904 0.167899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/leg-pitch-elastic__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg-pitch-elastic__3__1">
+  <inertial>
+    <origin xyz="0.00024766668574344175 -0.004465985849947618 0.030684689781043994" rpy="0 0 0"/>
+    <mass value="0.0209650463897525"/>
+    <inertia ixx="6.94000363571801e-06" iyy="8.47357458447088e-06" izz="2.49573422953387e-06" ixy="-1.01520289720776e-07" iyz="1.11879222097593e-08" ixz="-2.44470836144751e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.274606 -0.353792 0.167902" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/leg-pitch-elastic__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.274606 -0.353792 0.167902" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/leg-pitch-elastic__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg-pitch-elastic__2__1">
+  <inertial>
+    <origin xyz="-0.00026365617027893085 0.004466529213073167 0.0306840154084691" rpy="0 0 0"/>
+    <mass value="0.0209650463897525"/>
+    <inertia ixx="6.93974750106199e-06" iyy="8.47357458447131e-06" izz="2.49599036419206e-06" ixy="-1.01514442714086e-07" iyz="-1.12408517837859e-08" ixz="2.46787875592645e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.180783 -0.309616 0.167877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/leg-pitch-elastic__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.180783 -0.309616 0.167877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/leg-pitch-elastic__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg-pitch-elastic_1">
+  <inertial>
+    <origin xyz="-0.004346794997496989 -0.0010864542763367457 0.028314790362317016" rpy="0 0 0"/>
+    <mass value="0.0209650463897525"/>
+    <inertia ixx="8.39521910324164e-06" iyy="7.01827468855393e-06" izz="2.49581865792783e-06" ixy="3.52642963179998e-07" iyz="2.31224759995831e-07" ixz="-8.23499758102579e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.192633 -0.293504 0.167881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/leg-pitch-elastic_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.192633 -0.293504 0.167881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/leg-pitch-elastic_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-motor-bracket-v5-right_MIR_1">
+  <inertial>
+    <origin xyz="0.016858677590885524 -0.04944872831844077 -0.004495678312661094" rpy="0 0 0"/>
+    <mass value="0.0538430687726528"/>
+    <inertia ixx="3.61370786798598e-05" iyy="5.34207477404357e-05" izz="8.88309378296696e-05" ixy="2.76880068599316e-05" iyz="7.21804772852927e-09" ixz="-1.37368795813213e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.244552 -0.381153 0.167894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/hip-motor-bracket-v5-right_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.244552 -0.381153 0.167894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/hip-motor-bracket-v5-right_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="innner-thigh-magnet-encoder__1__1">
+  <inertial>
+    <origin xyz="0.018376297229245386 -0.002675106377944547 -0.027777248024375534" rpy="0 0 0"/>
+    <mass value="0.0238379534674091"/>
+    <inertia ixx="1.50715928632743e-05" iyy="1.36881930381427e-05" izz="9.40419375859789e-06" ixy="-2.19970533226073e-06" iyz="5.21077387042918e-06" ixz="3.82858396419578e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.234609 -0.349942 0.176891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/innner-thigh-magnet-encoder__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.234609 -0.349942 0.176891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/innner-thigh-magnet-encoder__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee-bend-motor-bracket-hip_1">
+  <inertial>
+    <origin xyz="-0.0039020151933331637 -0.01596019139880689 -0.008480456367095462" rpy="0 0 0"/>
+    <mass value="0.00916902212299896"/>
+    <inertia ixx="1.64610244079337e-06" iyy="5.62079187817991e-07" izz="1.79690566291238e-06" ixy="-4.03507208301566e-07" iyz="-6.51730918451582e-09" ixz="1.93048854545846e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.138554 -0.380537 0.167866" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/knee-bend-motor-bracket-hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.138554 -0.380537 0.167866" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/knee-bend-motor-bracket-hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee-bend-motor-bracket-hip__1__1">
+  <inertial>
+    <origin xyz="-0.0039057106592846613 -0.015959870925071173 0.008477538322127484" rpy="0 0 0"/>
+    <mass value="0.00916902212299896"/>
+    <inertia ixx="1.64612355205759e-06" iyy="5.62078248780406e-07" izz="1.79688549068586e-06" ixy="-4.03509289046214e-07" iyz="6.30285680369496e-09" ixz="-1.93848495998346e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.13857 -0.380537 0.108866" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/knee-bend-motor-bracket-hip__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.13857 -0.380537 0.108866" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/knee-bend-motor-bracket-hip__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-S2_MIR4Stator_1">
+  <inertial>
+    <origin xyz="0.0160814090181009 -0.04970085006681524 0.029183200119324654" rpy="0 0 0"/>
+    <mass value="0.129422420703688"/>
+    <inertia ixx="0.000238037471685241" iyy="0.000243964589611526" izz="0.000308150561191791" ixy="3.48109178184564e-08" iyz="-1.3917212651959e-06" ixz="-2.63267835847597e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.27992 -0.333064 0.167903" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/RMD-X10-S2_MIR4Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.27992 -0.333064 0.167903" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/RMD-X10-S2_MIR4Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-S2_MIR4Rotor_1">
+  <inertial>
+    <origin xyz="1.055766366997446e-06 1.696564097514175e-05 -0.011166077158486734" rpy="0 0 0"/>
+    <mass value="0.0300779967690979"/>
+    <inertia ixx="7.24242807782381e-06" iyy="7.30403748714975e-06" izz="9.54333063803419e-06" ixy="-8.80500508051649e-09" iyz="-2.93556310358191e-09" ixz="-1.88337195773831e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.263852 -0.282563 0.106899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/RMD-X10-S2_MIR4Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.263852 -0.282563 0.106899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/RMD-X10-S2_MIR4Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh-outer-encoder-mount__1__1">
+  <inertial>
+    <origin xyz="0.012415714213447782 0.013136394671229346 0.03216001100296097" rpy="0 0 0"/>
+    <mass value="0.0254782419946081"/>
+    <inertia ixx="1.66723911709612e-05" iyy="2.05986749110096e-05" izz="9.85632514806205e-06" ixy="1.46230037285618e-06" iyz="2.38841090045763e-06" ixz="-7.20491975549238e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.31685 -0.282872 0.108913" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/thigh-outer-encoder-mount__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.31685 -0.282872 0.108913" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/thigh-outer-encoder-mount__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="limit-bracket-knee_1">
+  <inertial>
+    <origin xyz="0.03813329848434943 0.007851530742153945 0.002014925512551391" rpy="0 0 0"/>
+    <mass value="0.00952958069532862"/>
+    <inertia ixx="2.00286962508188e-06" iyy="6.27632609529946e-06" izz="8.19681982171792e-06" ixy="-2.90787294220563e-06" iyz="-1.98204504091369e-08" ixz="5.96955781291195e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.280522 -0.232254 0.108903" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/limit-bracket-knee_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.280522 -0.232254 0.108903" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/limit-bracket-knee_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-motor-bracket-v5-right_MIR__1__1">
+  <inertial>
+    <origin xyz="0.028040950591955716 -0.04774372804222826 0.004507312209347081" rpy="0 0 0"/>
+    <mass value="0.0538430687726528"/>
+    <inertia ixx="3.61370786798607e-05" iyy="5.34207477404349e-05" izz="8.88309378296696e-05" ixy="2.76880068599316e-05" iyz="7.21804772852927e-09" ixz="-1.37368795815381e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.255752 -0.379448 0.108897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/hip-motor-bracket-v5-right_MIR__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.255752 -0.379448 0.108897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/hip-motor-bracket-v5-right_MIR__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="NO-NC_Bump_Switch__1__1">
+  <inertial>
+    <origin xyz="0.000575709176040301 -0.0056093546593196375 0.0033310228176758883" rpy="0 0 0"/>
+    <mass value="0.0104022165926644"/>
+    <inertia ixx="4.69379471393881e-07" iyy="2.75793419309521e-07" izz="4.1822125689873e-07" ixy="-1.47142053463865e-07" iyz="-4.50216294284496e-08" ixz="-2.42411353856104e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.203621 -0.255201 0.111073" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/NO-NC_Bump_Switch__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque252525"/>
+  </visual>
+  <collision>
+    <origin xyz="0.203621 -0.255201 0.111073" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/NO-NC_Bump_Switch__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="NO-NC_Bump_Switch_1">
+  <inertial>
+    <origin xyz="0.004154287788953048 -0.0038125014819440084 0.003332471068019399" rpy="0 0 0"/>
+    <mass value="0.0104022165926644"/>
+    <inertia ixx="2.03822227124221e-07" iyy="5.41311671418119e-07" izz="4.18260249058057e-07" ixy="5.05149739457849e-08" iyz="-7.39339244232133e-09" ixz="5.05100674312456e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.278363 -0.217985 0.111093" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/NO-NC_Bump_Switch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque252525"/>
+  </visual>
+  <collision>
+    <origin xyz="0.278363 -0.217985 0.111093" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/NO-NC_Bump_Switch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-ex-al-base_MIR_1">
+  <inertial>
+    <origin xyz="-1.3122016492006505e-05 0.00014934615915024319 0.013371898413980107" rpy="0 0 0"/>
+    <mass value="0.124436127065859"/>
+    <inertia ixx="6.24904589302359e-05" iyy="6.86703756884715e-05" izz="0.000118125480690043" ixy="-4.20395765185488e-07" iyz="-1.48815168858011e-06" ixz="8.63512218491833e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.263852 -0.282563 0.106899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/hip-ex-al-base_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="0.263852 -0.282563 0.106899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/hip-ex-al-base_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motorcap-KNEE_MIR_1">
+  <inertial>
+    <origin xyz="-0.00010648002345525764 0.0015375668943333753 0.010431783041842252" rpy="0 0 0"/>
+    <mass value="0.0930770899359061"/>
+    <inertia ixx="4.52079955926259e-05" iyy="4.90851653499437e-05" izz="8.84366948581076e-05" ixy="-2.64197276452806e-07" iyz="7.72553948930575e-07" ixz="-6.36351047069057e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.263859 -0.282563 0.079899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/motorcap-KNEE_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="0.263859 -0.282563 0.079899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/motorcap-KNEE_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="2020_300mm__1__1">
+  <inertial>
+    <origin xyz="0.0001692160358305883 -0.15033295453273596 -0.009999811478470913" rpy="0 0 0"/>
+    <mass value="0.058775242333686"/>
+    <inertia ixx="0.000441204573959331" iyy="6.79475811853937e-06" izz="0.000443209322179395" ixy="2.95787318907639e-05" iyz="7.71094505857672e-09" ixz="-5.22622284424706e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.255237 -0.303194 0.069897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/2020_300mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.255237 -0.303194 0.069897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/2020_300mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="magmount__1__1">
+  <inertial>
+    <origin xyz="0.001016693505902333 -0.015027309365769514 0.005883608580064176" rpy="0 0 0"/>
+    <mass value="0.00218048027852371"/>
+    <inertia ixx="3.1349163243601e-07" iyy="3.56291875278796e-08" izz="3.17917361947369e-07" ixy="1.89197426891941e-08" iyz="4.2057733616157e-10" ixz="-2.923309750329063e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.264518 -0.29222 0.059899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/magmount__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.264518 -0.29222 0.059899" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/magmount__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="multiplex-stack_1">
+  <inertial>
+    <origin xyz="-0.007384132619005279 0.1284017775351824 0.008248365725790852" rpy="0 0 0"/>
+    <mass value="0.0267269320354185"/>
+    <inertia ixx="4.05068875712944e-05" iyy="5.30403089512134e-06" izz="3.79789565546004e-05" ixy="2.31999143198369e-06" iyz="5.71520815915993e-10" ixz="6.73351016329364e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2549 -0.002528 0.088147" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/multiplex-stack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2549 -0.002528 0.088147" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/multiplex-stack_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="thigh-nub_1">
+  <inertial>
+    <origin xyz="-0.00021404242750505675 0.12517050733332039 -0.00293721855427663" rpy="0 0 0"/>
+    <mass value="0.0040354746682235"/>
+    <inertia ixx="5.40826269925396e-07" iyy="1.23217481173084e-07" izz="6.3572465290704e-07" ixy="2.84345648288446e-08" iyz="7.415482331375560e-12" ixz="-2.474014827095854e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.253153 -0.002647 0.089896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/thigh-nub_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.253153 -0.002647 0.089896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/thigh-nub_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee-lock-2-b_1">
+  <inertial>
+    <origin xyz="0.014320541366206696 0.03575857449114592 -0.002996011998907741" rpy="0 0 0"/>
+    <mass value="0.0213159508017028"/>
+    <inertia ixx="7.10788907552735e-06" iyy="2.47636377234705e-06" izz="8.6852042189662e-06" ixy="-6.48675745137429e-07" iyz="-3.61488412898306e-07" ixz="-4.40331495548123e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.253153 -0.002647 0.089896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/knee-lock-2-b_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.253153 -0.002647 0.089896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/knee-lock-2-b_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="knee-lock-2_1">
+  <inertial>
+    <origin xyz="0.014318755213854312 0.03575857611793448 0.0030028519225454853" rpy="0 0 0"/>
+    <mass value="0.0213159424990488"/>
+    <inertia ixx="7.10742843126652e-06" iyy="2.47635948259599e-06" izz="8.68565687018328e-06" ixy="-6.48864977893359e-07" iyz="3.61150137233902e-07" ixz="4.39508968335767e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.253158 -0.002647 0.069896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/knee-lock-2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.253158 -0.002647 0.069896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/knee-lock-2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bearingstrap__1__1">
+  <inertial>
+    <origin xyz="-0.00042938990948382383 0.006342285161374257 -2.855707553484077e-07" rpy="0 0 0"/>
+    <mass value="0.0320412038196272"/>
+    <inertia ixx="1.99283586604051e-05" iyy="6.6506654975958e-06" izz="2.47787765592453e-05" ixy="9.04149549919937e-07" iyz="3.14279001457365e-10" ixz="-1.26777036969523e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.244925 -0.003204 0.079894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/bearingstrap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.244925 -0.003204 0.079894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/bearingstrap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="skateboard-bearing__13__1">
+  <inertial>
+    <origin xyz="-5.344009461616395e-07 -2.7670256591907916e-07 0.0035000974301508114" rpy="0 0 0"/>
+    <mass value="0.00230907060038848"/>
+    <inertia ixx="8.85143780201005e-08" iyy="8.85143729253599e-08" izz="1.58171331574464e-07" ixy="2.213890014238565e-17" iyz="1.270549420881451e-20" ixz="-1.815902646079472e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.243908 0.011761 0.089894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/skateboard-bearing__13__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.243908 0.011761 0.089894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/skateboard-bearing__13__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="skateboard-bearing__14__1">
+  <inertial>
+    <origin xyz="1.0766004355788894e-06 -2.767025618789082e-07 -0.0034999030117111862" rpy="0 0 0"/>
+    <mass value="0.00230907060038848"/>
+    <inertia ixx="8.85143780200971e-08" iyy="8.85143729253328e-08" izz="1.58171331574464e-07" ixy="2.213720607649114e-17" iyz="5.929230630780102e-21" ixz="-1.815902646079472e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.243913 0.011761 0.069894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/skateboard-bearing__14__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.243913 0.011761 0.069894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/skateboard-bearing__14__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="conjstraint-knee-test-oute_MIR_1">
+  <inertial>
+    <origin xyz="0.038832382755675326 0.0017445678562804916 0.01568925935066031" rpy="0 0 0"/>
+    <mass value="0.0865582353587431"/>
+    <inertia ixx="0.00010041660399327" iyy="0.000103528682821977" izz="0.000197472941643741" ixy="-6.8554296120357e-05" iyz="-1.9459818251956e-06" ixz="-6.9972122304857e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.243913 0.011761 0.069894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/conjstraint-knee-test-oute_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.243913 0.011761 0.069894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/conjstraint-knee-test-oute_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="conjstraint-knee-test-oute_1">
+  <inertial>
+    <origin xyz="0.03882873568951309 0.001764800123750413 -0.015645362395750678" rpy="0 0 0"/>
+    <mass value="0.0861779978747358"/>
+    <inertia ixx="9.97456542874626e-05" iyy="0.000102817430627466" izz="0.000196116535799397" ixy="-6.81072470902851e-05" iyz="1.91966294223388e-06" ixz="1.39286679666246e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.243908 0.011761 0.089894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/conjstraint-knee-test-oute_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.243908 0.011761 0.089894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidrightleg_description/meshes/conjstraint-knee-test-oute_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="-0.191553 0.380845 -0.16988" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="RMD-X10-S2_MIR4__3_Rotor_1"/>
+</joint>
+
+<joint name="Revolute 2" type="continuous">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__3_Rotor_1"/>
+  <child link="RMD-X10-S2_MIR4__3_Stator_1"/>
+  <axis xyz="0.000261 0.0 -1.0"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="-0.018204 -0.011249 -5e-06" rpy="0 0 0"/>
+  <parent link="hip-motor-bracket-v5-right_MIR_1"/>
+  <child link="leg-pitch-elastic__1__1"/>
+</joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="-0.030054 -0.027361 -8e-06" rpy="0 0 0"/>
+  <parent link="hip-motor-bracket-v5-right_MIR_1"/>
+  <child link="leg-pitch-elastic__3__1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="0.063769 -0.071537 1.7e-05" rpy="0 0 0"/>
+  <parent link="hip-motor-bracket-v5-right_MIR_1"/>
+  <child link="leg-pitch-elastic__2__1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="0.051919 -0.087649 1.3e-05" rpy="0 0 0"/>
+  <parent link="hip-motor-bracket-v5-right_MIR_1"/>
+  <child link="leg-pitch-elastic_1"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="-0.052999 0.000308 0.001986" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__3_Stator_1"/>
+  <child link="hip-motor-bracket-v5-right_MIR_1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="0.009943 -0.031211 -0.008997" rpy="0 0 0"/>
+  <parent link="hip-motor-bracket-v5-right_MIR_1"/>
+  <child link="innner-thigh-magnet-encoder__1__1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="0.052999 -0.000308 0.002014" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__3_Stator_1"/>
+  <child link="knee-bend-motor-bracket-hip_1"/>
+</joint>
+
+<joint name="Rigid 11" type="fixed">
+  <origin xyz="0.052983 -0.000308 0.061014" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__3_Stator_1"/>
+  <child link="knee-bend-motor-bracket-hip__1__1"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="-0.035368 -0.048089 -9e-06" rpy="0 0 0"/>
+  <parent link="hip-motor-bracket-v5-right_MIR_1"/>
+  <child link="RMD-X10-S2_MIR4Stator_1"/>
+</joint>
+
+<joint name="Revolute 13" type="continuous">
+  <origin xyz="0.016068 -0.050501 0.061004" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4Stator_1"/>
+  <child link="RMD-X10-S2_MIR4Rotor_1"/>
+  <axis xyz="-0.000261 0.0 1.0"/>
+</joint>
+
+<joint name="Rigid 14" type="fixed">
+  <origin xyz="-0.03693 -0.050192 0.05899" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4Stator_1"/>
+  <child link="thigh-outer-encoder-mount__1__1"/>
+</joint>
+
+<joint name="Rigid 15" type="fixed">
+  <origin xyz="-0.000602 -0.10081 0.059" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4Stator_1"/>
+  <child link="limit-bracket-knee_1"/>
+</joint>
+
+<joint name="Rigid 16" type="fixed">
+  <origin xyz="0.007004 0.009544 0.059002" rpy="0 0 0"/>
+  <parent link="leg-pitch-elastic__1__1"/>
+  <child link="hip-motor-bracket-v5-right_MIR__1__1"/>
+</joint>
+
+<joint name="Rigid 17" type="fixed">
+  <origin xyz="0.076901 0.022947 -0.00217" rpy="0 0 0"/>
+  <parent link="limit-bracket-knee_1"/>
+  <child link="NO-NC_Bump_Switch__1__1"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="0.002159 -0.014269 -0.00219" rpy="0 0 0"/>
+  <parent link="limit-bracket-knee_1"/>
+  <child link="NO-NC_Bump_Switch_1"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4Rotor_1"/>
+  <child link="hip-ex-al-base_MIR_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="-7e-06 0.0 0.027" rpy="0 0 0"/>
+  <parent link="hip-ex-al-base_MIR_1"/>
+  <child link="motorcap-KNEE_MIR_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="0.008622 0.020631 0.010002" rpy="0 0 0"/>
+  <parent link="motorcap-KNEE_MIR_1"/>
+  <child link="2020_300mm__1__1"/>
+</joint>
+
+<joint name="Rigid 22" type="fixed">
+  <origin xyz="-0.000659 0.009657 0.02" rpy="0 0 0"/>
+  <parent link="motorcap-KNEE_MIR_1"/>
+  <child link="magmount__1__1"/>
+</joint>
+
+<joint name="Rigid 23" type="fixed">
+  <origin xyz="0.000337 -0.300666 -0.01825" rpy="0 0 0"/>
+  <parent link="2020_300mm__1__1"/>
+  <child link="multiplex-stack_1"/>
+</joint>
+
+<joint name="Rigid 24" type="fixed">
+  <origin xyz="0.002084 -0.300547 -0.019999" rpy="0 0 0"/>
+  <parent link="2020_300mm__1__1"/>
+  <child link="thigh-nub_1"/>
+</joint>
+
+<joint name="Rigid 25" type="fixed">
+  <origin xyz="0.002084 -0.300547 -0.019999" rpy="0 0 0"/>
+  <parent link="2020_300mm__1__1"/>
+  <child link="knee-lock-2-b_1"/>
+</joint>
+
+<joint name="Rigid 26" type="fixed">
+  <origin xyz="0.002079 -0.300547 1e-06" rpy="0 0 0"/>
+  <parent link="2020_300mm__1__1"/>
+  <child link="knee-lock-2_1"/>
+</joint>
+
+<joint name="Rigid 27" type="fixed">
+  <origin xyz="0.010312 -0.29999 -0.009997" rpy="0 0 0"/>
+  <parent link="2020_300mm__1__1"/>
+  <child link="bearingstrap__1__1"/>
+</joint>
+
+<joint name="Revolute 28" type="continuous">
+  <origin xyz="0.001017 -0.014965 -0.01" rpy="0 0 0"/>
+  <parent link="bearingstrap__1__1"/>
+  <child link="skateboard-bearing__13__1"/>
+  <axis xyz="0.000261 -0.0 -1.0"/>
+</joint>
+
+<joint name="Revolute 29" type="continuous">
+  <origin xyz="0.001012 -0.014965 0.01" rpy="0 0 0"/>
+  <parent link="bearingstrap__1__1"/>
+  <child link="skateboard-bearing__14__1"/>
+  <axis xyz="-0.000261 0.0 1.0"/>
+</joint>
+
+<joint name="Rigid 30" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="skateboard-bearing__14__1"/>
+  <child link="conjstraint-knee-test-oute_MIR_1"/>
+</joint>
+
+<joint name="Rigid 31" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="skateboard-bearing__13__1"/>
+  <child link="conjstraint-knee-test-oute_1"/>
+</joint>
+
+</robot>

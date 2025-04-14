@@ -1,0 +1,2438 @@
+<?xml version="1.0" ?>
+<robot name="humanoidpelvicgirdle" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find humanoidpelvicgirdle_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find humanoidpelvicgirdle_description)/urdf/humanoidpelvicgirdle.trans" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.14250080825099 -0.1711937198153 0.059689015822594" rpy="0 0 0"/>
+    <mass value="0.00197292018645444"/>
+    <inertia ixx="1.57833603342474e-08" iyy="1.20019297324486e-08" izz="1.20019319003312e-08" ixy="-1.202934914222922e-13" iyz="1.046661672263194e-16" ixz="9.857891514533906e-13"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque2550255"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lumbare_1">
+  <inertial>
+    <origin xyz="0.015013908729022599 -0.006651333878704202 8.561757265178327e-06" rpy="0 0 0"/>
+    <mass value="0.117280614244734"/>
+    <inertia ixx="0.000113328062124974" iyy="9.99043911133089e-05" izz="3.00428976883439e-05" ixy="-5.5018452432094e-07" iyz="-5.22690839553728e-08" ixz="2.21202860024253e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.140001 0.171194 -0.05969" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/lumbare_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="0.140001 0.171194 -0.05969" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/lumbare_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bearing-rocker-rear__1__1">
+  <inertial>
+    <origin xyz="-4.051960521583853e-06 1.0776773147785912e-05 0.014999619437497086" rpy="0 0 0"/>
+    <mass value="0.0241564195301387"/>
+    <inertia ixx="3.78361649031544e-06" iyy="4.82675908545724e-06" izz="5.36816065557105e-06" ixy="3.307880293464127e-11" iyz="4.03804361150985e-10" ixz="-4.13065396286365e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125015 0.187328 -0.112706" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/bearing-rocker-rear__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125015 0.187328 -0.112706" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/bearing-rocker-rear__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bearing-rocker-rear_1">
+  <inertial>
+    <origin xyz="4.398940962060949e-06 -1.1656552578204193e-05 -0.015000338115829372" rpy="0 0 0"/>
+    <mass value="0.0241564195301387"/>
+    <inertia ixx="3.78361649031533e-06" iyy="4.82675908545729e-06" izz="5.36816065557083e-06" ixy="3.307880282622105e-11" iyz="4.03804360981578e-10" ixz="-4.13065396337187e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.124988 0.187407 -0.006706" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/bearing-rocker-rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.124988 0.187407 -0.006706" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/bearing-rocker-rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="inner-rear-rocker-bracket_1">
+  <inertial>
+    <origin xyz="0.004964601169662686 -0.023458406170343143 -0.004666761650881026" rpy="0 0 0"/>
+    <mass value="0.0149027022461088"/>
+    <inertia ixx="4.85125754917702e-06" iyy="2.20455610523584e-06" izz="2.93635625573253e-06" ixy="1.42364305221636e-07" iyz="-1.093198172475e-06" ixz="3.04454230849903e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.106983 0.179419 0.008296" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/inner-rear-rocker-bracket_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.106983 0.179419 0.008296" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/inner-rear-rocker-bracket_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butt-adapter-large-motor__1__1">
+  <inertial>
+    <origin xyz="-0.011499599475764566 2.8189050083060607e-07 -3.0285352733555593e-06" rpy="0 0 0"/>
+    <mass value="0.0200429724894403"/>
+    <inertia ixx="3.03337332289836e-06" iyy="2.41874531077617e-06" izz="2.38175000247969e-06" ixy="-1.954512658490504e-11" iyz="-2.759748387524659e-11" ixz="1.69872254951405e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.142984 0.187418 0.008299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-adapter-large-motor__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.142984 0.187418 0.008299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-adapter-large-motor__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bearing-torso-rocker-mount-rear_1">
+  <inertial>
+    <origin xyz="-0.004457273495875075 -0.020163860532738748 -0.003980601886465481" rpy="0 0 0"/>
+    <mass value="0.014516614019081"/>
+    <inertia ixx="5.20818565552983e-06" iyy="2.0000626944661e-06" izz="3.40104897241108e-06" ixy="7.07568707618289e-10" iyz="-1.10657229209364e-06" ixz="1.43801045322374e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.165983 0.179417 0.008311" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/bearing-torso-rocker-mount-rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.165983 0.179417 0.008311" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/bearing-torso-rocker-mount-rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="inner-rear-rocker-bracket_MIR_1">
+  <inertial>
+    <origin xyz="0.004962707316387149 -0.023450982987579416 0.004705069037883952" rpy="0 0 0"/>
+    <mass value="0.0149027022461089"/>
+    <inertia ixx="4.85128888319053e-06" iyy="2.20781921407738e-06" izz="2.93306181203031e-06" ixy="1.41749250156436e-07" iyz="1.09435894371371e-06" ixz="-2.96581489559302e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.107019 0.179318 -0.127704" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/inner-rear-rocker-bracket_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.107019 0.179318 -0.127704" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/inner-rear-rocker-bracket_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butt-adapter-large-motor_1">
+  <inertial>
+    <origin xyz="-0.011500050377145604 7.152162328771805e-07 -3.0709819154872697e-06" rpy="0 0 0"/>
+    <mass value="0.0200429724894403"/>
+    <inertia ixx="3.03337332289814e-06" iyy="2.41874531077644e-06" izz="2.38175000247926e-06" ixy="-1.954512691016569e-11" iyz="-2.759748386847033e-11" ixz="1.69872255042884e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.143019 0.187317 -0.127701" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-adapter-large-motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.143019 0.187317 -0.127701" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-adapter-large-motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bearing-torso-rocker-mount-rear_MIR_1">
+  <inertial>
+    <origin xyz="-0.0044588068688973526 -0.020157468768245007 0.004008321937005871" rpy="0 0 0"/>
+    <mass value="0.0145166140190811"/>
+    <inertia ixx="5.208186663841e-06" iyy="2.00336708135868e-06" izz="3.39774357720809e-06" ixy="1.28685340053218e-10" iyz="1.10865738628515e-06" ixz="-4.95645503210008e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.166019 0.179316 -0.127689" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/bearing-torso-rocker-mount-rear_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.166019 0.179316 -0.127689" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/bearing-torso-rocker-mount-rear_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-S2_MIR4__1_Stator_1">
+  <inertial>
+    <origin xyz="-0.029814399326835647 -0.04213931603669818 -0.030882240102709804" rpy="0 0 0"/>
+    <mass value="0.129422420703688"/>
+    <inertia ixx="0.000308150704838786" iyy="0.000243401437992549" izz="0.000238600479657217" ixy="-1.32645701348983e-06" iyz="1.73815079329825e-06" ixz="-4.1094067718692e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.107026 0.220422 -0.151888" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-S2_MIR4__1_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.107026 0.220422 -0.151888" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-S2_MIR4__1_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butt-mag_1">
+  <inertial>
+    <origin xyz="-0.009303598241699629 -0.016382975337149525 -0.007960240928721718" rpy="0 0 0"/>
+    <mass value="0.0129510896420018"/>
+    <inertia ixx="4.86593516087382e-06" iyy="3.5820994653534e-06" izz="1.99113551344575e-06" ixy="-5.5433622210728e-10" iyz="-8.92422652920208e-10" ixz="-6.52761940966829e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.166032 0.246906 -0.171145" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-mag_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.166032 0.246906 -0.171145" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-mag_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-S2_MIR4__2_Stator_1">
+  <inertial>
+    <origin xyz="-0.0298224689528043 -0.05223868345573501 -0.00021643276535368377" rpy="0 0 0"/>
+    <mass value="0.129422420703688"/>
+    <inertia ixx="0.000308150256466957" iyy="0.00024339624789745" izz="0.000238606118124148" ixy="-1.32493266925566e-06" iyz="-1.7459855495835e-06" ixz="4.49097805071678e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.106986 0.210414 0.001272" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-S2_MIR4__2_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.106986 0.210414 0.001272" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-S2_MIR4__2_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butt-mag__1__1">
+  <inertial>
+    <origin xyz="-0.009307673480473788 -0.016371661528638837 0.007980659466157579" rpy="0 0 0"/>
+    <mass value="0.0129510896420018"/>
+    <inertia ixx="4.86525376513808e-06" iyy="3.58209939998203e-06" izz="1.99181697455334e-06" ixy="4.73152134659871e-10" iyz="-9.33733312294838e-10" ixz="6.54260403379765e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.165974 0.247072 0.051667" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-mag__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.165974 0.247072 0.051667" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-mag__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-motor-bracket-v5-right_MIR_MIR2_1">
+  <inertial>
+    <origin xyz="-0.004508757400730257 -0.04285547128390793 0.029878461863052524" rpy="0 0 0"/>
+    <mass value="0.0538430687726528"/>
+    <inertia ixx="8.88309403135326e-05" iyy="1.57736492294779e-05" izz="7.3784174706955e-05" ixy="-2.33535067846458e-09" iyz="4.32656083964146e-08" ixz="3.92395106511845e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.165995 0.220511 -0.029872" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-motor-bracket-v5-right_MIR_MIR2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.165995 0.220511 -0.029872" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-motor-bracket-v5-right_MIR_MIR2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="butt-center-rear-bracket_1">
+  <inertial>
+    <origin xyz="0.004106943183798131 -0.010673824252193403 0.029856070681211686" rpy="0 0 0"/>
+    <mass value="0.0229557280428144"/>
+    <inertia ixx="1.02888772902997e-05" iyy="7.69853486155066e-06" izz="3.48463978724531e-06" ixy="1.04080865870977e-07" iyz="-3.12299971690425e-09" ixz="1.69652629279453e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.106995 0.220513 -0.029888" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-center-rear-bracket_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.106995 0.220513 -0.029888" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/butt-center-rear-bracket_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="center-waist-aluminum-strap_1">
+  <inertial>
+    <origin xyz="-4.966215997090351e-06 0.005174650257925489 0.020216538874073438" rpy="0 0 0"/>
+    <mass value="0.00378881996438305"/>
+    <inertia ixx="8.95995128770454e-07" iyy="9.09842743033392e-07" izz="6.23546881984086e-08" ixy="6.051806869218981e-13" iyz="-6.31654108324811e-10" ixz="2.17303481313974e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.101497 0.212506 -0.03951" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/center-waist-aluminum-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.101497 0.212506 -0.03951" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/center-waist-aluminum-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="100m__3__1">
+  <inertial>
+    <origin xyz="0.0500006791988188 0.00999812568243022 5.663460121436981e-06" rpy="0 0 0"/>
+    <mass value="0.04"/>
+    <inertia ixx="2.66666887378374e-06" iyy="3.46666666342831e-05" izz="3.46666644919337e-05" ixy="1.0179721440795e-09" iyz="2.653774552538457e-13" ixz="-8.34214982606708e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.114003 0.228368 -0.059739" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.114003 0.228368 -0.059739" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="100m_1">
+  <inertial>
+    <origin xyz="0.04999967575019884 -2.0554806302031103e-06 1.273267922688448e-05" rpy="0 0 0"/>
+    <mass value="0.04"/>
+    <inertia ixx="2.66666887378374e-06" iyy="3.46666666342833e-05" izz="3.46666644919333e-05" ixy="1.01797214424213e-09" iyz="2.653774552538457e-13" ixz="-8.34214982605352e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.014002 0.218371 -0.059758" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.014002 0.218371 -0.059758" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="2020_200mm__1__1">
+  <inertial>
+    <origin xyz="0.09999967747450955 -3.4648990998864537e-06 2.569806965750654e-05" rpy="0 0 0"/>
+    <mass value="0.0391834948891241"/>
+    <inertia ixx="3.19334864931371e-06" iyy="0.000132208319375407" izz="0.000132208310737573" ixy="4.10417673685302e-09" iyz="1.069926590900605e-12" ixz="-3.36331966238344e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.114002 0.218368 -0.059732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_200mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.114002 0.218368 -0.059732" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_200mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hips-front-mount_1">
+  <inertial>
+    <origin xyz="-0.023148813142749705 0.012445070155796156 -1.4998740947146094e-05" rpy="0 0 0"/>
+    <mass value="0.0191947187361426"/>
+    <inertia ixx="2.44991075703973e-06" iyy="4.93418880702015e-06" izz="6.12865796051343e-06" ixy="-1.15882055151418e-06" iyz="5.8784558663416e-10" ixz="-9.308255594531623e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.085998 0.208375 -0.059776" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hips-front-mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.085998 0.208375 -0.059776" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hips-front-mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="naval__1__1">
+  <inertial>
+    <origin xyz="0.012077970516442368 0.005748449342290712 0.009896317428883784" rpy="0 0 0"/>
+    <mass value="0.0600129078763968"/>
+    <inertia ixx="2.75424840513639e-05" iyy="2.88727972826195e-05" izz="1.47508425746212e-05" ixy="-2.06851342475912e-06" iyz="-4.30705780409425e-08" ixz="-6.64473111801301e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075001 0.187382 -0.049758" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/naval__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075001 0.187382 -0.049758" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/naval__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front-bearing-strap__1__1">
+  <inertial>
+    <origin xyz="0.0033641676122700553 2.5252365787320485e-07 6.486381132209118e-07" rpy="0 0 0"/>
+    <mass value="0.0218841184667923"/>
+    <inertia ixx="4.15911012349225e-06" iyy="9.28555096138122e-06" izz="6.2554268560706e-06" ixy="1.64101647635168e-10" iyz="-2.25873984999788e-09" ixz="-5.4654906848136e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.085998 0.218375 -0.059784" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-bearing-strap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.085998 0.218375 -0.059784" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-bearing-strap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="skateboard-bearing__5__1">
+  <inertial>
+    <origin xyz="-1.1831417488783469e-07 -0.0034999978012551225 2.787040643249805e-06" rpy="0 0 0"/>
+    <mass value="0.00230907060038848"/>
+    <inertia ixx="8.85143733589052e-08" iyy="1.58171297489994e-07" izz="8.85144116710322e-08" ixy="2.229443870184825e-12" iyz="-5.195188743651181e-11" ixz="-1.662681629746934e-15"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096998 0.208375 -0.059779" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096998 0.208375 -0.059779" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="skateboard-bearing__6__1">
+  <inertial>
+    <origin xyz="4.656071285330521e-07 0.0035000058210604146 -2.5172348807681044e-06" rpy="0 0 0"/>
+    <mass value="0.00230907060038848"/>
+    <inertia ixx="8.85143733588781e-08" iyy="1.58171297489998e-07" izz="8.85144116710322e-08" ixy="2.229443870184825e-12" iyz="-5.195188743312368e-11" ixz="-1.662681629746934e-15"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096997 0.228375 -0.059794" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096997 0.228375 -0.059794" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="center-bracket-waist-hips_1">
+  <inertial>
+    <origin xyz="-4.02415511607801e-08 -0.012304773493843929 9.27036730060532e-06" rpy="0 0 0"/>
+    <mass value="0.0168974950033748"/>
+    <inertia ixx="3.26590390788725e-06" iyy="3.03844967683566e-06" izz="1.45390186424691e-06" ixy="-6.927604974046875e-12" iyz="-1.18181141253921e-09" ixz="4.72337236041994e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096997 0.228375 -0.059794" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/center-bracket-waist-hips_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096997 0.228375 -0.059794" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/center-bracket-waist-hips_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="groin-square__1__1">
+  <inertial>
+    <origin xyz="0.005053276703789328 -0.010152403348598654 -0.00999122951752511" rpy="0 0 0"/>
+    <mass value="0.0144297947460342"/>
+    <inertia ixx="3.5730495884271e-06" iyy="1.90591228286233e-06" izz="1.90560879679462e-06" ixy="-7.47913489696156e-09" iyz="-2.176011703724362e-12" ixz="4.40227466256432e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.106994 0.243368 -0.069808" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/groin-square__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.106994 0.243368 -0.069808" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/groin-square__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="groin-square_1">
+  <inertial>
+    <origin xyz="-0.004946722261624653 -0.010152448999680541 -0.009994050283256728" rpy="0 0 0"/>
+    <mass value="0.0144297947460342"/>
+    <inertia ixx="3.57304958842645e-06" iyy="1.90591228286242e-06" izz="1.90560879679462e-06" ixy="-7.47913489706998e-09" iyz="-2.176011676619308e-12" ixz="4.40227466229326e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.086994 0.243367 -0.069803" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/groin-square_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.086994 0.243367 -0.069803" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/groin-square_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="100m__1__1">
+  <inertial>
+    <origin xyz="-7.666258708682872e-07 -0.009999983451312255 7.197026067468082e-06" rpy="0 0 0"/>
+    <mass value="0.04"/>
+    <inertia ixx="3.46666644923297e-05" iyy="3.46666488661138e-05" izz="2.66668664155537e-06" ixy="6.221285205748606e-12" iyz="-2.38666574374751e-08" ixz="8.34138595687457e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096997 0.253375 -0.059813" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096997 0.253375 -0.059813" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front-bearing-strap__2__1">
+  <inertial>
+    <origin xyz="-6.714498490684173e-07 2.82182004524012e-06 0.0033646740722270557" rpy="0 0 0"/>
+    <mass value="0.0218841184667923"/>
+    <inertia ixx="9.28555229880233e-06" iyy="6.25542415167948e-06" izz="4.15911149046215e-06" ixy="-9.479879240544692e-11" iyz="-1.56350951814339e-09" ixz="1.33680494844861e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.096983 0.263338 -0.10982" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-bearing-strap__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.096983 0.263338 -0.10982" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-bearing-strap__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front-bearing-strap_1">
+  <inertial>
+    <origin xyz="1.1494234597314579e-06 -2.7887230267253926e-06 -0.0033642800171657158" rpy="0 0 0"/>
+    <mass value="0.0218841184667923"/>
+    <inertia ixx="9.28555229910135e-06" iyy="6.25542415183045e-06" izz="4.15911149001286e-06" ixy="-9.717268157662107e-11" iyz="-1.56351010939949e-09" ixz="1.33594202485495e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.097009 0.263412 -0.00982" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-bearing-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.097009 0.263412 -0.00982" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-bearing-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="skateboard-bearing__2__1">
+  <inertial>
+    <origin xyz="-0.003499667621974109 3.05603028438739e-07 -1.1275131960586382e-06" rpy="0 0 0"/>
+    <mass value="0.00230907060038848"/>
+    <inertia ixx="1.58171331504018e-07" iyy="8.85143729944981e-08" izz="8.85143780214625e-08" ixy="-2.215901507424123e-12" iyz="-5.773783144299993e-16" ixz="1.815902568830068e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.10698 0.26333 -0.120823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.10698 0.26333 -0.120823" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="skateboard-bearing__3__1">
+  <inertial>
+    <origin xyz="0.0035003328263464167 -2.808457734704284e-07 4.834883201854101e-07" rpy="0 0 0"/>
+    <mass value="0.00230907060038848"/>
+    <inertia ixx="1.58171331503991e-07" iyy="8.85143729944981e-08" izz="8.85143780214354e-08" ixy="-2.215901507424123e-12" iyz="-5.773918669571554e-16" ixz="1.815902568830068e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.08698 0.263329 -0.120818" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.08698 0.263329 -0.120818" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="skateboard-bearing__1__1">
+  <inertial>
+    <origin xyz="-0.003499866078088179 3.139431491994138e-07 -1.0894361851855345e-06" rpy="0 0 0"/>
+    <mass value="0.00230907060038848"/>
+    <inertia ixx="1.58171331504018e-07" iyy="8.85143729945083e-08" izz="8.85143780214896e-08" ixy="-2.215901507424123e-12" iyz="-5.773971609130757e-16" ixz="1.815902568581252e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.107012 0.263421 0.001177" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.107012 0.263421 0.001177" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="skateboard-bearing__4__1">
+  <inertial>
+    <origin xyz="0.0035001343702322774 -2.7250558920499657e-07 5.215653947835807e-07" rpy="0 0 0"/>
+    <mass value="0.00230907060038848"/>
+    <inertia ixx="1.58171331503991e-07" iyy="8.85143733580311e-08" izz="8.85143776579295e-08" ixy="-2.215901500647859e-12" iyz="-5.779392619993185e-16" ixz="1.815902578052139e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.087012 0.26342 0.001182" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.087012 0.26342 0.001182" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/skateboard-bearing__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-S2_MIR4__1_Rotor_1">
+  <inertial>
+    <origin xyz="-0.010665636168260662 1.5246976385885347e-05 4.0222466801548284e-06" rpy="0 0 0"/>
+    <mass value="0.0300779967690979"/>
+    <inertia ixx="9.54333092827034e-06" iyy="7.29299630371997e-06" izz="7.25346897101613e-06" ixy="-2.7411619228819e-09" iyz="2.52160042998016e-08" ixz="-6.99093623648169e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.10502 0.263323 -0.120768" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-S2_MIR4__1_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.10502 0.263323 -0.120768" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-S2_MIR4__1_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="yaw-waist-adapter-motor-exal_MIR1__1__1">
+  <inertial>
+    <origin xyz="0.012766304525695507 -4.811277808380865e-07 2.976496579931709e-06" rpy="0 0 0"/>
+    <mass value="0.0374132377219994"/>
+    <inertia ixx="1.42692013930744e-05" iyy="7.23303028289202e-06" izz="1.27237667642871e-05" ixy="3.545163576763877e-11" iyz="-9.94597164262305e-07" ixz="3.71243019886645e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.10452 0.263323 -0.120768" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/yaw-waist-adapter-motor-exal_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.10452 0.263323 -0.120768" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/yaw-waist-adapter-motor-exal_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor-yaw-cap__3__1">
+  <inertial>
+    <origin xyz="0.004998338344220352 -0.016910188428680556 0.006170772735798344" rpy="0 0 0"/>
+    <mass value="0.0175520946016762"/>
+    <inertia ixx="5.59129043793205e-06" iyy="2.20359734368444e-06" izz="3.68022826201199e-06" ixy="-3.803854106698701e-11" iyz="-2.6747830596599e-07" ixz="4.89690115280245e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.074518 0.246414 -0.114606" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.074518 0.246414 -0.114606" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="100m__4__1">
+  <inertial>
+    <origin xyz="-0.010004661138486665 -0.003284711254218864 0.018710862352918148" rpy="0 0 0"/>
+    <mass value="0.04"/>
+    <inertia ixx="3.46666644655946e-05" iyy="3.3709894751037e-05" izz="3.62344078336718e-06" ixy="-1.45117994736817e-09" iyz="5.44988868654149e-06" ixz="8.26609670377112e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.074515 0.260039 -0.102062" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.074515 0.260039 -0.102062" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="2020_100mm__3__1">
+  <inertial>
+    <origin xyz="1.3338861513348399e-05 0.008645288745797619 -0.04924713764707936" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.71247900735507e-05" iyy="1.66605139436196e-05" izz="2.06094814130409e-06" ixy="-7.04190568812275e-10" iyz="2.64457913783534e-06" ixz="4.01115475041772e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084533 0.271969 -0.17002" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084533 0.271969 -0.17002" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="2020_100mm__5__1">
+  <inertial>
+    <origin xyz="2.255591740468743e-07 -3.9259858347628906e-07 -2.898075188439986e-07" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.71247900735338e-05" iyy="1.66605139436077e-05" izz="2.06094814130366e-06" ixy="-7.04190568866486e-10" iyz="2.64457913783079e-06" ixz="4.01115475047193e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084533 0.271969 -0.17002" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084533 0.271969 -0.17002" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="6band__3__1">
+  <inertial>
+    <origin xyz="-0.0001165974860859037 -0.003632130583235582 0.027061831292523958" rpy="0 0 0"/>
+    <mass value="0.0379563926535415"/>
+    <inertia ixx="1.19198395379574e-05" iyy="1.38886448263424e-05" izz="1.25060022935545e-05" ixy="3.67481416183426e-08" iyz="3.05685574895388e-07" ixz="-5.60787262069914e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084533 0.26212 -0.171749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/6band__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084533 0.26212 -0.171749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/6band__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="side-band-brick-double__1__1">
+  <inertial>
+    <origin xyz="0.004157135173465942 -0.029548013350212676 -0.005186653610504521" rpy="0 0 0"/>
+    <mass value="0.0192782989057222"/>
+    <inertia ixx="8.55180024798277e-06" iyy="3.58724353496378e-06" izz="5.25739064828612e-06" ixy="-7.906292265845438e-11" iyz="-3.02532006222047e-07" ixz="8.4920290807991e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.10454 0.247176 -0.202288" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/side-band-brick-double__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.10454 0.247176 -0.202288" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/side-band-brick-double__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="side-band-brick-double_1">
+  <inertial>
+    <origin xyz="-0.004157108687691133 -0.029548021325816937 -0.005188393381026557" rpy="0 0 0"/>
+    <mass value="0.0192782989057222"/>
+    <inertia ixx="8.5518002479832e-06" iyy="3.58724353496378e-06" izz="5.2573906482859e-06" ixy="-7.906292260424427e-11" iyz="-3.02532006222047e-07" ixz="8.4920290797149e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.06454 0.247177 -0.202298" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/side-band-brick-double_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.06454 0.247177 -0.202298" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/side-band-brick-double_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="center-band-brick__6__1">
+  <inertial>
+    <origin xyz="0.010000295920794433 0.00933925135857655 0.0016427620433722423" rpy="0 0 0"/>
+    <mass value="0.00941313992841884"/>
+    <inertia ixx="2.00419133289885e-06" iyy="1.85657938212019e-06" izz="5.18845902095465e-07" ixy="-6.781719267103317e-11" iyz="2.42318277529239e-07" ixz="3.94609670948624e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.09454 0.306272 -0.191915" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/center-band-brick__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.09454 0.306272 -0.191915" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/center-band-brick__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-al-bracket_MIR_1">
+  <inertial>
+    <origin xyz="0.02864244263016219 0.0019294236355747174 0.053187245801758196" rpy="0 0 0"/>
+    <mass value="0.0843233109750716"/>
+    <inertia ixx="0.000120247653801087" iyy="0.000156350982667023" izz="4.66547705289134e-05" ixy="-2.1783463006542e-06" iyz="1.91388174195974e-05" ixz="-3.42572551588092e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084507 0.244829 -0.073255" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-bracket_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084507 0.244829 -0.073255" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-bracket_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-al-bracket__1__1">
+  <inertial>
+    <origin xyz="0.02864203998205766 -0.019929833160490573 0.04934954268309309" rpy="0 0 0"/>
+    <mass value="0.0843233882685759"/>
+    <inertia ixx="0.000120247686324158" iyy="0.000155882770411304" izz="4.71234434932539e-05" ixy="3.21388006262039e-06" iyz="2.04323317878289e-05" ixz="-2.47910709550879e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084506 0.264527 -0.069797" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-bracket__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084506 0.264527 -0.069797" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-bracket__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-V3__1_Stator_1">
+  <inertial>
+    <origin xyz="0.05299989142222803 -0.01717435821204119 -0.002509006684909887" rpy="0 0 0"/>
+    <mass value="0.117408857580246"/>
+    <inertia ixx="0.000160186895040272" iyy="0.000260222940221496" izz="0.000166976554957515" ixy="-1.65432884120689e-09" iyz="1.77436711718557e-05" ixz="-7.99746917304269e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.046522 0.247152 -0.13276" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-V3__1_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.046522 0.247152 -0.13276" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-V3__1_Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hard-limit_1">
+  <inertial>
+    <origin xyz="-0.005074192239978868 -0.006086029788289871 0.00041137377241040607" rpy="0 0 0"/>
+    <mass value="0.0117891311918386"/>
+    <inertia ixx="2.57530344621357e-06" iyy="4.47439005802719e-06" izz="2.25413800609476e-06" ixy="-2.33592512110457e-07" iyz="2.69610530102393e-07" ixz="1.90077771772586e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.049348 0.288 -0.157243" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hard-limit_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.049348 0.288 -0.157243" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hard-limit_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-front-bracket-strap-motor__2__1">
+  <inertial>
+    <origin xyz="0.005231292988403774 0.007663374852923871 -0.011841032365664028" rpy="0 0 0"/>
+    <mass value="0.0146860819884148"/>
+    <inertia ixx="2.19315157673223e-06" iyy="3.87189163637413e-06" izz="2.08833772950172e-06" ixy="1.44045810891773e-07" iyz="3.23062451547558e-07" ixz="-8.20640348681356e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.059478 0.247156 -0.132787" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-front-bracket-strap-motor__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.059478 0.247156 -0.132787" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-front-bracket-strap-motor__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-front-bracket-strap-motor_1">
+  <inertial>
+    <origin xyz="0.0052319389931231725 -0.003171662532312103 -0.013742972730407019" rpy="0 0 0"/>
+    <mass value="0.0146860819884148"/>
+    <inertia ixx="2.1931515767318e-06" iyy="3.87189163637391e-06" izz="2.08833772950162e-06" ixy="1.440458108918e-07" iyz="3.2306245154745e-07" ixz="-8.20640348681316e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.059478 0.282613 -0.126562" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-front-bracket-strap-motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.059478 0.282613 -0.126562" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-front-bracket-strap-motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front-motor-roll-nut__1__1">
+  <inertial>
+    <origin xyz="-0.0015453143262860458 -0.016031485241368548 -0.012786230093987883" rpy="0 0 0"/>
+    <mass value="0.0195643196645984"/>
+    <inertia ixx="4.29779312592117e-06" iyy="2.6300040998293e-06" izz="2.94385259123355e-06" ixy="2.88534206977788e-08" iyz="-5.68552576057446e-08" ixz="-1.64835178546012e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.077478 0.247156 -0.132792" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-motor-roll-nut__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.077478 0.247156 -0.132792" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-motor-roll-nut__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-V3__1_Rotor_1">
+  <inertial>
+    <origin xyz="-8.635486826725526e-06 0.010801354979431688 0.0018805647672205383" rpy="0 0 0"/>
+    <mass value="0.0272814772048107"/>
+    <inertia ixx="6.34702791715023e-06" iyy="8.05866279999644e-06" izz="6.42844058509765e-06" ixy="-6.10832684261965e-09" iyz="2.92461080844014e-07" ixz="2.57459398200519e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006478 0.284582 -0.126203" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-V3__1_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006478 0.284582 -0.126203" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-V3__1_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="2020_100mm__6__1">
+  <inertial>
+    <origin xyz="9.443359313549005e-07 -0.04924688663384891 -0.008645392909942637" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.71247911384936e-05" iyy="2.06094708894554e-06" izz="1.6660513931034e-05" ixy="2.10215720204069e-10" iyz="-2.64457926664572e-06" ixz="3.690506435707539e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006478 0.285074 -0.126116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006478 0.285074 -0.126116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-al-mot_MIR2__1__1">
+  <inertial>
+    <origin xyz="0.016573213463187433 -0.022881357393960966 -0.00401229152080175" rpy="0 0 0"/>
+    <mass value="0.024675938226781"/>
+    <inertia ixx="7.48541941488715e-06" iyy="3.55361579630121e-06" izz="5.07174361544368e-06" ixy="2.09759508190915e-08" iyz="-2.74965823951825e-07" ixz="4.29250097970415e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006478 0.285074 -0.126116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-mot_MIR2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006478 0.285074 -0.126116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-mot_MIR2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-al-mot_MIR2__2__1">
+  <inertial>
+    <origin xyz="-0.016572060667206755 -0.022880300514820373 -0.004020946326798114" rpy="0 0 0"/>
+    <mass value="0.024675938226781"/>
+    <inertia ixx="7.48542058855465e-06" iyy="3.55363340386993e-06" izz="5.0717248342067e-06" ixy="-2.10759668269506e-08" iyz="-2.7501776847657e-07" ixz="-3.09005141342199e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006478 0.285074 -0.126116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-mot_MIR2__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006478 0.285074 -0.126116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-mot_MIR2__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-yaw-chromatic-encoder_1">
+  <inertial>
+    <origin xyz="6.749658245702207e-06 -0.010427010858689578 -0.026179688400816997" rpy="0 0 0"/>
+    <mass value="0.00709011275040898"/>
+    <inertia ixx="1.02439284718227e-06" iyy="6.92524949446271e-07" izz="5.31151361547765e-07" ixy="-3.082476232034068e-11" iyz="7.78471305435216e-08" ixz="1.3094756587469e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006478 0.285074 -0.126116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-yaw-chromatic-encoder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006478 0.285074 -0.126116" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-yaw-chromatic-encoder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="yaw-waist-adapter-motor-exal_MIR1__3__1">
+  <inertial>
+    <origin xyz="-2.67801007257807e-06 0.02829751038506284 0.012312402514463097" rpy="0 0 0"/>
+    <mass value="0.0374132377219994"/>
+    <inertia ixx="7.05842122895612e-06" iyy="1.2939362686207e-05" izz="1.42282145250928e-05" ixy="2.47944567234961e-10" iyz="-2.33463861729283e-07" ixz="-1.87653618420039e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.00648 0.383568 -0.108825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/yaw-waist-adapter-motor-exal_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.00648 0.383568 -0.108825" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/yaw-waist-adapter-motor-exal_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor-yaw-cap__5__1">
+  <inertial>
+    <origin xyz="-0.015586846777717812 -0.007998922054423208 -0.0064847198471600365" rpy="0 0 0"/>
+    <mass value="0.0175520946016762"/>
+    <inertia ixx="2.15663960776444e-06" iyy="3.78292119140262e-06" izz="5.53555524446248e-06" ixy="1.34497620031819e-10" iyz="-3.17473793649717e-07" ixz="-8.90956372155867e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02207 0.343427 -0.105723" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02207 0.343427 -0.105723" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor-yaw-cap_1">
+  <inertial>
+    <origin xyz="-0.015589337419589237 -0.009728467129956897 0.0033647584244824447" rpy="0 0 0"/>
+    <mass value="0.0175520946016762"/>
+    <inertia ixx="2.15663960776357e-06" iyy="3.78292119140248e-06" izz="5.53555524446248e-06" ixy="1.34497620025043e-10" iyz="-3.17473793649934e-07" ixz="-8.90956372159255e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022062 0.348614 -0.135271" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022062 0.348614 -0.135271" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dumRightLeg_1">
+  <inertial>
+    <origin xyz="-0.015589178947041685 -0.009296533370410587 0.0009017480575885528" rpy="0 0 0"/>
+    <mass value="0.0688919713115789"/>
+    <inertia ixx="8.03423567431565e-06" iyy="1.44302646676226e-05" izz="2.17141804877315e-05" ixy="4.62789861500109e-10" iyz="-1.31941543849226e-06" ixz="-3.6230870820587e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02206 0.350343 -0.145121" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/dumRightLeg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque2550255"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02206 0.350343 -0.145121" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/dumRightLeg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="encoder-magnet-leg__1__1">
+  <inertial>
+    <origin xyz="1.4213371310614967e-06 -0.008233539905391052 -0.005149597644239459" rpy="0 0 0"/>
+    <mass value="0.00159858759715307"/>
+    <inertia ixx="8.86124662113766e-08" iyy="2.5008572262631e-08" izz="9.28514081047834e-08" ixy="1.180332818772012e-12" iyz="-1.2289115105926e-08" ixz="-1.495996003196055e-12"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006484 0.341697 -0.09587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/encoder-magnet-leg__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006484 0.341697 -0.09587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/encoder-magnet-leg__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="encoder-butt__1__1">
+  <inertial>
+    <origin xyz="-0.041040208924487995 0.0017238510377537986 -0.009871603911638743" rpy="0 0 0"/>
+    <mass value="0.0238317767008182"/>
+    <inertia ixx="1.48780204447933e-05" iyy="3.50264887647091e-05" izz="2.23890436056211e-05" ixy="2.36333849082469e-06" iyz="2.27919459526416e-06" ixz="-1.35117504708143e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.104538 0.275427 -0.189713" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/encoder-butt__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.104538 0.275427 -0.189713" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/encoder-butt__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-S2_MIR4__2_Rotor_1">
+  <inertial>
+    <origin xyz="-0.010665831923032651 1.66787062478857e-05 -6.1281729886767614e-06" rpy="0 0 0"/>
+    <mass value="0.0300779967690979"/>
+    <inertia ixx="9.54332996679812e-06" iyy="7.30332268608115e-06" izz="7.24314355012978e-06" ixy="-2.98506929146802e-09" iyz="-1.10044479860371e-08" ixz="1.11539417906406e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.104988 0.263414 0.001232" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-S2_MIR4__2_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.104988 0.263414 0.001232" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-S2_MIR4__2_Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="yaw-waist-adapter-motor-exal_MIR1__2__1">
+  <inertial>
+    <origin xyz="0.012766106069581493 -4.7278762732583246e-07 3.014573714488428e-06" rpy="0 0 0"/>
+    <mass value="0.0374132377219994"/>
+    <inertia ixx="1.42692013597461e-05" iyy="7.23600971060443e-06" izz="1.27207873699031e-05" ixy="-4.85155001892987e-10" iyz="1.0027829576729e-06" ixz="4.35559645527998e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.104488 0.263414 0.001232" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/yaw-waist-adapter-motor-exal_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.104488 0.263414 0.001232" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/yaw-waist-adapter-motor-exal_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor-yaw-cap__2__1">
+  <inertial>
+    <origin xyz="0.0049961398881062935 -0.013780180088517668 0.011581810812932851" rpy="0 0 0"/>
+    <mass value="0.0175520946016762"/>
+    <inertia ixx="5.59129042896917e-06" iyy="2.2043986050081e-06" izz="3.67942700965152e-06" ixy="-1.78045953252038e-10" iyz="2.69679697104e-07" ixz="5.06986868100531e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.074484 0.249635 0.012805" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.074484 0.249635 0.012805" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="100m__2__1">
+  <inertial>
+    <origin xyz="-0.009994859594600697 -0.0033127029140610498 -0.018711099569947504" rpy="0 0 0"/>
+    <mass value="0.04"/>
+    <inertia ixx="3.46666646482167e-05" iyy="3.36935689953022e-05" izz="3.6397663564806e-06" ixy="1.40148090702064e-09" iyz="-5.49474334628116e-06" ixz="7.91367415080216e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.074493 0.260102 -0.017484" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.074493 0.260102 -0.017484" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/100m__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="2020_100mm__7__1">
+  <inertial>
+    <origin xyz="-1.2859594617456449e-05 0.008719297085938993 0.04923390043005274" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.71247901619577e-05" iyy="1.66525918089687e-05" izz="2.06887018753188e-06" ixy="6.80073919704857e-10" iyz="-2.66634503149335e-06" ixz="3.84014036303005e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084475 0.272134 0.050461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__7__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084475 0.272134 0.050461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__7__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="2020_100mm__2__1">
+  <inertial>
+    <origin xyz="-3.0207156610784214e-07 1.6550215420352288e-07 3.7049995155191695e-09" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.71247901619377e-05" iyy="1.66525918089598e-05" izz="2.06887018753188e-06" ixy="6.80073922469573e-10" iyz="-2.66634503149151e-06" ixz="3.84014037901187e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084475 0.272134 0.050461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084475 0.272134 0.050461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="6band__4__1">
+  <inertial>
+    <origin xyz="-0.00010200352727010586 -0.0037484103508486633 -0.027484907873649753" rpy="0 0 0"/>
+    <mass value="0.0379563926535414"/>
+    <inertia ixx="1.19198429832509e-05" iyy="1.39233944662105e-05" izz="1.24712492083922e-05" ixy="1.55354066470968e-08" iyz="-2.10197971070472e-07" ixz="-6.52871844955246e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084475 0.262287 0.052205" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/6band__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084475 0.262287 0.052205" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/6band__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="side-band-brick-double__3__1">
+  <inertial>
+    <origin xyz="0.004154726496707395 -0.02954085288111985 0.0052322303914793394" rpy="0 0 0"/>
+    <mass value="0.0192782989057222"/>
+    <inertia ixx="8.55180023784569e-06" iyy="3.58814980355759e-06" izz="5.25648438982982e-06" ixy="-2.37418650928314e-10" iyz="3.05021876300987e-07" ixz="8.68766442899821e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.104466 0.247388 0.082776" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/side-band-brick-double__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.104466 0.247388 0.082776" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/side-band-brick-double__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="side-band-brick-double__2__1">
+  <inertial>
+    <origin xyz="-0.004159517364449694 -0.029539860856734934 0.005230490620959191" rpy="0 0 0"/>
+    <mass value="0.0192782989057222"/>
+    <inertia ixx="8.55180023784548e-06" iyy="3.58814980355751e-06" izz="5.25648438983025e-06" ixy="-2.37418650982524e-10" iyz="3.05021876301041e-07" ixz="8.68766442899821e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.064466 0.24739 0.082766" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/side-band-brick-double__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.064466 0.24739 0.082766" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/side-band-brick-double__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="encoder-butt_1">
+  <inertial>
+    <origin xyz="-0.04104860722389017 0.004371473031633322 0.024615127088927408" rpy="0 0 0"/>
+    <mass value="0.0238317767008182"/>
+    <inertia ixx="1.48639385503999e-05" iyy="3.50133583346501e-05" izz="2.24162559300735e-05" ixy="2.40112190761309e-06" iyz="-2.31402149828336e-06" ixz="1.35013712543091e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.104467 0.278237 0.08493" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/encoder-butt_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.104467 0.278237 0.08493" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/encoder-butt_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="center-band-brick__5__1">
+  <inertial>
+    <origin xyz="0.010001029831238128 0.00933672750437664 -0.001650778667978206" rpy="0 0 0"/>
+    <mass value="0.00941313992841884"/>
+    <inertia ixx="2.00419134101021e-06" iyy="1.85585347178724e-06" izz="5.19571804316501e-07" ixy="5.890928215612594e-11" iyz="-2.44312702167647e-07" ixz="3.78942233901459e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.094471 0.306469 0.072311" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/center-band-brick__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.094471 0.306469 0.072311" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/center-band-brick__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-al-bracket_MIR__1__1">
+  <inertial>
+    <origin xyz="0.02866796412891067 -0.020003368291067802 -0.04930531005002852" rpy="0 0 0"/>
+    <mass value="0.0843233109750716"/>
+    <inertia ixx="0.000120244901051813" iyy="0.000155821334698423" izz="4.71871712467865e-05" ixy="3.2283038124165e-06" iyz="-2.05927660251959e-05" ixz="2.51239491407928e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.084501 0.264542 -0.049751" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-bracket_MIR__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.084501 0.264542 -0.049751" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-bracket_MIR__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-al-bracket_1">
+  <inertial>
+    <origin xyz="0.028670221303454285 0.0018499566527405698 -0.05317501008610957" rpy="0 0 0"/>
+    <mass value="0.0843233882685759"/>
+    <inertia ixx="0.000120244243210881" iyy="0.000156293876182643" izz="4.67157808351892e-05" ixy="-2.16317371494056e-06" iyz="-1.93035259742997e-05" ixz="3.4673228168283e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0845 0.244849 -0.046263" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-bracket_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0845 0.244849 -0.046263" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-bracket_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-V3Stator_1">
+  <inertial>
+    <origin xyz="0.04288451712059121 -0.022602451577021537 -0.028116282755387294" rpy="0 0 0"/>
+    <mass value="0.117408857580246"/>
+    <inertia ixx="0.000160186895119393" iyy="0.000260169797507467" izz="0.00016702969705003" ixy="8.0541023256644e-09" iyz="-1.78826828932922e-05" ixz="-1.94724843459843e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.03637 0.241829 -0.01746" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-V3Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="0.03637 0.241829 -0.01746" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-V3Stator_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hard-limit_MIR_1">
+  <inertial>
+    <origin xyz="-0.00507419120749391 -0.006086952344410312 -0.00040453243347005063" rpy="0 0 0"/>
+    <mass value="0.0117891315641197"/>
+    <inertia ixx="2.57728524481813e-06" iyy="4.47358109468667e-06" izz="2.25296622037487e-06" ixy="-2.3628589422724e-07" iyz="-2.73045083139793e-07" ixz="-1.90025936173311e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.049399 0.288145 0.037591" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hard-limit_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.049399 0.288145 0.037591" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hard-limit_MIR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-front-bracket-strap-motor__1__1">
+  <inertial>
+    <origin xyz="0.005225173765040281 0.0076811564896388795 0.011833045860623092" rpy="0 0 0"/>
+    <mass value="0.0146860819884148"/>
+    <inertia ixx="2.19229600077579e-06" iyy="3.87092397928112e-06" izz="2.09016096255096e-06" ixy="1.45438910273882e-07" iyz="-3.25645380414871e-07" ixz="8.20478386816912e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.059516 0.247265 0.013191" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-front-bracket-strap-motor__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.059516 0.247265 0.013191" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-front-bracket-strap-motor__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-front-bracket-strap-motor__3__1">
+  <inertial>
+    <origin xyz="0.005224564898284552 -0.003150706712503226 0.01375102867860034" rpy="0 0 0"/>
+    <mass value="0.0146860819884148"/>
+    <inertia ixx="2.19229600077558e-06" iyy="3.87092397928123e-06" izz="2.09016096255118e-06" ixy="1.454389102738e-07" iyz="-3.25645380414889e-07" ixz="8.20478386816907e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.059513 0.282713 0.006913" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-front-bracket-strap-motor__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.059513 0.282713 0.006913" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-front-bracket-strap-motor__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front-motor-roll-nut_1">
+  <inertial>
+    <origin xyz="-0.0015519343436562194 -0.01601093678098936 0.012809202218158186" rpy="0 0 0"/>
+    <mass value="0.0195643196645984"/>
+    <inertia ixx="4.29762094385179e-06" iyy="2.63017315277586e-06" izz="2.94385572035616e-06" ixy="2.92797817598488e-08" iyz="5.7334963937989e-08" ixz="1.65460644134796e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.077516 0.247265 0.013186" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-motor-roll-nut_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.077516 0.247265 0.013186" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/front-motor-roll-nut_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RMD-X10-V3Rotor_1">
+  <inertial>
+    <origin xyz="9.438944453764829e-06 0.010798504649699003 -0.0018967541361757214" rpy="0 0 0"/>
+    <mass value="0.0272814772048107"/>
+    <inertia ixx="6.34702870863342e-06" iyy="8.05778588090018e-06" izz="6.42931671271125e-06" ixy="6.25624723603552e-09" iyz="-2.94893143401841e-07" ixz="2.57179190925745e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006513 0.284681 0.006578" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-V3Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006513 0.284681 0.006578" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/RMD-X10-V3Rotor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="2020_100mm__1__1">
+  <inertial>
+    <origin xyz="-4.015678990641931e-06 -0.04923383806166842 0.008719496554834222" rpy="0 0 0"/>
+    <mass value="0.019591747444562"/>
+    <inertia ixx="1.71247910498587e-05" iyy="2.06886922378367e-06" izz="1.66525918848083e-05" ixy="-1.17404876975641e-09" iyz="2.66634490271179e-06" ixz="2.0791944650976e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006513 0.285173 0.006491" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque727161"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006513 0.285173 0.006491" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/2020_100mm__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-al-mot_MIR2__3__1">
+  <inertial>
+    <origin xyz="-0.01657459728084018 -0.022874188345520186 0.00404707140028256" rpy="0 0 0"/>
+    <mass value="0.024675938226781"/>
+    <inertia ixx="7.4854167137592e-06" iyy="3.55444217923526e-06" izz="5.07091993363776e-06" ixy="-2.12211678781387e-08" iyz="2.77228834080646e-07" ixz="4.34164624925944e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006513 0.285173 0.006491" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-mot_MIR2__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006513 0.285173 0.006491" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-mot_MIR2__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hip-roll-al-mot_MIR2_1">
+  <inertial>
+    <origin xyz="0.016570676849713056 -0.022875240255869345 0.004055726202573089" rpy="0 0 0"/>
+    <mass value="0.024675938226781"/>
+    <inertia ixx="7.4854232703851e-06" iyy="3.55445455944253e-06" izz="5.07090099680519e-06" ixy="2.0819691518996e-08" iyz="2.77281202689397e-07" ixz="-3.103621314812e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006513 0.285173 0.006491" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-mot_MIR2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006513 0.285173 0.006491" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/hip-roll-al-mot_MIR2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="yaw-waist-adapter-motor-exal_MIR1__4__1">
+  <inertial>
+    <origin xyz="4.265464126183491e-06 0.02827911262940247 -0.012355045325274564" rpy="0 0 0"/>
+    <mass value="0.0374132377219994"/>
+    <inertia ixx="7.05842122113165e-06" iyy="1.29400620536601e-05" izz="1.42275151654627e-05" ixy="1.25741455279677e-10" iyz="2.35385455497334e-07" ixz="-1.86143900481255e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006505 0.383641 -0.010948" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/yaw-waist-adapter-motor-exal_MIR1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006505 0.383641 -0.010948" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/yaw-waist-adapter-motor-exal_MIR1__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor-yaw-cap__4__1">
+  <inertial>
+    <origin xyz="-0.015590318623910426 -0.00798965790687206 0.006488317925801082" rpy="0 0 0"/>
+    <mass value="0.0175520946016762"/>
+    <inertia ixx="2.15663959712495e-06" iyy="3.78387221996814e-06" izz="5.53460422653487e-06" ixy="-3.167918699717095e-11" iyz="3.20086750052939e-07" ixz="-8.70426608000611e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022094 0.343495 -0.013998" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022094 0.343495 -0.013998" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor-yaw-cap__1__1">
+  <inertial>
+    <origin xyz="-0.015588272605469373 -0.00973396317387104 -0.0033577994542470114" rpy="0 0 0"/>
+    <mass value="0.0175520946016762"/>
+    <inertia ixx="2.15663959712538e-06" iyy="3.78387221996814e-06" izz="5.53460422653531e-06" ixy="-3.167918700394722e-11" iyz="3.20086750052925e-07" ixz="-8.7042660799807e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022102 0.348726 0.015543" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022102 0.348726 0.015543" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/motor-yaw-cap__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="encoder-magnet-leg_1">
+  <inertial>
+    <origin xyz="-1.4906095598000296e-06 -0.008225571590822212 0.005161955660450714" rpy="0 0 0"/>
+    <mass value="0.00159858759715307"/>
+    <inertia ixx="8.86124657995424e-08" iyy="2.50453856901141e-08" izz="9.28145950890942e-08" ixy="-5.252216186094901e-12" iyz="1.23902581086617e-08" ixz="-7.013080059041701e-13"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006503 0.341751 -0.02384" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/encoder-magnet-leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006503 0.341751 -0.02384" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/encoder-magnet-leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dumLeftLeg_1">
+  <inertial>
+    <origin xyz="-0.015589078213183376 -0.009296657128402386 -0.0008960923654024108" rpy="0 0 0"/>
+    <mass value="0.0688919713115793"/>
+    <inertia ixx="8.03423573522873e-06" iyy="1.44342170564751e-05" izz="2.17102280379751e-05" ixy="3.21741566250639e-10" iyz="1.33027494083628e-06" ixz="-3.60524561517856e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022104 0.35047 0.02539" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/dumLeftLeg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque2550255"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022104 0.35047 0.02539" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidpelvicgirdle_description/meshes/dumLeftLeg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="-0.140001 -0.171194 0.05969" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lumbare_1"/>
+</joint>
+
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="0.014986 -0.016134 0.053016" rpy="0 0 0"/>
+  <parent link="lumbare_1"/>
+  <child link="bearing-rocker-rear__1__1"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.015013 -0.016213 -0.052984" rpy="0 0 0"/>
+  <parent link="lumbare_1"/>
+  <child link="bearing-rocker-rear_1"/>
+</joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="0.018005 0.007988 -0.015002" rpy="0 0 0"/>
+  <parent link="bearing-rocker-rear_1"/>
+  <child link="inner-rear-rocker-bracket_1"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="-0.017996 -1.1e-05 -0.015005" rpy="0 0 0"/>
+  <parent link="bearing-rocker-rear_1"/>
+  <child link="butt-adapter-large-motor__1__1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="-0.022999 0.008001 -1.2e-05" rpy="0 0 0"/>
+  <parent link="butt-adapter-large-motor__1__1"/>
+  <child link="bearing-torso-rocker-mount-rear_1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="0.017996 0.00801 0.014998" rpy="0 0 0"/>
+  <parent link="bearing-rocker-rear__1__1"/>
+  <child link="inner-rear-rocker-bracket_MIR_1"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="-0.018004 1.1e-05 0.014995" rpy="0 0 0"/>
+  <parent link="bearing-rocker-rear__1__1"/>
+  <child link="butt-adapter-large-motor_1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="-0.023 0.008001 -1.2e-05" rpy="0 0 0"/>
+  <parent link="butt-adapter-large-motor_1"/>
+  <child link="bearing-torso-rocker-mount-rear_MIR_1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="-7e-06 -0.041104 0.024184" rpy="0 0 0"/>
+  <parent link="inner-rear-rocker-bracket_MIR_1"/>
+  <child link="RMD-X10-S2_MIR4__1_Stator_1"/>
+</joint>
+
+<joint name="Rigid 11" type="fixed">
+  <origin xyz="-0.059006 -0.026484 0.019257" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__1_Stator_1"/>
+  <child link="butt-mag_1"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="-3e-06 -0.030995 0.007024" rpy="0 0 0"/>
+  <parent link="inner-rear-rocker-bracket_1"/>
+  <child link="RMD-X10-S2_MIR4__2_Stator_1"/>
+</joint>
+
+<joint name="Rigid 13" type="fixed">
+  <origin xyz="-0.058988 -0.036658 -0.050395" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__2_Stator_1"/>
+  <child link="butt-mag__1__1"/>
+</joint>
+
+<joint name="Rigid 14" type="fixed">
+  <origin xyz="-0.059009 -0.010097 0.031144" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__2_Stator_1"/>
+  <child link="hip-motor-bracket-v5-right_MIR_MIR2_1"/>
+</joint>
+
+<joint name="Rigid 15" type="fixed">
+  <origin xyz="-9e-06 -0.010099 0.03116" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__2_Stator_1"/>
+  <child link="butt-center-rear-bracket_1"/>
+</joint>
+
+<joint name="Rigid 16" type="fixed">
+  <origin xyz="0.005498 0.008007 0.009622" rpy="0 0 0"/>
+  <parent link="butt-center-rear-bracket_1"/>
+  <child link="center-waist-aluminum-strap_1"/>
+</joint>
+
+<joint name="Rigid 17" type="fixed">
+  <origin xyz="-0.007008 -0.007855 0.029851" rpy="0 0 0"/>
+  <parent link="butt-center-rear-bracket_1"/>
+  <child link="100m__3__1"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="0.100001 0.009997 1.9e-05" rpy="0 0 0"/>
+  <parent link="100m__3__1"/>
+  <child link="100m_1"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="1e-06 0.01 -7e-06" rpy="0 0 0"/>
+  <parent link="100m__3__1"/>
+  <child link="2020_200mm__1__1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="0.1 0.009996 1.8e-05" rpy="0 0 0"/>
+  <parent link="100m_1"/>
+  <child link="hips-front-mount_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="-0.010997 0.020993 -0.010018" rpy="0 0 0"/>
+  <parent link="hips-front-mount_1"/>
+  <child link="naval__1__1"/>
+</joint>
+
+<joint name="Rigid 22" type="fixed">
+  <origin xyz="0.1 -4e-06 2.6e-05" rpy="0 0 0"/>
+  <parent link="100m_1"/>
+  <child link="front-bearing-strap__1__1"/>
+</joint>
+
+<joint name="Rigid 23" type="fixed">
+  <origin xyz="0.011 0.01 -5e-06" rpy="0 0 0"/>
+  <parent link="front-bearing-strap__1__1"/>
+  <child link="skateboard-bearing__5__1"/>
+</joint>
+
+<joint name="Rigid 24" type="fixed">
+  <origin xyz="0.010999 -0.01 1e-05" rpy="0 0 0"/>
+  <parent link="front-bearing-strap__1__1"/>
+  <child link="skateboard-bearing__6__1"/>
+</joint>
+
+<joint name="Rigid 25" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="skateboard-bearing__6__1"/>
+  <child link="center-bracket-waist-hips_1"/>
+</joint>
+
+<joint name="Rigid 26" type="fixed">
+  <origin xyz="0.009997 -0.014993 0.010014" rpy="0 0 0"/>
+  <parent link="center-bracket-waist-hips_1"/>
+  <child link="groin-square__1__1"/>
+</joint>
+
+<joint name="Rigid 27" type="fixed">
+  <origin xyz="-0.010003 -0.014992 0.010009" rpy="0 0 0"/>
+  <parent link="center-bracket-waist-hips_1"/>
+  <child link="groin-square_1"/>
+</joint>
+
+<joint name="Rigid 28" type="fixed">
+  <origin xyz="0.0 -0.025 1.9e-05" rpy="0 0 0"/>
+  <parent link="center-bracket-waist-hips_1"/>
+  <child link="100m__1__1"/>
+</joint>
+
+<joint name="Rigid 29" type="fixed">
+  <origin xyz="-1.4e-05 -0.009963 0.050007" rpy="0 0 0"/>
+  <parent link="100m__1__1"/>
+  <child link="front-bearing-strap__2__1"/>
+</joint>
+
+<joint name="Rigid 30" type="fixed">
+  <origin xyz="1.2e-05 -0.010037 -0.049993" rpy="0 0 0"/>
+  <parent link="100m__1__1"/>
+  <child link="front-bearing-strap_1"/>
+</joint>
+
+<joint name="Revolute 31" type="continuous">
+  <origin xyz="0.009997 8e-06 0.011003" rpy="0 0 0"/>
+  <parent link="front-bearing-strap__2__1"/>
+  <child link="skateboard-bearing__2__1"/>
+  <axis xyz="1.0 -3.2e-05 0.000261"/>
+</joint>
+
+<joint name="Revolute 32" type="continuous">
+  <origin xyz="-0.010003 9e-06 0.010998" rpy="0 0 0"/>
+  <parent link="front-bearing-strap__2__1"/>
+  <child link="skateboard-bearing__3__1"/>
+  <axis xyz="-1.0 3.2e-05 -0.000261"/>
+</joint>
+
+<joint name="Revolute 33" type="continuous">
+  <origin xyz="0.010003 -9e-06 -0.010997" rpy="0 0 0"/>
+  <parent link="front-bearing-strap_1"/>
+  <child link="skateboard-bearing__1__1"/>
+  <axis xyz="1.0 -3.2e-05 0.000261"/>
+</joint>
+
+<joint name="Revolute 34" type="continuous">
+  <origin xyz="-0.009997 -8e-06 -0.011002" rpy="0 0 0"/>
+  <parent link="front-bearing-strap_1"/>
+  <child link="skateboard-bearing__4__1"/>
+  <axis xyz="-1.0 3.2e-05 -0.000261"/>
+</joint>
+
+<joint name="Revolute 35" type="continuous">
+  <origin xyz="0.002006 -0.042901 -0.03112" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__1_Stator_1"/>
+  <child link="RMD-X10-S2_MIR4__1_Rotor_1"/>
+  <axis xyz="1.0 -3.2e-05 0.000261"/>
+</joint>
+
+<joint name="Rigid 36" type="fixed">
+  <origin xyz="0.0005 0.0 0.0" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__1_Rotor_1"/>
+  <child link="yaw-waist-adapter-motor-exal_MIR1__1__1"/>
+</joint>
+
+<joint name="Rigid 37" type="fixed">
+  <origin xyz="0.030002 0.016909 -0.006162" rpy="0 0 0"/>
+  <parent link="yaw-waist-adapter-motor-exal_MIR1__1__1"/>
+  <child link="motor-yaw-cap__3__1"/>
+</joint>
+
+<joint name="Rigid 38" type="fixed">
+  <origin xyz="3e-06 -0.013625 -0.012544" rpy="0 0 0"/>
+  <parent link="motor-yaw-cap__3__1"/>
+  <child link="100m__4__1"/>
+</joint>
+
+<joint name="Rigid 39" type="fixed">
+  <origin xyz="-0.010018 -0.01193 0.067958" rpy="0 0 0"/>
+  <parent link="100m__4__1"/>
+  <child link="2020_100mm__3__1"/>
+</joint>
+
+<joint name="Rigid 40" type="fixed">
+  <origin xyz="-0.010018 -0.01193 0.067958" rpy="0 0 0"/>
+  <parent link="100m__4__1"/>
+  <child link="2020_100mm__5__1"/>
+</joint>
+
+<joint name="Rigid 41" type="fixed">
+  <origin xyz="-0.010018 -0.002081 0.069687" rpy="0 0 0"/>
+  <parent link="100m__4__1"/>
+  <child link="6band__3__1"/>
+</joint>
+
+<joint name="Rigid 42" type="fixed">
+  <origin xyz="-0.020007 0.014944 0.030539" rpy="0 0 0"/>
+  <parent link="6band__3__1"/>
+  <child link="side-band-brick-double__1__1"/>
+</joint>
+
+<joint name="Rigid 43" type="fixed">
+  <origin xyz="0.019993 0.014943 0.030549" rpy="0 0 0"/>
+  <parent link="6band__3__1"/>
+  <child link="side-band-brick-double_1"/>
+</joint>
+
+<joint name="Rigid 44" type="fixed">
+  <origin xyz="0.01 -0.059096 -0.010373" rpy="0 0 0"/>
+  <parent link="side-band-brick-double__1__1"/>
+  <child link="center-band-brick__6__1"/>
+</joint>
+
+<joint name="Rigid 45" type="fixed">
+  <origin xyz="-0.009992 0.01521 -0.028807" rpy="0 0 0"/>
+  <parent link="100m__4__1"/>
+  <child link="hip-roll-al-bracket_MIR_1"/>
+</joint>
+
+<joint name="Rigid 46" type="fixed">
+  <origin xyz="-0.009991 -0.004488 -0.032265" rpy="0 0 0"/>
+  <parent link="100m__4__1"/>
+  <child link="hip-roll-al-bracket__1__1"/>
+</joint>
+
+<joint name="Rigid 47" type="fixed">
+  <origin xyz="0.037985 -0.002323 0.059505" rpy="0 0 0"/>
+  <parent link="hip-roll-al-bracket_MIR_1"/>
+  <child link="RMD-X10-V3__1_Stator_1"/>
+</joint>
+
+<joint name="Rigid 48" type="fixed">
+  <origin xyz="0.09587 -0.040848 0.024483" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3__1_Stator_1"/>
+  <child link="hard-limit_1"/>
+</joint>
+
+<joint name="Rigid 49" type="fixed">
+  <origin xyz="0.106 -4e-06 2.7e-05" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3__1_Stator_1"/>
+  <child link="hip-roll-front-bracket-strap-motor__2__1"/>
+</joint>
+
+<joint name="Rigid 50" type="fixed">
+  <origin xyz="0.106 -0.035461 -0.006198" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3__1_Stator_1"/>
+  <child link="hip-roll-front-bracket-strap-motor_1"/>
+</joint>
+
+<joint name="Rigid 51" type="fixed">
+  <origin xyz="0.018 0.0 5e-06" rpy="0 0 0"/>
+  <parent link="hip-roll-front-bracket-strap-motor__2__1"/>
+  <child link="front-motor-roll-nut__1__1"/>
+</joint>
+
+<joint name="Revolute 52" type="continuous">
+  <origin xyz="0.053 -0.03743 -0.006557" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3__1_Stator_1"/>
+  <child link="RMD-X10-V3__1_Rotor_1"/>
+  <axis xyz="1.4e-05 -0.984937 -0.172914"/>
+</joint>
+
+<joint name="Rigid 53" type="fixed">
+  <origin xyz="0.0 -0.000492 -8.7e-05" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3__1_Rotor_1"/>
+  <child link="2020_100mm__6__1"/>
+</joint>
+
+<joint name="Rigid 54" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="2020_100mm__6__1"/>
+  <child link="hip-roll-al-mot_MIR2__1__1"/>
+</joint>
+
+<joint name="Rigid 55" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="2020_100mm__6__1"/>
+  <child link="hip-roll-al-mot_MIR2__2__1"/>
+</joint>
+
+<joint name="Rigid 56" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="2020_100mm__6__1"/>
+  <child link="hip-yaw-chromatic-encoder_1"/>
+</joint>
+
+<joint name="Rigid 57" type="fixed">
+  <origin xyz="2e-06 -0.098494 -0.017291" rpy="0 0 0"/>
+  <parent link="2020_100mm__6__1"/>
+  <child link="yaw-waist-adapter-motor-exal_MIR1__3__1"/>
+</joint>
+
+<joint name="Rigid 58" type="fixed">
+  <origin xyz="0.01559 0.040141 -0.003102" rpy="0 0 0"/>
+  <parent link="yaw-waist-adapter-motor-exal_MIR1__3__1"/>
+  <child link="motor-yaw-cap__5__1"/>
+</joint>
+
+<joint name="Rigid 59" type="fixed">
+  <origin xyz="0.015582 0.034954 0.026446" rpy="0 0 0"/>
+  <parent link="yaw-waist-adapter-motor-exal_MIR1__3__1"/>
+  <child link="motor-yaw-cap_1"/>
+</joint>
+
+<joint name="Rigid 60" type="fixed">
+  <origin xyz="-2e-06 -0.001729 0.00985" rpy="0 0 0"/>
+  <parent link="motor-yaw-cap_1"/>
+  <child link="dumRightLeg_1"/>
+</joint>
+
+<joint name="Rigid 61" type="fixed">
+  <origin xyz="-0.015586 0.00173 -0.009853" rpy="0 0 0"/>
+  <parent link="motor-yaw-cap__5__1"/>
+  <child link="encoder-magnet-leg__1__1"/>
+</joint>
+
+<joint name="Rigid 62" type="fixed">
+  <origin xyz="2e-06 -0.028251 -0.012575" rpy="0 0 0"/>
+  <parent link="side-band-brick-double__1__1"/>
+  <child link="encoder-butt__1__1"/>
+</joint>
+
+<joint name="Revolute 63" type="continuous">
+  <origin xyz="0.001998 -0.053 4e-05" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__2_Stator_1"/>
+  <child link="RMD-X10-S2_MIR4__2_Rotor_1"/>
+  <axis xyz="1.0 -3.2e-05 0.000261"/>
+</joint>
+
+<joint name="Rigid 64" type="fixed">
+  <origin xyz="0.0005 0.0 0.0" rpy="0 0 0"/>
+  <parent link="RMD-X10-S2_MIR4__2_Rotor_1"/>
+  <child link="yaw-waist-adapter-motor-exal_MIR1__2__1"/>
+</joint>
+
+<joint name="Rigid 65" type="fixed">
+  <origin xyz="0.030004 0.013779 -0.011573" rpy="0 0 0"/>
+  <parent link="yaw-waist-adapter-motor-exal_MIR1__2__1"/>
+  <child link="motor-yaw-cap__2__1"/>
+</joint>
+
+<joint name="Rigid 66" type="fixed">
+  <origin xyz="-9e-06 -0.010467 0.030289" rpy="0 0 0"/>
+  <parent link="motor-yaw-cap__2__1"/>
+  <child link="100m__2__1"/>
+</joint>
+
+<joint name="Rigid 67" type="fixed">
+  <origin xyz="-0.009982 -0.012032 -0.067945" rpy="0 0 0"/>
+  <parent link="100m__2__1"/>
+  <child link="2020_100mm__7__1"/>
+</joint>
+
+<joint name="Rigid 68" type="fixed">
+  <origin xyz="-0.009982 -0.012032 -0.067945" rpy="0 0 0"/>
+  <parent link="100m__2__1"/>
+  <child link="2020_100mm__2__1"/>
+</joint>
+
+<joint name="Rigid 69" type="fixed">
+  <origin xyz="-0.009982 -0.002185 -0.069689" rpy="0 0 0"/>
+  <parent link="100m__2__1"/>
+  <child link="6band__4__1"/>
+</joint>
+
+<joint name="Rigid 70" type="fixed">
+  <origin xyz="-0.019991 0.014899 -0.030571" rpy="0 0 0"/>
+  <parent link="6band__4__1"/>
+  <child link="side-band-brick-double__3__1"/>
+</joint>
+
+<joint name="Rigid 71" type="fixed">
+  <origin xyz="0.020009 0.014897 -0.030561" rpy="0 0 0"/>
+  <parent link="6band__4__1"/>
+  <child link="side-band-brick-double__2__1"/>
+</joint>
+
+<joint name="Rigid 72" type="fixed">
+  <origin xyz="-1e-06 -0.030849 -0.002154" rpy="0 0 0"/>
+  <parent link="side-band-brick-double__3__1"/>
+  <child link="encoder-butt_1"/>
+</joint>
+
+<joint name="Rigid 73" type="fixed">
+  <origin xyz="0.009995 -0.059081 0.010465" rpy="0 0 0"/>
+  <parent link="side-band-brick-double__3__1"/>
+  <child link="center-band-brick__5__1"/>
+</joint>
+
+<joint name="Rigid 74" type="fixed">
+  <origin xyz="-0.010008 -0.00444 0.032267" rpy="0 0 0"/>
+  <parent link="100m__2__1"/>
+  <child link="hip-roll-al-bracket_MIR__1__1"/>
+</joint>
+
+<joint name="Rigid 75" type="fixed">
+  <origin xyz="-0.010007 0.015253 0.028779" rpy="0 0 0"/>
+  <parent link="100m__2__1"/>
+  <child link="hip-roll-al-bracket_1"/>
+</joint>
+
+<joint name="Rigid 76" type="fixed">
+  <origin xyz="0.04813 0.00302 -0.028803" rpy="0 0 0"/>
+  <parent link="hip-roll-al-bracket_1"/>
+  <child link="RMD-X10-V3Stator_1"/>
+</joint>
+
+<joint name="Rigid 77" type="fixed">
+  <origin xyz="0.085769 -0.046316 -0.055051" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3Stator_1"/>
+  <child link="hard-limit_MIR_1"/>
+</joint>
+
+<joint name="Rigid 78" type="fixed">
+  <origin xyz="0.095886 -0.005436 -0.030651" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3Stator_1"/>
+  <child link="hip-roll-front-bracket-strap-motor__1__1"/>
+</joint>
+
+<joint name="Rigid 79" type="fixed">
+  <origin xyz="0.095883 -0.040884 -0.024373" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3Stator_1"/>
+  <child link="hip-roll-front-bracket-strap-motor__3__1"/>
+</joint>
+
+<joint name="Rigid 80" type="fixed">
+  <origin xyz="0.018 0.0 5e-06" rpy="0 0 0"/>
+  <parent link="hip-roll-front-bracket-strap-motor__1__1"/>
+  <child link="front-motor-roll-nut_1"/>
+</joint>
+
+<joint name="Revolute 81" type="continuous">
+  <origin xyz="0.042883 -0.042852 -0.024038" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3Stator_1"/>
+  <child link="RMD-X10-V3Rotor_1"/>
+  <axis xyz="-7.7e-05 -0.984678 0.174383"/>
+</joint>
+
+<joint name="Rigid 82" type="fixed">
+  <origin xyz="0.0 -0.000492 8.7e-05" rpy="0 0 0"/>
+  <parent link="RMD-X10-V3Rotor_1"/>
+  <child link="2020_100mm__1__1"/>
+</joint>
+
+<joint name="Rigid 83" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="2020_100mm__1__1"/>
+  <child link="hip-roll-al-mot_MIR2__3__1"/>
+</joint>
+
+<joint name="Rigid 84" type="fixed">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="2020_100mm__1__1"/>
+  <child link="hip-roll-al-mot_MIR2_1"/>
+</joint>
+
+<joint name="Rigid 85" type="fixed">
+  <origin xyz="-8e-06 -0.098468 0.017439" rpy="0 0 0"/>
+  <parent link="2020_100mm__1__1"/>
+  <child link="yaw-waist-adapter-motor-exal_MIR1__4__1"/>
+</joint>
+
+<joint name="Rigid 86" type="fixed">
+  <origin xyz="0.015589 0.040146 0.00305" rpy="0 0 0"/>
+  <parent link="yaw-waist-adapter-motor-exal_MIR1__4__1"/>
+  <child link="motor-yaw-cap__4__1"/>
+</joint>
+
+<joint name="Rigid 87" type="fixed">
+  <origin xyz="0.015597 0.034915 -0.026491" rpy="0 0 0"/>
+  <parent link="yaw-waist-adapter-motor-exal_MIR1__4__1"/>
+  <child link="motor-yaw-cap__1__1"/>
+</joint>
+
+<joint name="Rigid 88" type="fixed">
+  <origin xyz="-0.015591 0.001744 0.009842" rpy="0 0 0"/>
+  <parent link="motor-yaw-cap__4__1"/>
+  <child link="encoder-magnet-leg_1"/>
+</joint>
+
+<joint name="Rigid 89" type="fixed">
+  <origin xyz="2e-06 -0.001744 -0.009847" rpy="0 0 0"/>
+  <parent link="motor-yaw-cap__1__1"/>
+  <child link="dumLeftLeg_1"/>
+</joint>
+
+</robot>
