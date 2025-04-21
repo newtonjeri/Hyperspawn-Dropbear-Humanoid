@@ -1857,7 +1857,7 @@
         <gazebo>
             <plugin name="gazebo_ros" filename="libgazebo_ros_api_plugin.so"/>
             <joint name="${prefix}_Revolute37_gz" type="revolute">
-              <pose relative_to="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1">0.02809 -0.1631 ${sign*0.0} 0 0 0</pose>
+              <pose relative_to="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1">0.1464 0.07711 ${sign*-0.0065} 0 0 0</pose>
               <parent>${prefix}_straight-tendon_1</parent>
               <child>${prefix}_6mm-bearing__5__1</child>
       
@@ -1875,9 +1875,10 @@
                 <friction>0.50</friction>
               </dynamics>
             </joint>
-
-            <!-- <joint name="${prefix}_Revolute47_gz" type="revolute">
-              <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.01161 -0.05887 ${sign*-0.034} 0 0 0</pose>
+            
+            <joint name="${prefix}_Revolute47_gz" type="revolute">
+              <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.05237 0.02931 ${sign*-0.029} 0 0 0</pose>
+              <!-- <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.07143 -0.002652 ${sign*-0.029} 0 0 0</pose> -->
               <parent>${prefix}_elbow-rear-hanger_1</parent>
               <child>${prefix}_6mm-bearing__8__1</child>
       
@@ -1894,8 +1895,9 @@
               </dynamics>
             </joint>
       
+            
             <joint name="${prefix}_Recolute48_gz" type="revolute">
-            <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.01161 -0.05887 ${sign*0.0} 0 0 0</pose>
+              <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.05237 0.02932 ${sign*-0.005} 0 0 0</pose>
                 <parent>${prefix}_elbow-rear-hanger__1__1</parent>
                 <child>${prefix}_6mm-bearing__3__1</child>
       
@@ -1911,7 +1913,7 @@
                 <damping>2.0</damping>
                 <friction>0.10</friction>
               </dynamics>
-            </joint> -->
+            </joint>
 
           </gazebo>
         
