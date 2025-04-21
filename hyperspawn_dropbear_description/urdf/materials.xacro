@@ -73,5 +73,25 @@
   <color rgba="0.5137254901960784 0.4235294117647059 0.37254901960784315 1.0"/>
 </material>
 
+<material name="opaque0125168">
+  <color rgba="0.0 0.49019607843137253 0.6588235294117647 1.0"/>
+</material>
+
+
+<material name="opaque252525">
+  <color rgba="0.09803921568627451 0.09803921568627451 0.09803921568627451 1.0"/>
+</material>
+
+<material name="opaque2552550">
+  <color rgba="1.0 1.0 0.0 1.0"/>
+</material>
+
+<material name="powder_coat_green">
+  <color rgba="0.26666666666666666 0.5882352941176471 0.2823529411764706 0.0"/>
+</material>
+
+<material name="steel_satin">
+  <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
+</material>
 
 </robot>
