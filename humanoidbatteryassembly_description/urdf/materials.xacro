@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<robot name="humanoidbatteryassembly" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="silver_default">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+<material name="opaque191191191">
+  <color rgba="0.7490196078431373 0.7490196078431373 0.7490196078431373 1.0"/>
+</material>
+<material name="opaque245245245">
+  <color rgba="0.9607843137254902 0.9607843137254902 0.9607843137254902 1.0"/>
+</material>
+<material name="opaque808080">
+  <color rgba="0.3137254901960784 0.3137254901960784 0.3137254901960784 1.0"/>
+</material>
+<material name="opaque0125168">
+  <color rgba="0.0 0.49019607843137253 0.6588235294117647 1.0"/>
+</material>
+<material name="opaque22122113">
+  <color rgba="0.8666666666666667 0.8666666666666667 0.050980392156862744 1.0"/>
+</material>
+<material name="powder_coat_pink">
+  <color rgba="1.0 0.0 1.0 1.0"/>
+</material>
+
+</robot>

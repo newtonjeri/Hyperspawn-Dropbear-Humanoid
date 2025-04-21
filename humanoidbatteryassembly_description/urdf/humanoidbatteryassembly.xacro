@@ -1,0 +1,675 @@
+<?xml version="1.0" ?>
+<robot name="humanoidbatteryassembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find humanoidbatteryassembly_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find humanoidbatteryassembly_description)/urdf/humanoidbatteryassembly.trans" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0225904848023058 0.0189601747607262 -0.00613215766921156" rpy="0 0 0"/>
+    <mass value="0.000493230046613619"/>
+    <inertia ixx="1.52079263926163e-09" iyy="1.5207925477636e-09" izz="9.86460065428829e-10" ixy="-7.940933880509066e-23" iyz="1.455837878093329e-22" ixz="1.392963436099667e-13"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="powder_coat_pink"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery-frame-top_1">
+  <inertial>
+    <origin xyz="-0.029487392574973965 0.009472165252299464 0.0899922901445806" rpy="0 0 0"/>
+    <mass value="0.373840326889218"/>
+    <inertia ixx="0.00188785500063738" iyy="0.00196151034910766" izz="0.000930228184184265" ixy="-1.07358740047868e-06" iyz="-2.408605931890351e-11" ixz="2.47609267192158e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02259 -0.01896 0.003632" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/battery-frame-top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02259 -0.01896 0.003632" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/battery-frame-top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="24ah-adapter_1">
+  <inertial>
+    <origin xyz="-2.3628207273966584e-05 -0.0099850280312349 0.09000001842179056" rpy="0 0 0"/>
+    <mass value="0.108611185548771"/>
+    <inertia ixx="0.000446959511258279" iyy="0.000572049897242319" izz="0.00013214273965512" ixy="8.037224585952935e-16" iyz="4.141652298894627e-17" ixz="8.20702857974901e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00741 0.02204 0.00364" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/24ah-adapter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.00741 0.02204 0.00364" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/24ah-adapter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery-board-adapter_1">
+  <inertial>
+    <origin xyz="0.004971785695739639 -0.06132209778721101 0.07850739418054586" rpy="0 0 0"/>
+    <mass value="0.114729037991707"/>
+    <inertia ixx="0.000546875747312462" iyy="0.000304930617675406" izz="0.000243854987748665" ixy="1.10572451180531e-08" iyz="8.00084474638241e-09" ixz="7.8993496067947e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.042587 -0.07896 -0.007865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/battery-board-adapter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.042587 -0.07896 -0.007865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/battery-board-adapter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__5__1">
+  <inertial>
+    <origin xyz="0.019492606770232672 -0.0359995552578323 0.02400503065313052" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.000384918355464486" iyy="0.000287416154113656" izz="0.000175646214937062" ixy="-6.264520152621245e-16" iyz="1.029992063861229e-17" ixz="5.45556207013406e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.052587 -0.098679 -0.007374" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.052587 -0.098679 -0.007374" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__7__1">
+  <inertial>
+    <origin xyz="0.019504930628009474 -0.03599955525784347 -0.023994973084695226" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.000384918355464487" iyy="0.000287416154113656" izz="0.000175646214937061" ixy="-6.262351748276274e-16" iyz="1.040834085586084e-17" ixz="5.45556206963532e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.052546 -0.098679 -0.165374" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__7__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.052546 -0.098679 -0.165374" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__7__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__8__1">
+  <inertial>
+    <origin xyz="0.019489999400669582 0.023999548077406 0.03600474469399404" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.00038491836306042" iyy="0.000175646200714836" izz="0.000287416160739948" ixy="-1.342242289537054e-15" iyz="-1.100465205072787e-17" ixz="2.54180664168401e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.052587 0.057374 -0.005376" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__8__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.052587 0.057374 -0.005376" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__8__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large_1">
+  <inertial>
+    <origin xyz="0.019508537102486963 0.023999548077397605 -0.035995258364225735" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.000384918363060417" iyy="0.000175646200714834" izz="0.000287416160739948" ixy="-1.342133869319806e-15" iyz="-1.149254302834635e-17" ixz="2.54180664164064e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.052545 0.057374 -0.167376" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.052545 0.057374 -0.167376" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery-frame-bottom_1">
+  <inertial>
+    <origin xyz="-0.004253042372786646 -0.08787568166183796 0.08984695595405534" rpy="0 0 0"/>
+    <mass value="0.720342243028372"/>
+    <inertia ixx="0.00475044117930145" iyy="0.00386827533892745" izz="0.00259972730772333" ixy="2.25218885753066e-05" iyz="7.65344938387195e-06" ixz="5.50739028114884e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00741 0.04204 0.00364" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/battery-frame-bottom_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="0.00741 0.04204 0.00364" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/battery-frame-bottom_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__2__1">
+  <inertial>
+    <origin xyz="-0.03599508116943264 -0.023999825239000183 -0.019508608166754943" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.000287416160739949" iyy="0.000175646200714836" izz="0.00038491836306042" ixy="-7.186091999233923e-16" iyz="-1.734723475976807e-17" ixz="-2.54180664198758e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01641 0.07204 0.003642" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01641 0.07204 0.003642" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__1__1">
+  <inertial>
+    <origin xyz="0.03600491577209107 -0.02399982523957872 -0.019489145868573216" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.000287416160739945" iyy="0.000175646200714836" izz="0.000384918363060417" ixy="-7.186091999233923e-16" iyz="-1.691355389077387e-17" ixz="-2.54180664198216e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.00159 0.11204 0.003638" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.00159 0.11204 0.003638" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__4__1">
+  <inertial>
+    <origin xyz="0.019507999909711672 -0.023999825239709782 -0.03599516568904662" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.000384918363060418" iyy="0.000175646200714836" izz="0.000287416160739948" ixy="-1.347446459964985e-15" iyz="-1.170938346284345e-17" ixz="2.54180664183579e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.037569 0.11204 -0.077372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.037569 0.11204 -0.077372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__6__1">
+  <inertial>
+    <origin xyz="0.019489537611527573 -0.023999825239716832 0.036004831252733585" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.000384918363060422" iyy="0.000175646200714836" izz="0.000287416160739947" ixy="-1.341808608668060e-15" iyz="-1.127570259384925e-17" ixz="2.54180664181411e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.037564 0.11204 -0.095372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.037564 0.11204 -0.095372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__6__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__9__1">
+  <inertial>
+    <origin xyz="-0.03600517218772016 -0.02399982523901982 0.019489182712158687" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.00028741616073995" iyy="0.000175646200714835" izz="0.00038491836306042" ixy="-7.179586786199010e-16" iyz="-1.647987302177967e-17" ixz="-2.54180664185748e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.016457 0.07204 -0.176358" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__9__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.016457 0.07204 -0.176358" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__9__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="power-module-large__3__1">
+  <inertial>
+    <origin xyz="0.035994824753803556 -0.023999825239599343 0.019508645010338693" rpy="0 0 0"/>
+    <mass value="0.294976679515741"/>
+    <inertia ixx="0.000287416160739948" iyy="0.000175646200714835" izz="0.000384918363060417" ixy="-7.181755190543981e-16" iyz="-2.255140518769849e-17" ixz="-2.54180664185748e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001543 0.11204 -0.176362" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001543 0.11204 -0.176362" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/power-module-large__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Power_Converter_1">
+  <inertial>
+    <origin xyz="-0.015368497172790214 1.747610835489688e-07 0.03249628165064687" rpy="0 0 0"/>
+    <mass value="0.158146990279371"/>
+    <inertia ixx="0.000135690869690996" iyy="7.23574179303196e-05" izz="9.0014506241123e-05" ixy="-4.070094955510584e-16" iyz="-2.168404344971009e-18" ixz="1.19074729837583e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.052436 0.14854 -0.096348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/Power_Converter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.052436 0.14854 -0.096348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/Power_Converter_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Power_Converter__2__1">
+  <inertial>
+    <origin xyz="-0.01535133833561634 1.7476109154257458e-07 -0.032503715461035136" rpy="0 0 0"/>
+    <mass value="0.158146990279371"/>
+    <inertia ixx="0.000135690869690995" iyy="7.23574179303183e-05" izz="9.0014506241123e-05" ixy="-4.065758146820642e-16" iyz="-2.602085213965211e-18" ixz="1.1907472983162e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.052431 0.14854 -0.076348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/Power_Converter__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.052431 0.14854 -0.076348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/Power_Converter__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="5v-module__1__1">
+  <inertial>
+    <origin xyz="-0.006829591091305862 1.7476103840452506e-07 -0.027501493647208504" rpy="0 0 0"/>
+    <mass value="0.0179737870598435"/>
+    <inertia ixx="4.56134129567961e-06" iyy="3.7925789778426e-06" izz="1.36666762909015e-06" ixy="-4.960224939121183e-18" iyz="2.168404344971009e-19" ixz="8.32826597853135e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.05243 0.08754 -0.071348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/5v-module__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.05243 0.08754 -0.071348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/5v-module__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="5v-module_1">
+  <inertial>
+    <origin xyz="-0.006843749928479768 1.7476102991131892e-07 0.027498503464473134" rpy="0 0 0"/>
+    <mass value="0.0179737870598435"/>
+    <inertia ixx="4.56134129567958e-06" iyy="3.79257897784258e-06" izz="1.36666762909013e-06" ixy="-4.933119884809045e-18" iyz="2.439454888092385e-19" ixz="8.32826597832806e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.052438 0.08754 -0.101348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/5v-module_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.052438 0.08754 -0.101348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/5v-module_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="naval-strap_1">
+  <inertial>
+    <origin xyz="-0.006996760881096832 -0.04627696351340316 -1.5510194544959832e-06" rpy="0 0 0"/>
+    <mass value="0.0415844639449449"/>
+    <inertia ixx="4.41236384387287e-05" iyy="3.08810465228639e-05" izz="1.46364874794783e-05" ixy="5.613750519638e-07" iyz="3.18745811144524e-10" ixz="7.67449132981499e-09"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.027566 -0.06596 -0.086369" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/naval-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque245245245"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.027566 -0.06596 -0.086369" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/naval-strap_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="naval_1">
+  <inertial>
+    <origin xyz="-0.017589962097806593 -0.004048945439302078 0.019892622139461635" rpy="0 0 0"/>
+    <mass value="0.0600129078763968"/>
+    <inertia ixx="2.79119124941706e-05" iyy="2.85034236130666e-05" izz="1.47507878013654e-05" ixy="-2.15256718572801e-06" iyz="-3.86566382881587e-08" ixz="-6.48319442978991e-08"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.017572 0.00204 -0.066367" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/naval_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque22122113"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.017572 0.00204 -0.066367" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/naval_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery__1___1__1">
+  <inertial>
+    <origin xyz="0.03500037179257057 -0.12999982523929907 9.018421798165366e-06" rpy="0 0 0"/>
+    <mass value="2.912"/>
+    <inertia ixx="0.0226165329919545" iyy="0.00740133333333334" izz="0.0175933336747121" ixy="-9.767577371921909e-14" iyz="-9.835882108788496e-16" ixz="1.30950902473503e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.042434 -0.07396 -0.086351" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/battery__1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque191191191"/>
+  </visual>
+  <collision>
+    <origin xyz="0.042434 -0.07396 -0.086351" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/battery__1___1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mcp1_1">
+  <inertial>
+    <origin xyz="0.0005699601199161616 -0.011599825239580641 0.017600379204158363" rpy="0 0 0"/>
+    <mass value="0.00125548451603534"/>
+    <inertia ixx="2.41398795938467e-07" iyy="1.61781411920293e-07" izz="7.98941356821032e-08" ixy="-5.116079001415974e-19" iyz="6.776263578034403e-21" ixz="4.210300981451556e-11"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03558 0.04824 -0.035821" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/mcp1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque0125168"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03558 0.04824 -0.035821" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/mcp1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mpu1__1__1">
+  <inertial>
+    <origin xyz="0.0007483229183894158 -0.010174825239574366 0.00518219945352337" rpy="0 0 0"/>
+    <mass value="0.000583294249588268"/>
+    <inertia ixx="4.33873746950401e-08" iyy="1.16506159728516e-08" izz="3.19554956196155e-08" ixy="-2.037114238146592e-19" iyz="1.482307657695026e-20" ixz="2.980202033250049e-12"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.035568 0.049865 -0.081371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/mpu1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque0125168"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.035568 0.049865 -0.081371" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/mpu1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="esp1_1">
+  <inertial>
+    <origin xyz="0.0007443336561322386 -0.011749825239586655 0.02335042239740054" rpy="0 0 0"/>
+    <mass value="0.00219783849917654"/>
+    <inertia ixx="6.23119222050571e-07" iyy="4.72406455621281e-07" izz="1.51537019964334e-07" ixy="-9.673116257644110e-19" iyz="3.049318610115481e-20" ixz="1.22937815238603e-10"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.035562 0.04829 -0.101521" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/esp1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque808080"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.035562 0.04829 -0.101521" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://humanoidbatteryassembly_description/meshes/esp1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="0.02259 0.01896 -0.003632" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="battery-frame-top_1"/>
+</joint>
+
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="-0.03 -0.041 -8e-06" rpy="0 0 0"/>
+  <parent link="battery-frame-top_1"/>
+  <child link="24ah-adapter_1"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.019997 0.06 0.011497" rpy="0 0 0"/>
+  <parent link="battery-frame-top_1"/>
+  <child link="battery-board-adapter_1"/>
+</joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="0.01 0.019719 -0.000491" rpy="0 0 0"/>
+  <parent link="battery-board-adapter_1"/>
+  <child link="power-module-large__5__1"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="0.009959 0.019719 0.157509" rpy="0 0 0"/>
+  <parent link="battery-board-adapter_1"/>
+  <child link="power-module-large__7__1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="0.01 -0.136334 -0.002489" rpy="0 0 0"/>
+  <parent link="battery-board-adapter_1"/>
+  <child link="power-module-large__8__1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="0.009958 -0.136334 0.159511" rpy="0 0 0"/>
+  <parent link="battery-board-adapter_1"/>
+  <child link="power-module-large_1"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="0.0 -0.02 0.0" rpy="0 0 0"/>
+  <parent link="24ah-adapter_1"/>
+  <child link="battery-frame-bottom_1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="-0.009 -0.03 -2e-06" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="power-module-large__2__1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="0.009 -0.07 2e-06" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="power-module-large__1__1"/>
+</joint>
+
+<joint name="Rigid 11" type="fixed">
+  <origin xyz="0.044979 -0.07 0.081012" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="power-module-large__4__1"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="0.044974 -0.07 0.099012" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="power-module-large__6__1"/>
+</joint>
+
+<joint name="Rigid 13" type="fixed">
+  <origin xyz="-0.009047 -0.03 0.179998" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="power-module-large__9__1"/>
+</joint>
+
+<joint name="Rigid 14" type="fixed">
+  <origin xyz="0.008953 -0.07 0.180002" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="power-module-large__3__1"/>
+</joint>
+
+<joint name="Rigid 15" type="fixed">
+  <origin xyz="-0.045026 -0.1065 0.099988" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="Power_Converter_1"/>
+</joint>
+
+<joint name="Rigid 16" type="fixed">
+  <origin xyz="-0.045021 -0.1065 0.079988" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="Power_Converter__2__1"/>
+</joint>
+
+<joint name="Rigid 17" type="fixed">
+  <origin xyz="-0.04502 -0.0455 0.074988" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="5v-module__1__1"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="-0.045028 -0.0455 0.104988" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="5v-module_1"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="0.004976 0.047 0.090001" rpy="0 0 0"/>
+  <parent link="battery-frame-top_1"/>
+  <child link="naval-strap_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="-0.009994 -0.068 -0.020002" rpy="0 0 0"/>
+  <parent link="naval-strap_1"/>
+  <child link="naval_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="-0.065024 0.055 0.089983" rpy="0 0 0"/>
+  <parent link="battery-frame-top_1"/>
+  <child link="battery__1___1__1"/>
+</joint>
+
+<joint name="Rigid 22" type="fixed">
+  <origin xyz="0.04299 -0.0062 0.039461" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="mcp1_1"/>
+</joint>
+
+<joint name="Rigid 23" type="fixed">
+  <origin xyz="0.042978 -0.007825 0.085011" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="mpu1__1__1"/>
+</joint>
+
+<joint name="Rigid 24" type="fixed">
+  <origin xyz="0.042972 -0.00625 0.105161" rpy="0 0 0"/>
+  <parent link="battery-frame-bottom_1"/>
+  <child link="esp1_1"/>
+</joint>
+
+</robot>
