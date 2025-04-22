@@ -1491,12 +1491,13 @@
       <child link="${prefix}_shoulder-ex-al-interface__2__1"/>
     </joint>
     
-    <joint name="${prefix}_Revolute 8" type="continuous">
-      <origin xyz="-0.017 -0.015588 ${sign*-0.009}" rpy="0 0 0"/>
-      <parent link="${prefix}_shoulder-ex-al-interface__2__1"/>
-      <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__1__1"/>
-      <axis xyz="-1.0 -0.0 -0.0"/>
-    </joint>
+    <joint name="${prefix}_pitch" type="revolute">
+        <origin xyz="-0.017 -0.015588 ${sign*-0.009}" rpy="0 0 0"/>
+        <parent link="${prefix}_shoulder-ex-al-interface__2__1"/>
+        <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__1__1"/>
+        <axis xyz="${sign * 1.0} 0.0 0.0"/>
+        <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+      </joint>
     
     <joint name="${prefix}_Rigid 9" type="fixed">
       <origin xyz="-0.0375 -0.042 ${sign*0.0}" rpy="0 0 0"/>
@@ -1564,11 +1565,10 @@
       <child link="${prefix}_shoulder-front-bearing-adapter_1"/>
     </joint>
     
-    <joint name="${prefix}_Revolute 20" type="continuous">
+    <joint name="${prefix}_Revolute 20" type="fixed">
       <origin xyz="-0.003828 0.0 ${sign*0.0}" rpy="0 0 0"/>
       <parent link="${prefix}_shoulder-front-bearing-adapter_1"/>
       <child link="${prefix}_skateboard-bearing__7__1"/>
-      <axis xyz="-1.0 -0.0 -0.0"/>
     </joint>
     
     <joint name="${prefix}_Rigid 21" type="fixed">
@@ -1577,12 +1577,13 @@
       <child link="${prefix}_shoulder-ex-al-interface__1__1"/>
     </joint>
     
-    <joint name="${prefix}_Revolute 22" type="continuous">
-      <origin xyz="0.009 -0.017 ${sign*-0.015588}" rpy="0 0 0"/>
-      <parent link="${prefix}_shoulder-ex-al-interface__1__1"/>
-      <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1"/>
-      <axis xyz="-0.0 -1.0 0.0"/>
-    </joint>
+    <joint name="${prefix}_roll" type="revolute">
+        <origin xyz="0.009 -0.017 ${sign*-0.015588}" rpy="0 0 0"/>
+        <parent link="${prefix}_shoulder-ex-al-interface__1__1"/>
+        <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1"/>
+        <axis xyz="0.0 ${sign*1.0} 0.0"/>
+        <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+      </joint>
     
     <joint name="${prefix}_Rigid 23" type="fixed">
       <origin xyz="0.033979 -0.0375 ${sign*-0.024687}" rpy="0 0 0"/>
@@ -1626,12 +1627,13 @@
       <child link="${prefix}_fan-mount_1"/>
     </joint>
     
-    <joint name="${prefix}_Revolute 30" type="continuous">
-      <origin xyz="0.0 -0.042 ${sign*-0.037}" rpy="0 0 0"/>
-      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
-      <child link="${prefix}_bicep-motor-mate_1"/>
-      <axis xyz="-0.0 -0.0 -1.0"/>
-    </joint>
+    <joint name="${prefix}_elbow_joint" type="revolute">
+        <origin xyz="0.0 -0.042 ${sign*-0.037}" rpy="0 0 0"/>
+        <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
+        <child link="${prefix}_bicep-motor-mate_1"/>
+        <axis xyz="0.0 0.0 ${sign * 1.0}"/>
+        <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+      </joint>
     
     <joint name="${prefix}_Rigid 31" type="fixed">
       <origin xyz="0.052346 -0.029323 ${sign*0.0025}" rpy="0 0 0"/>
@@ -1639,19 +1641,21 @@
       <child link="${prefix}_6mm-bearing_1"/>
     </joint>
     
-    <joint name="${prefix}_Revolute 32" type="continuous">
-      <origin xyz="0.0 0.0 ${sign*0.005}" rpy="0 0 0"/>
-      <parent link="${prefix}_6mm-bearing_1"/>
-      <child link="${prefix}_bicep_1"/>
-      <axis xyz="0.0 0.0 1.0"/>
-    </joint>
-    
-    <joint name="${prefix}_Revolute 33" type="continuous">
-      <origin xyz="-0.006353 -0.049595 ${sign*-0.005}" rpy="0 0 0"/>
-      <parent link="${prefix}_bicep_1"/>
-      <child link="${prefix}_6mm-bearing__9__1"/>
-      <axis xyz="-0.0 -0.0 -1.0"/>
-    </joint>
+    <joint name="${prefix}_Revolute32" type="revolute">
+        <origin xyz="0.0 0.0 ${sign*0.005}" rpy="0 0 0"/>
+        <parent link="${prefix}_6mm-bearing_1"/>
+        <child link="${prefix}_bicep_1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+      </joint>
+  
+      <joint name="${prefix}_Revolute33" type="revolute">
+        <origin xyz="-0.006353 -0.049595 ${sign*-0.005}" rpy="0 0 0"/>
+        <parent link="${prefix}_bicep_1"/>
+        <child link="${prefix}_6mm-bearing__9__1"/>
+        <axis xyz="0.0 0.0 -1.0"/>
+        <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+      </joint>
     
     <joint name="${prefix}_Rigid 34" type="fixed">
       <origin xyz="0.0 0.0 ${sign*0.005}" rpy="0 0 0"/>
@@ -1688,33 +1692,37 @@
       <parent link="${prefix}_elbow-hangar1_1"/>
       <child link="${prefix}_6mm-bearing__6__1"/>
     </joint>
-    
-    <joint name="${prefix}_Revolute 41" type="continuous">
+
+    <joint name="${prefix}_Revolute41" type="revolute">
       <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
       <parent link="${prefix}_6mm-bearing__2__1"/>
       <child link="${prefix}_elbow-rear-hanger__1__1"/>
       <axis xyz="0.0 0.0 1.0"/>
+      <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
     </joint>
-    
-    <joint name="${prefix}_Revolute 42" type="continuous">
+
+    <joint name="${prefix}_Revolute42" type="revolute">
       <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
       <parent link="${prefix}_6mm-bearing__6__1"/>
       <child link="${prefix}_elbow-rear-hanger_1"/>
-      <axis xyz="-0.0 -0.0 -1.0"/>
+      <axis xyz="0.0 0.0 -1.0"/>
+      <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
     </joint>
-    
-    <joint name="${prefix}_Revolute 43" type="continuous">
+
+    <joint name="${prefix}_Revolute43" type="revolute">
       <origin xyz="-0.065182 -0.031627 ${sign*-0.005}" rpy="0 0 0"/>
       <parent link="${prefix}_straight-tendon_1"/>
       <child link="${prefix}_6mm-bearing__7__1"/>
-      <axis xyz="-0.0 -0.0 -1.0"/>
+      <axis xyz="0.0 0.0 -1.0"/>
+      <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
     </joint>
-    
-    <joint name="${prefix}_Revolute 44" type="continuous">
+
+    <joint name="${prefix}_Revolute44" type="revolute">
       <origin xyz="-0.065182 -0.031627 ${sign*0.029}" rpy="0 0 0"/>
       <parent link="${prefix}_straight-tendon_1"/>
       <child link="${prefix}_6mm-bearing__4__1"/>
       <axis xyz="0.0 0.0 1.0"/>
+      <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
     </joint>
     
     <joint name="${prefix}_Rigid 45" type="fixed">
@@ -1765,12 +1773,14 @@
       <child link="${prefix}_6mm-bearing__8__1"/>
     </joint>
     
-    <joint name="${prefix}_Revolute 55" type="continuous">
-      <origin xyz="-0.012993 -0.036995 ${sign*-0.039944}" rpy="0 0 0"/>
-      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1"/>
-      <child link="${prefix}_shoulder-ex-al-interface_1"/>
-      <axis xyz="-0.000375 -1.0 -0.0"/>
-    </joint>
+   
+    <joint name="${prefix}_wrist_roll" type="revolute">
+        <origin xyz="-0.012993 -0.036995 ${sign*-0.039944}" rpy="0 0 0"/>
+        <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1"/>
+        <child link="${prefix}_shoulder-ex-al-interface_1"/>
+        <axis xyz="0.0 ${sign * 1.0} 0.0"/>
+        <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+      </joint>
     
     <joint name="${prefix}_Rigid 56" type="fixed">
       <origin xyz="0.008994 -0.017503 ${sign*-0.015588}" rpy="0 0 0"/>
