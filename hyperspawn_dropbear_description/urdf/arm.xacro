@@ -6,1917 +6,1934 @@
  Regular Expressions
     Find - xyz="(.+)\s(.+)\s(.+)" r
     Replace - xyz="$1 $2 ${sign*$3}" r
+
+    Find
+      <inertia\s+ixx="([^"]+)"\s+iyy="([^"]+)"\s+izz="([^"]+)"\s+ixy="([^"]+)"\s+iyz="([^"]+)"\s+ixz="([^"]+)"\s*/>
+    Replace
+      <inertia ixx="$1" iyy="$2" izz="$3" ixy="${sign*$4}" iyz="${sign*$5}" ixz="$6"/>
+
+      hyperspawn_dropbear_description/meshes/${folder}
+
+      link name="${prefix}_
+      joint name="${prefix}_${prefix}_
    -->
 
+    <!-- <link name="${prefix}_base_link">
+      <inertial>
+        <origin xyz="-6.496817022290221e-15 0 ${sign*0.005}" rpy="0 0 0"/>
+        <mass value="0.49623462441733"/>
+        <inertia ixx="0.000272043421613551" iyy="0.000272043421603598" izz="0.000535816266143527" ixy="${sign*-8.924416761146857e-20}" iyz="${sign*0}" ixz="3.081487911019577e-33"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 ${sign*0}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="steel_satin"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${sign*0}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link> -->
+
+    
     <xacro:macro name="arm_macro" params="prefix folder parent sign *origin">
-        <!-- <link name="${prefix}_base_link">
-          <inertial>
-            <origin xyz="-4.564684959507811e-14 -1.297744842251468e-14 ${sign*-0.00040000000000051}" rpy="0 0 0"/>
-            <mass value="0.0710251267123582"/>
-            <inertia ixx="1.03755872605632e-05" iyy="1.03755872605639e-05" izz="2.04552364931589e-05" ixy="2.231104194494098e-20" iyz="-3.993969333038147e-17" ixz="8.809863505376990e-17"/>
-          </inertial>
-          <visual>
-            <origin xyz="0 0 ${sign*0}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/base_link.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque2550255"/>
-          </visual>
-          <collision>
-            <origin xyz="0 0 ${sign*0}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/base_link.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link> -->
-        
-        <link name="${prefix}_2020_100mm__9__1">
-          <inertial>
-            <origin xyz="1.4980442800229068e-14 5.199887469533773e-15 ${sign*0.049999999999999795}" rpy="0 0 0"/>
-            <mass value="0.019591747444562"/>
-            <inertia ixx="1.71247911414457e-05" iyy="1.71247911416276e-05" izz="1.59666987542057e-06" ixy="-6.394884621840706e-17" iyz="2.518172085831656e-18" ixz="7.829445091340370e-18"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.0 0.0 ${sign*-0.0021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__9__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque727161"/>
-          </visual>
-          <collision>
-            <origin xyz="0.0 0.0 ${sign*-0.0021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__9__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-roll-al-mot_MIR1__1__1">
-          <inertial>
-            <origin xyz="0.005127204279605231 -0.01578027268886943 ${sign*0.013349013943228552}" rpy="0 0 0"/>
-            <mass value="0.0139822805624322"/>
-            <inertia ixx="1.33357850186962e-06" iyy="2.39192509601408e-06" izz="1.95321408998418e-06" ixy="-3.84446207640792e-07" iyz="1.4147058742276e-08" ixz="-4.62978754176702e-09"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.0 -0.0 ${sign*-0.0021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="0.0 -0.0 ${sign*-0.0021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-roll-al-mot_MIR1__2__1">
-          <inertial>
-            <origin xyz="-0.005127204279607458 0.015780272688869185 ${sign*0.013349013943228556}" rpy="0 0 0"/>
-            <mass value="0.0139822805624322"/>
-            <inertia ixx="1.33357850186963e-06" iyy="2.39192509601406e-06" izz="1.95321408998418e-06" ixy="-3.84446207640812e-07" iyz="-1.41470587422785e-08" ixz="4.62978754176003e-09"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.0 -0.0 ${sign*-0.0021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="0.0 -0.0 ${sign*-0.0021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_yaw-cap_1">
-          <inertial>
-            <origin xyz="-8.404754804490673e-15 2.1068804545096473e-14 ${sign*-0.006586829858195878}" rpy="0 0 0"/>
-            <mass value="0.0147970811486"/>
-            <inertia ixx="2.47144498176233e-06" iyy="4.12036554274002e-06" izz="2.86340658923296e-06" ixy="-5.99005456426396e-07" iyz="2.946851009227335e-18" ixz="-1.059818412580698e-18"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.0 0.0 ${sign*-0.1021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-cap_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="0.0 0.0 ${sign*-0.1021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-cap_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_yaw-waist-adapter-motor-exal_MIR1_1">
-          <inertial>
-            <origin xyz="-0.0022354396247523025 0.006879975731446575 ${sign*0.049999999999987436}" rpy="0 0 0"/>
-            <mass value="0.0374132377219994"/>
-            <inertia ixx="7.74698902279246e-06" iyy="1.35806331978027e-05" izz="1.28983762196582e-05" ixy="-2.11919529319787e-06" iyz="-1.897353801849633e-19" ixz="3.642241673193491e-20"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.0 -0.0 ${sign*-0.0021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-waist-adapter-motor-exal_MIR1_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="0.0 -0.0 ${sign*-0.0021}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-waist-adapter-motor-exal_MIR1_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_front-bearing-adapter-shoulder_1">
-          <inertial>
-            <origin xyz="0.012476625956564928 0.01204671407588206 ${sign*-0.00900000000002072}" rpy="0 0 0"/>
-            <mass value="0.023683107739144"/>
-            <inertia ixx="3.64971689005244e-06" iyy="7.09787565227239e-06" izz="5.22213010024979e-06" ixy="-1.2526169920336e-06" iyz="9.893344823930228e-19" ixz="-3.184843881676169e-19"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.021006 -0.014204 ${sign*-0.0611}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/front-bearing-adapter-shoulder_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="0.021006 -0.014204 ${sign*-0.0611}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/front-bearing-adapter-shoulder_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-ex-al-interface__2__1">
-          <inertial>
-            <origin xyz="0.01738138579865837 -0.0030497886170603797 ${sign*-0.008999999999991598}" rpy="0 0 0"/>
-            <mass value="0.027893677646265"/>
-            <inertia ixx="4.32482586114369e-06" iyy="8.39411157893946e-06" izz="6.30628010967354e-06" ixy="-1.47825456629198e-06" iyz="2.466898755583424e-17" ixz="7.404253805128741e-17"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.011735 0.014328 ${sign*-0.0611}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="0.011735 0.014328 ${sign*-0.0611}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_RMD-X8-Pro_MIR8_MIR1__1__1">
-          <inertial>
-            <origin xyz="0.0067650965649745445 -0.020808521702550438 ${sign*0.00046176070349858434}" rpy="0 0 0"/>
-            <mass value="0.0658409996798309"/>
-            <inertia ixx="6.73245559130172e-05" iyy="9.09727241934292e-05" izz="6.35281702686579e-05" ixy="-8.59564716294938e-06" iyz="7.14503501851588e-07" ixz="-2.30317369534993e-07"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.008343 0.025679 ${sign*-0.0521}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque13110895"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.008343 0.025679 ${sign*-0.0521}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-motor-bicep-rotor-bracket_1">
-          <inertial>
-            <origin xyz="0.011585383104448774 -0.002019144805998477 ${sign*0.006894585665480131}" rpy="0 0 0"/>
-            <mass value="0.0242631871440445"/>
-            <inertia ixx="7.32924174579478e-06" iyy="1.01897271688699e-05" izz="4.02506203897297e-06" ixy="-1.03913215530172e-06" iyz="-4.23772294446241e-07" ixz="-1.30423701412823e-06"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.059876 0.048364 ${sign*-0.0521}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-motor-bicep-rotor-bracket_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.059876 0.048364 ${sign*-0.0521}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-motor-bicep-rotor-bracket_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_bicep-rear-motor-adapter_1">
-          <inertial>
-            <origin xyz="-0.0018929355342764131 0.016127672677199507 ${sign*0.015500000000001603}" rpy="0 0 0"/>
-            <mass value="0.0281681226709944"/>
-            <inertia ixx="6.66789269228993e-06" iyy="5.24554656234814e-06" izz="6.37785740381877e-06" ixy="1.31824458087614e-06" iyz="1.694065894508601e-19" ixz="-5.421010862427522e-20"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.076995 0.042802 ${sign*-0.0506}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-rear-motor-adapter_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.076995 0.042802 ${sign*-0.0506}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-rear-motor-adapter_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_bicep-shoulder-bracket-exal__1__1">
-          <inertial>
-            <origin xyz="0.011983042446585573 -0.004518260205938709 ${sign*0.005535150009386286}" rpy="0 0 0"/>
-            <mass value="0.0119000299936683"/>
-            <inertia ixx="1.06039831340363e-06" iyy="1.52523000194053e-06" izz="2.34706806988364e-06" ixy="-1.688599950433e-07" iyz="6.776263578034403e-21" ixz="1.355252715606881e-20"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.065252 0.006662 ${sign*-0.0761}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.065252 0.006662 ${sign*-0.0761}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_bicep-shoulder-bracket-exal__2__1">
-          <inertial>
-            <origin xyz="0.011983042446582756 -0.004518260205939313 ${sign*-0.0054648499906134115}" rpy="0 0 0"/>
-            <mass value="0.0119000299936683"/>
-            <inertia ixx="1.06039831340363e-06" iyy="1.5252300019405e-06" izz="2.34706806988363e-06" ixy="-1.68859995043294e-07" iyz="6.776263578034403e-21" ixz="1.355252715606881e-20"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.065252 0.006662 ${sign*-0.0561}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.065252 0.006662 ${sign*-0.0561}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_2020_100mm__8__1">
-          <inertial>
-            <origin xyz="-0.02187147869637933 0.034952359549973555 ${sign*-0.009999999999981746}" rpy="0 0 0"/>
-            <mass value="0.019591747444562"/>
-            <inertia ixx="1.5641987506042e-05" iyy="3.0794735109847e-06" izz="1.71247911413717e-05" ixy="4.56360033803824e-06" iyz="-7.738493006115288e-18" ixz="2.507217523872729e-18"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.097956 0.010231 ${sign*-0.0761}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__8__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque727161"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.097956 0.010231 ${sign*-0.0761}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__8__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_yaw-waist-adapter-motor-exal_MIR1__5__1">
-          <inertial>
-            <origin xyz="0.008570545572160838 -0.049788080074744674 ${sign*1.457167719820518e-15}" rpy="0 0 0"/>
-            <mass value="0.0374132377219994"/>
-            <inertia ixx="1.41382993236902e-05" iyy="1.30292783846948e-05" izz="7.05842073186832e-06" ixy="4.02875438314004e-07" iyz="-6.776263578034403e-21" ixz="5.421010862427522e-20"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.060634 -0.072274 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-waist-adapter-motor-exal_MIR1__5__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.060634 -0.072274 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-waist-adapter-motor-exal_MIR1__5__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_bicep-shoulder-bracket-exal_1">
-          <inertial>
-            <origin xyz="-0.014231130165287431 -0.020921360581575885 ${sign*-0.007214849990613441}" rpy="0 0 0"/>
-            <mass value="0.0119000299936683"/>
-            <inertia ixx="1.06039831340366e-06" iyy="1.5252300019405e-06" izz="2.34706806988368e-06" ixy="-1.68859995043294e-07" iyz="6.776263578034403e-21" ixz="1.355252715606881e-20"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.070144 -0.075364 ${sign*-0.05785}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.070144 -0.075364 ${sign*-0.05785}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-front_1">
-          <inertial>
-            <origin xyz="-0.007463364992977992 -0.010559925065031256 ${sign*0.010000000000000855}" rpy="0 0 0"/>
-            <mass value="0.0285901454621081"/>
-            <inertia ixx="5.24738535853905e-06" iyy="5.75381404316444e-06" izz="5.10534101569437e-06" ixy="-1.12882167821954e-07" iyz="-4.118613002729310e-17" ixz="-1.249543003789544e-16"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.04393 -0.058961 ${sign*-0.0561}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-front_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.04393 -0.058961 ${sign*-0.0561}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-front_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_bicep-shoulder-bracket-exal__3__1">
-          <inertial>
-            <origin xyz="0.011982869834713333 -0.00451836058157562 ${sign*0.0055351500093866746}" rpy="0 0 0"/>
-            <mass value="0.0119000299936683"/>
-            <inertia ixx="1.06039831340366e-06" iyy="1.52523000194053e-06" izz="2.3470680698837e-06" ixy="-1.688599950433e-07" iyz="6.776263578034403e-21" ixz="1.355252715606881e-20"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.04393 -0.058961 ${sign*-0.0761}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.04393 -0.058961 ${sign*-0.0761}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-cap_1">
-          <inertial>
-            <origin xyz="-0.034857061179216664 -0.006155365677712535 ${sign*-0.02572256391671531}" rpy="0 0 0"/>
-            <mass value="0.046227678179176"/>
-            <inertia ixx="1.76465028282704e-05" iyy="3.51734867524788e-05" izz="2.25355319862365e-05" ixy="-6.39975511036637e-06" iyz="-1.32005071311637e-06" ixz="-4.02230543927391e-06"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.024494 -0.060532 ${sign*-0.0811}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-cap_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.024494 -0.060532 ${sign*-0.0811}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-cap_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-front-bearing-adapter_1">
-          <inertial>
-            <origin xyz="0.002386025471724852 -0.007343142980721001 ${sign*-2.1516816106625924e-13}" rpy="0 0 0"/>
-            <mass value="0.0517827683159966"/>
-            <inertia ixx="2.00897215647814e-05" iyy="3.34357881365482e-05" izz="1.85144321830305e-05" ixy="-4.84824247298993e-06" iyz="-2.439454888092385e-19" ixz="6.776263578034403e-21"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.015451 -0.047553 ${sign*-0.0521}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-front-bearing-adapter_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="0.015451 -0.047553 ${sign*-0.0521}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-front-bearing-adapter_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_skateboard-bearing__7__1">
-          <inertial>
-            <origin xyz="0.0010817588048354296 -0.0033289225564277353 ${sign*6.462885782099193e-14}" rpy="0 0 0"/>
-            <mass value="0.00230907060038848"/>
-            <inertia ixx="9.51660210389439e-08" iyy="1.51519688193447e-07" izz="8.85143732875385e-08" ixy="-2.04716678984035e-08" iyz="0" ixz="0"/>
-          </inertial>
-          <visual>
-            <origin xyz="0.014268 -0.043912 ${sign*-0.0521}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/skateboard-bearing__7__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="0.014268 -0.043912 ${sign*-0.0521}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/skateboard-bearing__7__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-ex-al-interface__1__1">
-          <inertial>
-            <origin xyz="0.005086309920670065 0.011115745348658862 ${sign*-0.015588000000003085}" rpy="0 0 0"/>
-            <mass value="0.027893677646265"/>
-            <inertia ixx="8.62918953092065e-06" iyy="6.55151618232706e-06" izz="3.84451183650918e-06" ixy="7.54759023527542e-07" iyz="-7.428817760599116e-17" ixz="2.390665790330537e-17"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.088376 -0.019252 ${sign*-0.081688}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.088376 -0.019252 ${sign*-0.081688}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1">
-          <inertial>
-            <origin xyz="0.020811032738451224 0.006758332348657088 ${sign*-0.0004617607034976129}" rpy="0 0 0"/>
-            <mass value="0.0658409996798309"/>
-            <inertia ixx="9.09774292415633e-05" iyy="6.7319850864883e-05" izz="6.35281702686577e-05" ixy="8.5891712197628e-06" iyz="2.3364395504617e-07" ixz="7.13422628698264e-07"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.101763 -0.033065 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque13110895"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.101763 -0.033065 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_bicep-rotational-cuff-second-motor-bracket_1">
-          <inertial>
-            <origin xyz="0.02579329779689743 -0.027346829280827607 ${sign*0.011692978353793584}" rpy="0 0 0"/>
-            <mass value="0.0320781339241104"/>
-            <inertia ixx="3.41151769728197e-05" iyy="7.91300090191788e-06" izz="3.80752971458179e-05" ixy="9.51849738174703e-06" iyz="2.75547767213661e-08" ixz="8.48427415083269e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.126928 -0.076969 ${sign*-0.041413}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-rotational-cuff-second-motor-bracket_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.126928 -0.076969 ${sign*-0.041413}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-rotational-cuff-second-motor-bracket_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_arm-cuff-bicep-bracket_1">
-          <inertial>
-            <origin xyz="0.026747737541988198 -0.027037140279867637 ${sign*0.010976523865579235}" rpy="0 0 0"/>
-            <mass value="0.0396071482598914"/>
-            <inertia ixx="1.72909087565665e-05" iyy="6.95389552897961e-06" izz="2.08996292553588e-05" ixy="3.75496291676885e-06" iyz="-6.15614302756809e-08" ixz="-1.88151444691781e-07"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.126928 -0.076969 ${sign*-0.090787}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/arm-cuff-bicep-bracket_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.126928 -0.076969 ${sign*-0.090787}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/arm-cuff-bicep-bracket_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1">
-          <inertial>
-            <origin xyz="0.04008391366910127 0.012538887934983922 ${sign*-0.01561908096714007}" rpy="0 0 0"/>
-            <mass value="0.0658409996798309"/>
-            <inertia ixx="6.44336317909464e-05" iyy="6.36248988822963e-05" izz="9.37669197018588e-05" ixy="2.95951172273197e-07" iyz="7.12726270180649e-07" ixz="-2.35787126190521e-07"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.158351 -0.051451 ${sign*-0.0941}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque13110895"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.158351 -0.051451 ${sign*-0.0941}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_elbow-hangar_1">
-          <inertial>
-            <origin xyz="0.009097755696947596 0.008492177017401778 ${sign*0.0053454030039173095}" rpy="0 0 0"/>
-            <mass value="0.0204020833630401"/>
-            <inertia ixx="6.6421250278737e-06" iyy="4.11811022617411e-06" izz="1.03527066425164e-05" ixy="-8.109713974891e-08" iyz="1.26245664383887e-08" ixz="3.49860892958232e-09"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.23824 -0.077409 ${sign*-0.0941}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-hangar_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.23824 -0.077409 ${sign*-0.0941}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-hangar_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_elbow-hangar1_1">
-          <inertial>
-            <origin xyz="0.009239632983326695 0.008659896006840764 ${sign*-0.005352531151966877}" rpy="0 0 0"/>
-            <mass value="0.0206552999135536"/>
-            <inertia ixx="6.71852816144279e-06" iyy="4.18187895299157e-06" izz="1.04933666904246e-05" ixy="-9.19621016773212e-08" iyz="-1.0640147190554e-08" ixz="-1.82105253153462e-09"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.238212 -0.077493 ${sign*-0.0591}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-hangar1_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.238212 -0.077493 ${sign*-0.0591}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-hangar1_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_power-mount-arm_1">
-          <inertial>
-            <origin xyz="0.0199725006095543 0.007084375363081735 ${sign*-0.007564191049157856}" rpy="0 0 0"/>
-            <mass value="0.00920761435653255"/>
-            <inertia ixx="6.93163292977354e-07" iyy="2.31947497968756e-06" izz="2.76652425160314e-06" ixy="-8.26146077881631e-07" iyz="9.47310549299942e-08" ixz="1.55844231409296e-07"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.198384 -0.02243 ${sign*-0.0591}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/power-mount-arm_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.198384 -0.02243 ${sign*-0.0591}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/power-mount-arm_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_fan-mount_1">
-          <inertial>
-            <origin xyz="0.007614354119151734 0.000836188010462844 ${sign*0.01662058044961192}" rpy="0 0 0"/>
-            <mass value="0.00644067140035774"/>
-            <inertia ixx="1.48605155910032e-06" iyy="3.68013686438944e-06" izz="2.83932016880128e-06" ixy="-7.97050051407598e-07" iyz="-2.97112695746051e-08" ixz="9.68054293153044e-09"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.206393 -0.015511 ${sign*-0.0526}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/fan-mount_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.206393 -0.015511 ${sign*-0.0526}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/fan-mount_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_bicep-motor-mate_1">
-          <inertial>
-            <origin xyz="0.0036413059649408053 0.01829349155933041 ${sign*-0.005357773320266546}" rpy="0 0 0"/>
-            <mass value="0.0234002691640453"/>
-            <inertia ixx="1.32060288590759e-05" iyy="2.54192298376364e-06" izz="1.53523578903067e-05" ixy="-2.21008972083536e-06" iyz="-8.0372672143551e-08" ixz="-1.59965060578119e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.198295 -0.06443 ${sign*-0.0571}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-motor-mate_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.198295 -0.06443 ${sign*-0.0571}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-motor-mate_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing_1">
-          <inertial>
-            <origin xyz="-3.5326930772350273e-07 -2.214747430728803e-07 ${sign*0.0025000000000666572}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534108097759e-08" iyy="1.36534107510715e-08" izz="2.42143162924741e-08" ixy="2.874491009802194e-17" iyz="0" ixz="-5.082197683525802e-21"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.210008 -0.123276 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.210008 -0.123276 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_bicep_1">
-          <inertial>
-            <origin xyz="0.025241062458964486 0.003467924642948428 ${sign*-0.0024679893349933285}" rpy="0 0 0"/>
-            <mass value="0.00452110353215657"/>
-            <inertia ixx="1.78635876769165e-07" iyy="1.59943917593539e-06" izz="1.72883353989758e-06" ixy="-2.22997923500127e-07" iyz="-1.13161037261654e-08" ixz="-8.64330203756723e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.210008 -0.123276 ${sign*-0.0646}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.210008 -0.123276 ${sign*-0.0646}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__9__1">
-          <inertial>
-            <origin xyz="2.865579871724755e-07 1.0929456925601322e-07 ${sign*0.00250000000008746}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534108186749e-08" iyy="1.36534107421742e-08" izz="2.42143162924538e-08" ixy="1.498231877103406e-17" iyz="0" ixz="-5.082197683525802e-21"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.259138 -0.132559 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__9__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.259138 -0.132559 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__9__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_straight-tendon_1">
-          <inertial>
-            <origin xyz="0.016982130987867106 -0.03009616821723135 ${sign*0.011870768566949505}" rpy="0 0 0"/>
-            <mass value="0.0328967120048395"/>
-            <inertia ixx="1.2026531689926e-05" iyy="1.84226655396526e-05" izz="2.75121662277849e-05" ixy="1.05830445656609e-05" iyz="1.27172353512099e-07" ixz="-7.15971958302562e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.259138 -0.132559 ${sign*-0.0646}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/straight-tendon_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.259138 -0.132559 ${sign*-0.0646}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/straight-tendon_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__1__1">
-          <inertial>
-            <origin xyz="2.7684984724163364e-07 3.2034255134649747e-07 ${sign*-0.002499999999997768}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534107809988e-08" iyy="1.36534107798503e-08" izz="2.42143162924809e-08" ixy="-4.107093354646651e-17" iyz="0" ixz="-3.388131789017201e-21"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.248202 -0.110095 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.248202 -0.110095 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__5__1">
-          <inertial>
-            <origin xyz="-2.579352154363779e-07 -2.4019200871305824e-07 ${sign*0.0025000000000022435}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534107810039e-08" iyy="1.3653410779857e-08" izz="2.42143162924809e-08" ixy="-4.107770981004455e-17" iyz="-1.694065894508601e-21" ixz="-3.388131789017201e-21"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.248175 -0.11018 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__5__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.248175 -0.11018 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__5__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__2__1">
-          <inertial>
-            <origin xyz="-3.244389845113993e-07 -4.2206160963398354e-07 ${sign*-0.002499999999997643}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534107810005e-08" iyy="1.36534107798638e-08" izz="2.42143162924741e-08" ixy="-4.107770981004455e-17" iyz="0" ixz="0"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.269544 -0.088998 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.269544 -0.088998 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_elbow-bridge-rear__1__1">
-          <inertial>
-            <origin xyz="0.00037731086861581 -0.0006154201679538229 ${sign*-0.012000384647695192}" rpy="0 0 0"/>
-            <mass value="0.0028705367164362"/>
-            <inertia ixx="1.64013592546732e-07" iyy="1.69029719705434e-07" izz="8.44000480725439e-08" ixy="-4.94462821241156e-09" iyz="6.270768206453371e-13" ixz="-4.202376294171195e-13"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.269544 -0.088998 ${sign*-0.0886}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-bridge-rear__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.269544 -0.088998 ${sign*-0.0886}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-bridge-rear__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__6__1">
-          <inertial>
-            <origin xyz="1.4077586790728347e-07 1.740391428195487e-08 ${sign*0.0025000000000023684}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534107810005e-08" iyy="1.36534107798503e-08" izz="2.42143162924673e-08" ixy="-4.107432167825553e-17" iyz="8.470329472543003e-22" ixz="5.082197683525802e-21"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.269516 -0.089082 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__6__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.269516 -0.089082 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__6__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_elbow-rear-hanger__1__1">
-          <inertial>
-            <origin xyz="0.02934379676100346 0.008989918119322815 ${sign*-0.004053673616636819}" rpy="0 0 0"/>
-            <mass value="0.00878773207629285"/>
-            <inertia ixx="1.1522637629092e-06" iyy="2.77857409078255e-06" izz="3.8398800936702e-06" ixy="-1.32357239278618e-06" iyz="2.66633484505264e-09" ixz="-1.49038211958406e-09"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.269544 -0.088998 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-rear-hanger__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque808080"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.269544 -0.088998 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-rear-hanger__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_elbow-rear-hanger_1">
-          <inertial>
-            <origin xyz="0.029350657033763494 0.008974172754350793 ${sign*0.004053673616641912}" rpy="0 0 0"/>
-            <mass value="0.00878773207629285"/>
-            <inertia ixx="1.15065037986482e-06" iyy="2.78018747382691e-06" izz="3.83988009366998e-06" ixy="-1.32257983291486e-06" iyz="-2.66652047281092e-09" ixz="1.4900499778806e-09"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.269516 -0.089082 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-rear-hanger_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque808080"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.269516 -0.089082 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-rear-hanger_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__7__1">
-          <inertial>
-            <origin xyz="-3.636756962244192e-08 -4.999536466626653e-07 ${sign*0.002500000000108589}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.3653410811426e-08" iyy="1.36534107494316e-08" izz="2.42143162924673e-08" ixy="-2.694920024984282e-17" iyz="4.235164736271502e-22" ixz="0"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.30936 -0.080341 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__7__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.30936 -0.080341 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__7__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__4__1">
-          <inertial>
-            <origin xyz="-3.636765966152922e-08 -4.999536816763239e-07 ${sign*-0.00249999999989145}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534107494215e-08" iyy="1.36534108114209e-08" izz="2.42143162924673e-08" ixy="2.695258838163184e-17" iyz="0" ixz="-3.388131789017201e-21"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.30936 -0.080341 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__4__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.30936 -0.080341 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__4__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_forearm-elbow-motor-bracket-inner2_1">
-          <inertial>
-            <origin xyz="0.01210452779343929 0.018768296075041158 ${sign*0.006000210735618364}" rpy="0 0 0"/>
-            <mass value="0.0192069448509669"/>
-            <inertia ixx="6.21792569103477e-06" iyy="2.28550673511642e-06" izz="8.12040624796964e-06" ixy="3.33924211184293e-07" iyz="-2.97249573777891e-09" ixz="-1.98666460270516e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.30936 -0.080341 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/forearm-elbow-motor-bracket-inner2_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.30936 -0.080341 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/forearm-elbow-motor-bracket-inner2_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__3__1">
-          <inertial>
-            <origin xyz="-3.3812888700079924e-07 -4.80847968137299e-07 ${sign*-0.0024999999998957523}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534108134029e-08" iyy="1.36534107474529e-08" izz="2.42143162924538e-08" ixy="-2.448264030743830e-17" iyz="1.694065894508601e-21" ixz="3.388131789017201e-21"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.32192 -0.118318 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.32192 -0.118318 ${sign*-0.0936}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_elbow-bridge-rear_1">
-          <inertial>
-            <origin xyz="0.00017362146100646791 0.0006999255750166633 ${sign*-0.012000384647593357}" rpy="0 0 0"/>
-            <mass value="0.0028705367164362"/>
-            <inertia ixx="1.61621552749476e-07" iyy="1.71421759502684e-07" izz="8.44000480725439e-08" ixy="2.59397725035102e-09" iyz="-7.392586265093492e-13" ixz="-1.527144160911806e-13"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.32192 -0.118318 ${sign*-0.0886}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-bridge-rear_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.32192 -0.118318 ${sign*-0.0886}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-bridge-rear_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_second-forearm-motor-strap_1">
-          <inertial>
-            <origin xyz="0.014708936033833275 -0.02081565891948628 ${sign*0.002509257258482181}" rpy="0 0 0"/>
-            <mass value="0.0131449054705419"/>
-            <inertia ixx="3.43138676629572e-06" iyy="1.58695113719942e-06" izz="4.77340242408691e-06" ixy="5.10902521250233e-07" iyz="6.16354740128598e-08" ixz="1.402440507787e-07"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.318828 -0.127828 ${sign*-0.1051}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/second-forearm-motor-strap_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.318828 -0.127828 ${sign*-0.1051}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/second-forearm-motor-strap_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1">
-          <inertial>
-            <origin xyz="0.018861805978547308 -0.007520690639387845 ${sign*-0.04040576070339569}" rpy="0 0 0"/>
-            <mass value="0.0658409996798309"/>
-            <inertia ixx="9.09838616472696e-05" iyy="6.73134184591643e-05" izz="6.35281702686431e-05" ixy="8.58030568945184e-06" iyz="-2.33376660648183e-07" ixz="-7.13510111442729e-07"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.345523 -0.125898 ${sign*-0.106044}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__4__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque13110895"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.345523 -0.125898 ${sign*-0.106044}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__4__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_fore-arm-bicep-motor-attatch_1">
-          <inertial>
-            <origin xyz="-0.009651244394266734 -0.03898859615972326 ${sign*0.00035796122303864003}" rpy="0 0 0"/>
-            <mass value="0.0209546718492168"/>
-            <inertia ixx="1.04514300674843e-05" iyy="2.58698928522509e-06" izz="1.24986679126875e-05" ixy="2.78916445132994e-06" iyz="2.66278334695827e-08" ixz="2.02287240043527e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.339041 -0.145873 ${sign*-0.041413}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/fore-arm-bicep-motor-attatch_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.339041 -0.145873 ${sign*-0.041413}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/fore-arm-bicep-motor-attatch_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_forearm-elbow-motor-bracket-inner_1">
-          <inertial>
-            <origin xyz="0.002543710639871688 -0.02871711147828905 ${sign*0.005494237705661112}" rpy="0 0 0"/>
-            <mass value="0.0194601610964149"/>
-            <inertia ixx="6.31121950777307e-06" iyy="2.30522493752019e-06" izz="8.23398459688131e-06" ixy="3.01641193478706e-07" iyz="2.98435509831841e-09" ixz="1.92473633802413e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.318828 -0.127827 ${sign*-0.0481}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/forearm-elbow-motor-bracket-inner_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.318828 -0.127827 ${sign*-0.0481}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/forearm-elbow-motor-bracket-inner_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_6mm-bearing__8__1">
-          <inertial>
-            <origin xyz="1.8166938153818535e-07 -6.957382656103128e-08 ${sign*0.0025000000001725795}" rpy="0 0 0"/>
-            <mass value="0.000742201264410583"/>
-            <inertia ixx="1.36534107474767e-08" iyy="1.36534108133724e-08" izz="2.42143162924809e-08" ixy="2.453346228427356e-17" iyz="-8.470329472543003e-22" ixz="0"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.321914 -0.118315 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__8__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque244244244"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.321914 -0.118315 ${sign*-0.0596}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__8__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-ex-al-interface_1">
-          <inertial>
-            <origin xyz="0.008777069212284438 0.002847989226232972 ${sign*1.0648426584936033e-13}" rpy="0 0 0"/>
-            <mass value="0.027893677646265"/>
-            <inertia ixx="8.62975476795724e-06" iyy="6.55095094528966e-06" izz="3.84451183650918e-06" ixy="7.53980428245355e-07" iyz="7.418653365232064e-17" ixz="-2.428612866367530e-17"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.384723 -0.124974 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque22122113"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.384723 -0.124974 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-roll-al-mot_MIR1__3__1">
-          <inertial>
-            <origin xyz="0.015475495394150607 -0.0044405328981518 ${sign*-0.0010043671574723606}" rpy="0 0 0"/>
-            <mass value="0.0139822805624322"/>
-            <inertia ixx="1.88229880822098e-06" iyy="1.27958507925314e-06" izz="2.5168338003939e-06" ixy="2.18564846424479e-07" iyz="4.61044448857295e-09" ixz="1.41533491789534e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.39859 -0.138936 ${sign*-0.050512}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.39859 -0.138936 ${sign*-0.050512}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_shoulder-roll-al-mot_MIR1_1">
-          <inertial>
-            <origin xyz="0.015475426626878619 -0.004440320984141877 ${sign*0.0010033671576757525}" rpy="0 0 0"/>
-            <mass value="0.0139822805624322"/>
-            <inertia ixx="1.88226180650956e-06" iyy="1.2796220809643e-06" izz="2.51683380039346e-06" ixy="2.18615855241441e-07" iyz="-4.57859064090195e-09" ixz="-1.4163685929235e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.39859 -0.138936 ${sign*-0.081689}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque245245245"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.39859 -0.138936 ${sign*-0.081689}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_2020_100mm__10__1">
-          <inertial>
-            <origin xyz="0.04755886079292104 0.015433290864262622 ${sign*1.0068335054569388e-13}" rpy="0 0 0"/>
-            <mass value="0.019591747444562"/>
-            <inertia ixx="3.07605584273351e-06" iyy="1.56454051740999e-05" izz="1.71247911416065e-05" ixy="-4.5588926132704e-06" iyz="1.084202172485504e-19" ixz="2.168404344971009e-19"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.401368 -0.130375 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__10__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque727161"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.401368 -0.130375 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__10__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_top-bracket-servo-strap_1">
-          <inertial>
-            <origin xyz="0.03411014913308452 0.011047031874247631 ${sign*1.204420641340298e-05}" rpy="0 0 0"/>
-            <mass value="0.0175777981223999"/>
-            <inertia ixx="9.29479846030251e-06" iyy="5.47481508958057e-06" izz="5.02507725581381e-06" ixy="1.3855824304073e-06" iyz="-4.310728897861764e-11" ixz="-2.134664385360086e-11"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.401368 -0.130375 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/top-bracket-servo-strap_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.401368 -0.130375 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/top-bracket-servo-strap_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_MG995_1">
-          <inertial>
-            <origin xyz="0.02542053581561582 -0.001276948059540317 ${sign*-0.004850007599141448}" rpy="0 0 0"/>
-            <mass value="0.032566461385389"/>
-            <inertia ixx="5.38895774384847e-06" iyy="5.59171425588111e-06" izz="8.86947697656577e-06" ixy="4.14631043579167e-08" iyz="5.365051773068702e-12" ixz="4.980090775527635e-13"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.430497 -0.160434 ${sign*-0.05095}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque636363"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.430497 -0.160434 ${sign*-0.05095}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_MG995__4__1">
-          <inertial>
-            <origin xyz="0.02412079550410856 0.002727982934733808 ${sign*0.009060775705328955}" rpy="0 0 0"/>
-            <mass value="0.032566461385389"/>
-            <inertia ixx="5.76005376702008e-06" iyy="8.54204411183338e-06" izz="5.54805109744851e-06" ixy="-1.00902296761973e-06" iyz="-2.8737861608219e-08" ixz="-8.85428860033805e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.441223 -0.127381 ${sign*-0.0465}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__4__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque636363"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.441223 -0.127381 ${sign*-0.0465}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__4__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_MG995__3__1">
-          <inertial>
-            <origin xyz="0.019827623818259865 0.015959817195865075 ${sign*0.004850007599342093}" rpy="0 0 0"/>
-            <mass value="0.032566461385389"/>
-            <inertia ixx="5.49827845502016e-06" iyy="5.48239354471181e-06" izz="8.86947697656664e-06" ixy="-1.09241279847103e-07" iyz="4.050359277574939e-12" ixz="-3.553362248540082e-12"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.442596 -0.123148 ${sign*-0.08125}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque636363"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.442596 -0.123148 ${sign*-0.08125}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__3__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_MG995__5__1">
-          <inertial>
-            <origin xyz="0.021127364129767012 0.011954886201590936 ${sign*-0.009060775705128143}" rpy="0 0 0"/>
-            <mass value="0.032566461385389"/>
-            <inertia ixx="5.76005626801851e-06" iyy="8.54204161083831e-06" izz="5.54805109744851e-06" ixy="-1.0090264153783e-06" iyz="2.87284461969787e-08" ixz="8.85459413568768e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.43187 -0.156201 ${sign*-0.0857}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__5__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque636363"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.43187 -0.156201 ${sign*-0.0857}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__5__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_2020_100mm__11__1">
-          <inertial>
-            <origin xyz="0.09510320422272961 0.030861694308185278 ${sign*9.919842725025774e-14}" rpy="0 0 0"/>
-            <mass value="0.019591747444562"/>
-            <inertia ixx="3.07605584273991e-06" iyy="1.56454051740713e-05" izz="1.71247911415996e-05" ixy="-4.55889261327929e-06" iyz="1.084202172485504e-19" ixz="3.252606517456513e-19"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.401368 -0.130375 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__11__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque727161"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.401368 -0.130375 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__11__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_top-bracket-servo-strap__1__1">
-          <inertial>
-            <origin xyz="-0.009381861774768185 -0.0030667560010047834 ${sign*-1.2044206214339992e-05}" rpy="0 0 0"/>
-            <mass value="0.0175777981223999"/>
-            <inertia ixx="9.29487224457558e-06" iyy="5.47474130530891e-06" izz="5.02507725581424e-06" ixy="1.38548071488285e-06" iyz="2.235920584965634e-11" ixz="-4.259088502885089e-11"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.54403 -0.17667 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/top-bracket-servo-strap__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.54403 -0.17667 ${sign*-0.0661}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/top-bracket-servo-strap__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_MG995__2__1">
-          <inertial>
-            <origin xyz="-0.024121471517170034 -0.0027287589888995434 ${sign*0.009060775705327699}" rpy="0 0 0"/>
-            <mass value="0.032566461385389"/>
-            <inertia ixx="5.76005376701997e-06" iyy="8.54204411183251e-06" izz="5.54805109744851e-06" ixy="-1.00902296761886e-06" iyz="2.87378616086798e-08" ixz="8.85428860044647e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.528891 -0.187685 ${sign*-0.0465}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque636363"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.528891 -0.187685 ${sign*-0.0465}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__2__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_MG995__6__1">
-          <inertial>
-            <origin xyz="-0.025421211828677737 0.0012771720053743607 ${sign*-0.00485000759914328}" rpy="0 0 0"/>
-            <mass value="0.032566461385389"/>
-            <inertia ixx="5.38895774384988e-06" iyy="5.59171425588978e-06" izz="8.86947697657445e-06" ixy="4.14631043548809e-08" iyz="-5.365051935699028e-12" ixz="-4.980085354516772e-13"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.539617 -0.154631 ${sign*-0.05095}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__6__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque636363"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.539617 -0.154631 ${sign*-0.05095}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__6__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_MG995__1__1">
-          <inertial>
-            <origin xyz="-0.02112704014282696 -0.011954662255756893 ${sign*-0.009060775705130197}" rpy="0 0 0"/>
-            <mass value="0.032566461385389"/>
-            <inertia ixx="5.76005626801829e-06" iyy="8.54204161083311e-06" izz="5.54805109744157e-06" ixy="-1.00902641537743e-06" iyz="-2.87284461971413e-08" ixz="-8.85459413568768e-08"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.538243 -0.158864 ${sign*-0.0857}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque636363"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.538243 -0.158864 ${sign*-0.0857}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__1__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_MG995__7__1">
-          <inertial>
-            <origin xyz="-0.019827299831319145 -0.0159595932500311 ${sign*0.004850007599340733}" rpy="0 0 0"/>
-            <mass value="0.032566461385389"/>
-            <inertia ixx="5.49827845501886e-06" iyy="5.48239354471181e-06" izz="8.86947697656577e-06" ixy="-1.09241279844935e-07" iyz="-4.050359331785047e-12" ixz="3.553362899061385e-12"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.527517 -0.191917 ${sign*-0.08125}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__7__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque636363"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.527517 -0.191917 ${sign*-0.08125}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__7__1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <link name="${prefix}_multiplex-stack-flat_1">
-          <inertial>
-            <origin xyz="-0.010298214415190743 0.0316942752130374 ${sign*0.007502408653395604}" rpy="0 0 0"/>
-            <mass value="0.0196851916219767"/>
-            <inertia ixx="2.20267292244485e-05" iyy="4.33346762103762e-06" izz="2.61301709215887e-05" ixy="6.4274160590935e-06" iyz="-2.08940472779795e-08" ixz="6.79501824664246e-09"/>
-          </inertial>
-          <visual>
-            <origin xyz="-0.077235 0.01118 ${sign*-0.0871}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/multiplex-stack-flat_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-            <material name="opaque191191191"/>
-          </visual>
-          <collision>
-            <origin xyz="-0.077235 0.01118 ${sign*-0.0871}" rpy="0 0 0"/>
-            <geometry>
-              <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/multiplex-stack-flat_1.stl" scale="0.001 0.001 0.001"/>
-            </geometry>
-          </collision>
-        </link>
-        
-        <joint name="${prefix}_torso_connection" type="fixed">
-            <xacro:insert_block name="origin"/>
-            <parent link="${parent}"/>
-            <child link="${prefix}_2020_100mm__9__1"/>
+    
+    <link name="${prefix}_shoulder-roll-al-mot_MIR1__1__1">
+      <inertial>
+        <origin xyz="-0.01659232442569455 1.1139623568467982e-07 ${sign*0.013349013943229465}" rpy="0 0 0"/>
+        <mass value="0.0163592682580457"/>
+        <inertia ixx="2.94469554646068e-06" iyy="1.41414366306325e-06" izz="2.28526048528149e-06" ixy="${sign*-1.959109032158722e-11}" iyz="${sign*3.686440548058393e-11}" ixz="1.74158424577829e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0 -0.0 ${sign*-0.01}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0 -0.0 ${sign*-0.01}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-roll-al-mot_MIR1__2__1">
+      <inertial>
+        <origin xyz="0.016592324425693906 -1.1139623519396125e-07 ${sign*0.013349013943229461}" rpy="0 0 0"/>
+        <mass value="0.0163592682580457"/>
+        <inertia ixx="2.94469554646068e-06" iyy="1.41414366306325e-06" izz="2.2852604852815e-06" ixy="${sign*-1.959109029246965e-11}" iyz="${sign*-3.686440548014597e-11}" ixz="-1.74158424577846e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0 -0.0 ${sign*-0.01}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0 -0.0 ${sign*-0.01}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_yaw-cap_1">
+      <inertial>
+        <origin xyz="2.2162578884901502e-14 2.2140731002778117e-16 ${sign*-0.006586829858195156}" rpy="0 0 0"/>
+        <mass value="0.017312584943862"/>
+        <inertia ixx="5.04854323001019e-06" iyy="2.6638750836575e-06" izz="3.35018570940257e-06" ixy="${sign*1.908869042176979e-20}" iyz="${sign*1.100622863726450e-19}" ixz="3.662235970160196e-18"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0 -0.0 ${sign*-0.11}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-cap_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0 -0.0 ${sign*-0.11}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-cap_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_yaw-waist-adapter-motor-exal_MIR1_1">
+      <inertial>
+        <origin xyz="0.00723403458529202 -3.5971225997855074e-16 ${sign*0.0499999999999884}" rpy="0 0 0"/>
+        <mass value="0.0437734881347393"/>
+        <inertia ixx="1.66949657418105e-05" iyy="8.2583522562858e-06" izz="1.50911001770001e-05" ixy="${sign*-2.786381389588518e-20}" iyz="${sign*-1.216427996016598e-20}" ixz="-2.236166980751353e-19"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0 -0.0 ${sign*-0.01}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-waist-adapter-motor-exal_MIR1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0 -0.0 ${sign*-0.01}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-waist-adapter-motor-exal_MIR1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_front-bearing-adapter-shoulder_1">
+      <inertial>
+        <origin xyz="0.007601634210069975 -0.015587999999998516 ${sign*-0.00900000000001975}" rpy="0 0 0"/>
+        <mass value="0.0277092360547985"/>
+        <inertia ixx="8.78070443423959e-06" iyy="3.7939788402805e-06" izz="6.10989221729227e-06" ixy="${sign*3.877429965353465e-20}" iyz="${sign*-1.823094394463676e-20}" ixz="1.219727444046192e-18"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.02 -0.015588 ${sign*-0.069}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/front-bearing-adapter-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.02 -0.015588 ${sign*-0.069}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/front-bearing-adapter-shoulder_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-ex-al-interface__2__1">
+      <inertial>
+        <origin xyz="-0.008272088271638172 -0.015588000000004406 ${sign*-0.008999999999990647}" rpy="0 0 0"/>
+        <mass value="0.03263560284613"/>
+        <inertia ixx="1.03830779561817e-05" iyy="4.49807884871569e-06" izz="7.37834772831807e-06" ixy="${sign*2.358671083983723e-19}" iyz="${sign*-9.132545078240102e-17}" ixz="6.844026213814747e-19"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.01 -0.015588 ${sign*-0.069}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="0.01 -0.015588 ${sign*-0.069}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_RMD-X8-Pro_MIR8_MIR1__1__1">
+      <inertial>
+        <origin xyz="-0.02188091903208703 -3.219454781594442e-06 ${sign*0.0004617607023024439}" rpy="0 0 0"/>
+        <mass value="0.780215846180861"/>
+        <inertia ixx="0.00111113799843006" iyy="0.000764684770745232" izz="0.000752808817666897" ixy="${sign*4.74278772872876e-08}" iyz="${sign*-2.07243316667861e-08}" ixz="8.89585651039351e-06"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.027 0.0 ${sign*-0.06}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque13110895"/>
+      </visual>
+      <collision>
+        <origin xyz="0.027 0.0 ${sign*-0.06}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-motor-bicep-rotor-bracket_1">
+      <inertial>
+        <origin xyz="-0.005500000000001365 -0.010394566089843876 ${sign*0.006894585665480776}" rpy="0 0 0"/>
+        <mass value="0.0283879289585321"/>
+        <inertia ixx="1.23170131575466e-05" iyy="8.18018047261162e-06" izz="4.70932258559873e-06" ixy="${sign*-1.355252715606881e-19}" iyz="${sign*1.60448646361674e-06}" ixz="5.421010862427522e-20"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0645 0.042 ${sign*-0.06}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-motor-bicep-rotor-bracket_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0645 0.042 ${sign*-0.06}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-motor-bicep-rotor-bracket_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_bicep-rear-motor-adapter_1">
+      <inertial>
+        <origin xyz="0.015923392949308564 -0.003183487341080926 ${sign*0.0155000000000022}" rpy="0 0 0"/>
+        <mass value="0.0329567035250635"/>
+        <inertia ixx="5.38963285566697e-06" iyy="8.54909107225949e-06" izz="7.46209316246797e-06" ixy="${sign*-7.58704318227122e-07}" iyz="${sign*2.710505431213761e-20}" ixz="1.626303258728257e-19"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0645 0.06 ${sign*-0.0585}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-rear-motor-adapter_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0645 0.06 ${sign*-0.0585}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-rear-motor-adapter_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_bicep-shoulder-bracket-exal__1__1">
+      <inertial>
+        <origin xyz="-0.00799999999999938 -0.009999999999990211 ${sign*0.005535150009386841}" rpy="0 0 0"/>
+        <mass value="0.0139230350925919"/>
+        <inertia ixx="1.84871225007599e-06" iyy="1.17647287887655e-06" izz="2.74606964176384e-06" ixy="${sign*-4.065758146820642e-20}" iyz="${sign*-2.710505431213761e-20}" ixz="-6.776263578034403e-21"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0265 0.06 ${sign*-0.084}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0265 0.06 ${sign*-0.084}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_bicep-shoulder-bracket-exal__2__1">
+      <inertial>
+        <origin xyz="-0.00799999999999845 -0.009999999999987075 ${sign*-0.005464849990612884}" rpy="0 0 0"/>
+        <mass value="0.0139230350925919"/>
+        <inertia ixx="1.84871225007599e-06" iyy="1.17647287887658e-06" izz="2.74606964176389e-06" ixy="${sign*-4.065758146820642e-20}" iyz="${sign*-2.032879073410321e-20}" ixz="-6.776263578034403e-21"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0265 0.06 ${sign*-0.064}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0265 0.06 ${sign*-0.064}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_2020_100mm__8___1__1">
+      <inertial>
+        <origin xyz="0.03999999999997527 0.009999999999997691 ${sign*-0.009999999999981204}" rpy="0 0 0"/>
+        <mass value="0.0528977181003175"/>
+        <inertia ixx="4.31100866363557e-06" iyy="4.62369360821583e-05" izz="4.62369360817191e-05" ixy="${sign*-4.940218111474687e-17}" iyz="${sign*1.084202172485504e-19}" ixz="-2.516514389746603e-17"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.04 0.09 ${sign*-0.084}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__8___1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque727161"/>
+      </visual>
+      <collision>
+        <origin xyz="0.04 0.09 ${sign*-0.084}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__8___1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_yaw-waist-adapter-motor-exal_MIR1__5__1">
+      <inertial>
+        <origin xyz="-0.04999999999998893 0.007234034585292329 ${sign*2.0539125955565396e-15}" rpy="0 0 0"/>
+        <mass value="0.0437734881347393"/>
+        <inertia ixx="1.50911001770002e-05" iyy="1.66949657418102e-05" izz="8.25835225628604e-06" ixy="${sign*1.712452913172996e-19}" iyz="${sign*2.710505431213761e-20}" ixz="-1.982913302373183e-20"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.05 0.08 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-waist-adapter-motor-exal_MIR1__5__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.05 0.08 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/yaw-waist-adapter-motor-exal_MIR1__5__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_bicep-shoulder-bracket-exal_1">
+      <inertial>
+        <origin xyz="-0.01550000000000154 0.020000000000012313 ${sign*-0.007214849990613059}" rpy="0 0 0"/>
+        <mass value="0.0139230350925919"/>
+        <inertia ixx="1.84871225007598e-06" iyy="1.17647287887656e-06" izz="2.74606964176393e-06" ixy="${sign*-3.388131789017201e-20}" iyz="${sign*-1.355252715606881e-20}" ixz="0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.05 0.09 ${sign*-0.06575}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.05 0.09 ${sign*-0.06575}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-front_1">
+      <inertial>
+        <origin xyz="-0.007736652232246094 0.010361414448293069 ${sign*0.010000000000001535}" rpy="0 0 0"/>
+        <mass value="0.0334504701906665"/>
+        <inertia ixx="6.75301171017896e-06" iyy="6.11839158981428e-06" izz="5.9732489883625e-06" ixy="${sign*-6.72891148221279e-08}" iyz="${sign*1.539024983843174e-16}" ixz="-6.640738306473715e-19"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0425 0.06 ${sign*-0.064}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-front_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0425 0.06 ${sign*-0.064}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-front_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_bicep-shoulder-bracket-exal__3__1">
+      <inertial>
+        <origin xyz="-0.008000000000001208 -0.00999999999998867 ${sign*0.005535150009387327}" rpy="0 0 0"/>
+        <mass value="0.0139230350925919"/>
+        <inertia ixx="1.84871225007602e-06" iyy="1.1764728788765e-06" izz="2.74606964176393e-06" ixy="${sign*-4.065758146820642e-20}" iyz="${sign*-4.065758146820642e-20}" ixz="-6.776263578034403e-21"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0425 0.06 ${sign*-0.084}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0425 0.06 ${sign*-0.084}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-shoulder-bracket-exal__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-cap_1">
+      <inertial>
+        <origin xyz="0.004917614424534554 0.03505255276075949 ${sign*-0.025722563916740007}" rpy="0 0 0"/>
+        <mass value="0.0540863834696359"/>
+        <inertia ixx="4.35959437594329e-05" iyy="1.82034440516574e-05" izz="2.63665724286844e-05" ixy="${sign*3.09573929524443e-08}" iyz="${sign*4.95302874574802e-06}" ixz="-1.46040514440132e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.05 0.042 ${sign*-0.089}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-cap_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.05 0.042 ${sign*-0.089}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-cap_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-front-bearing-adapter_1">
+      <inertial>
+        <origin xyz="-0.007720854302206356 1.4675767796906362e-15 ${sign*-2.1421753260142395e-13}" rpy="0 0 0"/>
+        <mass value="0.060585838929716"/>
+        <inertia ixx="4.09629608015188e-05" iyy="2.1661885549037e-05" izz="2.16618856541457e-05" ixy="${sign*2.751034531088321e-19}" iyz="${sign*7.982245490983458e-20}" ixz="-2.710505431213761e-19"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.05 -0.0 ${sign*-0.06}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-front-bearing-adapter_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.05 -0.0 ${sign*-0.06}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-front-bearing-adapter_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_skateboard-bearing__7__1">
+      <inertial>
+        <origin xyz="-0.003500427124746859 9.925393840148899e-16 ${sign*6.552397513459596e-14}" rpy="0 0 0"/>
+        <mass value="0.00270161260245453"/>
+        <inertia ixx="1.85060463480797e-07" iyy="1.03561816321086e-07" izz="1.0356181674642e-07" ixy="${sign*7.325440669930568e-22}" iyz="${sign*-9.492407324726906e-23}" ixz="8.470329472543003e-22"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.046172 -0.0 ${sign*-0.06}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/skateboard-bearing__7__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.046172 -0.0 ${sign*-0.06}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/skateboard-bearing__7__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-ex-al-interface__1__1">
+      <inertial>
+        <origin xyz="0.009000000000008309 -0.008272088271638098 ${sign*-0.01558800000000271}" rpy="0 0 0"/>
+        <mass value="0.03263560284613"/>
+        <inertia ixx="7.37834772831809e-06" iyy="1.03830779561816e-05" izz="4.49807884871572e-06" ixy="${sign*6.956531523051977e-19}" iyz="${sign*2.981555974335137e-19}" ixz="-9.132742117692257e-17"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.009 0.09 ${sign*-0.089588}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="0.009 0.09 ${sign*-0.089588}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1">
+      <inertial>
+        <origin xyz="-3.2194544748872734e-06 -0.02188091903285745 ${sign*-0.0004617607034973631}" rpy="0 0 0"/>
+        <mass value="0.780215846205997"/>
+        <inertia ixx="0.00076468477079434" iyy="0.00111113799846705" izz="0.000752808817683592" ixy="${sign*4.74278830335224e-08}" iyz="${sign*-8.8958565327606e-06}" ixz="2.07243405787374e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0 0.107 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque13110895"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.107 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_bicep-rotational-cuff-second-motor-bracket_1">
+      <inertial>
+        <origin xyz="-0.033978987607059224 -0.016080679496792427 ${sign*0.011692978353793536}" rpy="0 0 0"/>
+        <mass value="0.0375314166912092"/>
+        <inertia ixx="5.63969681368617e-06" iyy="4.35332712997568e-05" izz="4.45480976606069e-05" ixy="${sign*2.263675591796633e-13}" iyz="${sign*-1.04370009652323e-07}" ixz="-1.368785284884419e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.033979 0.1445 ${sign*-0.049313}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-rotational-cuff-second-motor-bracket_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.033979 0.1445 ${sign*-0.049313}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-rotational-cuff-second-motor-bracket_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_arm-cuff-bicep-bracket_1">
+      <inertial>
+        <origin xyz="-0.033979393966011476 -0.017084104800040023 ${sign*0.010976523865579207}" rpy="0 0 0"/>
+        <mass value="0.046340363464073"/>
+        <inertia ixx="6.70864033861288e-06" iyy="2.16577806754761e-05" izz="2.44525662287697e-05" ixy="${sign*1.67486728776186e-10}" iyz="${sign*2.31620437242874e-07}" ixz="-4.75494423516738e-10"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.033979 0.1445 ${sign*-0.098687}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/arm-cuff-bicep-bracket_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.033979 0.1445 ${sign*-0.098687}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/arm-cuff-bicep-bracket_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1">
+      <inertial>
+        <origin xyz="-0.00046176070351495026 -0.041996780545524526 ${sign*-0.015619080967140236}" rpy="0 0 0"/>
+        <mass value="0.780215846205997"/>
+        <inertia ixx="0.000752808817683609" iyy="0.000764684770794344" izz="0.00111113799846707" ixy="${sign*-2.07243405790566e-08}" iyz="${sign*4.74278830289027e-08}" ixz="8.89585653275783e-06"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0 0.1665 ${sign*-0.102}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque13110895"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.1665 ${sign*-0.102}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_elbow-hangar_1">
+      <inertial>
+        <origin xyz="0.005265304298907771 -0.011277107816589804 ${sign*0.005345403003916699}" rpy="0 0 0"/>
+        <mass value="0.023870437534757"/>
+        <inertia ixx="5.15595587768491e-06" iyy="7.43351936955127e-06" izz="1.21126667717443e-05" ixy="${sign*9.44656014223985e-07}" iyz="${sign*-8.45743906396738e-09}" ixz="1.27828894760319e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0 0.2505 ${sign*-0.102}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-hangar_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.2505 ${sign*-0.102}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-hangar_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_elbow-hangar1_1">
+      <inertial>
+        <origin xyz="0.005380513267402049 -0.011463196997355096 ${sign*-0.005352531151967405}" rpy="0 0 0"/>
+        <mass value="0.0241667008988578"/>
+        <inertia ixx="5.23944879813189e-06" iyy="7.51402752633227e-06" izz="1.22772390283733e-05" ixy="${sign*9.59284637530162e-07}" iyz="${sign*5.87329491161595e-09}" ixz="-1.1181274814033e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="-8.9e-05 0.2505 ${sign*-0.067}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-hangar1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="-8.9e-05 0.2505 ${sign*-0.067}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-hangar1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_power-mount-arm_1">
+      <inertial>
+        <origin xyz="0.0005659694928435155 -0.02118381634567837 ${sign*-0.0075641910491581615}" rpy="0 0 0"/>
+        <mass value="0.0107729087971431"/>
+        <inertia ixx="3.10023384079527e-06" iyy="4.24552938222798e-07" izz="3.2368333743759e-06" ixy="${sign*2.22774089034326e-07}" iyz="${sign*-2.07663507882405e-07}" ixz="4.9065203193914e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.039972 0.195606 ${sign*-0.067}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/power-mount-arm_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="0.039972 0.195606 ${sign*-0.067}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/power-mount-arm_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_fan-mount_1">
+      <inertial>
+        <origin xyz="-0.0015578096635837577 -0.007500647575580305 ${sign*0.016620580449611774}" rpy="0 0 0"/>
+        <mass value="0.00753558553841855"/>
+        <inertia ixx="4.60876411340874e-06" iyy="1.43567634207458e-06" izz="3.32200459749767e-06" ixy="${sign*1.807177129296844e-12}" iyz="${sign*-2.978376952619127e-11}" ixz="-3.65608021158094e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.049027 0.201084 ${sign*-0.0605}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/fan-mount_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="0.049027 0.201084 ${sign*-0.0605}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/fan-mount_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_bicep-motor-mate_1">
+      <inertial>
+        <origin xyz="0.01627296537372195 -0.009115804390395527 ${sign*-0.005357773320266886}" rpy="0 0 0"/>
+        <mass value="0.027378314921933"/>
+        <inertia ixx="5.68539577019598e-06" iyy="1.2739707885926e-05" izz="1.79622587316588e-05" ixy="${sign*5.75885960260209e-06}" iyz="${sign*4.68586203927952e-08}" ixz="-8.36500407814724e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0 0.2085 ${sign*-0.065}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-motor-mate_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.2085 ${sign*-0.065}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep-motor-mate_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing_1">
+      <inertial>
+        <origin xyz="3.0067933010080594e-07 -4.514541435685082e-07 ${sign*0.0025000000000662548}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792917266392e-07" iyy="1.61792918229625e-07" izz="2.86939648065795e-07" ixy="${sign*-7.113721504220516e-17}" iyz="${sign*2.710505431213761e-20}" ixz="1.355252715606881e-20"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.052346 0.237823 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.052346 0.237823 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_bicep_1">
+      <inertial>
+        <origin xyz="-0.004501322778096249 -0.02507818045237381 ${sign*-0.002467989334993856}" rpy="0 0 0"/>
+        <mass value="0.00528969113262319"/>
+        <inertia ixx="1.86596212657403e-06" iyy="2.14385685090326e-07" izz="2.02273524168027e-06" ixy="${sign*-2.77470768518512e-07}" iyz="${sign*1.00268480067038e-07}" ixz="1.86580110405718e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.052346 0.237823 ${sign*-0.0725}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.052346 0.237823 ${sign*-0.0725}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/bicep_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__9__1">
+      <inertial>
+        <origin xyz="7.024925836179863e-08 -1.7358376386278351e-07 ${sign*0.0025000000000867523}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792917277017e-07" iyy="1.61792918219135e-07" izz="2.86939648065795e-07" ixy="${sign*1.227181333982030e-16}" iyz="${sign*5.421010862427522e-20}" ixz="1.355252715606881e-20"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.045993 0.287418 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__9__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.045993 0.287418 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__9__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_straight-tendon_1">
+      <inertial>
+        <origin xyz="-0.03387086911923143 -0.006850606168940843 ${sign*0.011870768566948839}" rpy="0 0 0"/>
+        <mass value="0.0384891530456622"/>
+        <inertia ixx="1.3561857955739e-05" iyy="2.20637028028669e-05" izz="3.21892344865081e-05" ixy="${sign*-1.22167181917474e-05}" iyz="${sign*3.36896365957457e-08}" ixz="1.67395229540895e-07"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.045993 0.287418 ${sign*-0.0725}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/straight-tendon_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.045993 0.287418 ${sign*-0.0725}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/straight-tendon_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__1__1">
+      <inertial>
+        <origin xyz="1.5023622727816655e-07 2.8225565540385134e-07 ${sign*-0.0024999999999983508}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792918028912e-07" iyy="1.6179291746743e-07" izz="2.86939648066011e-07" ixy="${sign*3.977802245577755e-16}" iyz="${sign*-5.421010862427522e-20}" ixz="0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.028008 0.270076 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.028008 0.270076 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__5__1">
+      <inertial>
+        <origin xyz="-3.43434128045883e-08 3.76162596904539e-07 ${sign*0.0025000000000015288}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792918028803e-07" iyy="1.61792917467437e-07" izz="2.86939648065903e-07" ixy="${sign*3.977937770849316e-16}" iyz="${sign*0}" ixz="3.388131789017201e-21"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.028097 0.270076 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__5__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.028097 0.270076 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__5__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__2__1">
+      <inertial>
+        <origin xyz="1.4995815077558684e-07 -3.310962337632617e-08 ${sign*-0.0024999999999983508}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792918028695e-07" iyy="1.61792917467444e-07" izz="2.86939648065903e-07" ixy="${sign*3.977819186236700e-16}" iyz="${sign*0}" ixz="0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.001348 0.283853 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.001348 0.283853 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_elbow-bridge-rear__1__1">
+      <inertial>
+        <origin xyz="-0.0007014437261218269 -0.00016914076333035544 ${sign*-0.012000384647695761}" rpy="0 0 0"/>
+        <mass value="0.00335852795823036"/>
+        <inertia ixx="2.00604809019603e-07" iyy="1.89055866315515e-07" izz="9.87480562448487e-08" ixy="${sign*2.95552000101445e-09}" iyz="${sign*2.408940288998324e-13}" ixz="8.497078949570724e-13"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.001348 0.283853 ${sign*-0.0965}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-bridge-rear__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.001348 0.283853 ${sign*-0.0965}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-bridge-rear__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__6__1">
+      <inertial>
+        <origin xyz="-3.462138343352482e-08 6.079737324693468e-08 ${sign*0.0025000000000017786}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792918028695e-07" iyy="1.61792917467444e-07" izz="2.86939648065903e-07" ixy="${sign*3.977814951071964e-16}" iyz="${sign*0}" ixz="-1.058791184067875e-22"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.001437 0.283853 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__6__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.001437 0.283853 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__6__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_elbow-rear-hanger__1__1">
+      <inertial>
+        <origin xyz="-0.0005173605648576027 -0.03068611869294674 ${sign*-0.004053673616637665}" rpy="0 0 0"/>
+        <mass value="0.0102816465292626"/>
+        <inertia ixx="3.97946437943604e-06" iyy="6.19615909383298e-07" izz="4.49265970959385e-06" ixy="${sign*6.93613376658654e-07}" iyz="${sign*6.94388970639854e-10}" ixz="3.50577458253964e-09"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.001348 0.283853 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-rear-hanger__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque808080"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.001348 0.283853 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-rear-hanger__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_elbow-rear-hanger_1">
+      <inertial>
+        <origin xyz="-0.0005349140144733694 -0.030687105459771158 ${sign*0.004053673616640996}" rpy="0 0 0"/>
+        <mass value="0.0102816465292626"/>
+        <inertia ixx="3.9803089348651e-06" iyy="6.18771353954308e-07" izz="4.4926597095945e-06" ixy="${sign*6.915643315992e-07}" iyz="${sign*-6.93952270945436e-10}" ixz="-3.50586105141726e-09"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.001437 0.283853 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-rear-hanger_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque808080"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.001437 0.283853 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-rear-hanger_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__7__1">
+      <inertial>
+        <origin xyz="-1.30050141874255e-07 -3.89144360235516e-07 ${sign*0.0025000000001076383}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.6179291763849e-07" iyy="1.61792917857547e-07" izz="2.86939648066011e-07" ixy="${sign*4.743181216716741e-16}" iyz="${sign*2.710505431213761e-20}" ixz="-1.694065894508601e-21"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.019189 0.319045 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__7__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="0.019189 0.319045 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__7__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__4__1">
+      <inertial>
+        <origin xyz="-1.3005014696046424e-07 -3.8914426414571324e-07 ${sign*-0.00249999999989238}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792917857499e-07" iyy="1.61792917638572e-07" izz="2.86939648065903e-07" ixy="${sign*-4.743248979352521e-16}" iyz="${sign*5.421010862427522e-20}" ixz="1.694065894508601e-20"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.019189 0.319045 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__4__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="0.019189 0.319045 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__4__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_forearm-elbow-motor-bracket-inner2_1">
+      <inertial>
+        <origin xyz="0.014109539680702861 -0.01731239070342261 ${sign*0.0060002107356171425}" rpy="0 0 0"/>
+        <mass value="0.0224721254756313"/>
+        <inertia ixx="2.88375001689968e-06" iyy="7.06526592169688e-06" izz="9.50087531012382e-06" ixy="${sign*1.03610352968555e-06}" iyz="${sign*2.31810401857008e-08}" ixz="3.87518016892065e-09"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.019189 0.319045 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/forearm-elbow-motor-bracket-inner2_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="0.019189 0.319045 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/forearm-elbow-motor-bracket-inner2_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__3__1">
+      <inertial>
+        <origin xyz="1.239805898570201e-09 8.370368326238165e-08 ${sign*-0.002499999999896668}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792917602278e-07" iyy="1.61792917893603e-07" izz="2.86939648065686e-07" ixy="${sign*4.645128682742583e-16}" iyz="${sign*-5.421010862427522e-20}" ixz="-1.355252715606881e-20"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.013048 0.342726 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.013048 0.342726 ${sign*-0.1015}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_elbow-bridge-rear_1">
+      <inertial>
+        <origin xyz="0.0006123708628285231 -0.00038179918552844194 ${sign*-0.012000384647594495}" rpy="0 0 0"/>
+        <mass value="0.00335852795823036"/>
+        <inertia ixx="1.97684629107432e-07" iyy="1.91976046227523e-07" izz="9.87480562447403e-08" ixy="${sign*-5.82517280834244e-09}" iyz="${sign*4.372097031201533e-13}" ixz="-7.673859038991558e-13"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.013048 0.342726 ${sign*-0.0965}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-bridge-rear_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.013048 0.342726 ${sign*-0.0965}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/elbow-bridge-rear_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_second-forearm-motor-strap_1">
+      <inertial>
+        <origin xyz="-0.024341797177582752 -0.007557108441825444 ${sign*0.002509257258481362}" rpy="0 0 0"/>
+        <mass value="0.015379539400534"/>
+        <inertia ixx="1.71145037689913e-06" iyy="4.16000497019116e-06" izz="5.58488083618274e-06" ixy="${sign*1.50622534099762e-07}" iyz="${sign*-1.78338919930407e-07}" ixz="1.78787982488208e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.023048 0.342724 ${sign*-0.113}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/second-forearm-motor-strap_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.023048 0.342724 ${sign*-0.113}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/second-forearm-motor-strap_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1">
+      <inertial>
+        <origin xyz="-0.012981586090492152 -0.015614144505653293 ${sign*-0.04040576070339705}" rpy="0 0 0"/>
+        <mass value="0.780215846205997"/>
+        <inertia ixx="0.000764684854958189" iyy="0.00111113791430313" izz="0.000752808817683567" ixy="${sign*1.77223752146461e-07}" iyz="${sign*8.89586367266992e-06}" ixz="-1.73915786318753e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.012964 0.367517 ${sign*-0.113944}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__4__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque13110895"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.012964 0.367517 ${sign*-0.113944}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/RMD-X8-Pro_MIR8_MIR1__4__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_fore-arm-bicep-motor-attatch_1">
+      <inertial>
+        <origin xyz="-0.0340979234925639 0.021227629310018037 ${sign*0.00035796122303764083}" rpy="0 0 0"/>
+        <mass value="0.0245169660635836"/>
+        <inertia ixx="1.98729978360393e-06" iyy="1.32676508590662e-05" izz="1.46234414578456e-05" ixy="${sign*6.41390647216426e-08}" iyz="${sign*-3.21365220300792e-08}" ixz="2.2316059401674e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.033964 0.367525 ${sign*-0.049313}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/fore-arm-bicep-motor-attatch_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.033964 0.367525 ${sign*-0.049313}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/fore-arm-bicep-motor-attatch_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_forearm-elbow-motor-bracket-inner_1">
+      <inertial>
+        <origin xyz="-0.028097214791209014 0.00645470057921349 ${sign*0.005494237705660113}" rpy="0 0 0"/>
+        <mass value="0.0227683884828054"/>
+        <inertia ixx="2.93724186710984e-06" iyy="7.14399813388343e-06" izz="9.63376197835085e-06" ixy="${sign*1.09196031303596e-06}" iyz="${sign*-2.2496229764061e-08}" ixz="-3.63808226131827e-09"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.023047 0.342724 ${sign*-0.056}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/forearm-elbow-motor-bracket-inner_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.023047 0.342724 ${sign*-0.056}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/forearm-elbow-motor-bracket-inner_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_6mm-bearing__8__1">
+      <inertial>
+        <origin xyz="2.3269067660203202e-07 9.564553549168409e-08 ${sign*0.002500000000171587}" rpy="0 0 0"/>
+        <mass value="0.00879508498326541"/>
+        <inertia ixx="1.61792917893061e-07" iyy="1.61792917603044e-07" izz="2.86939648065686e-07" ixy="${sign*-4.646890511272872e-16}" iyz="${sign*5.421010862427522e-20}" ixz="0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.013047 0.34272 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__8__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque244244244"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.013047 0.34272 ${sign*-0.0675}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/6mm-bearing__8__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-ex-al-interface_1">
+      <inertial>
+        <origin xyz="-3.2728948960875906e-06 -0.009227971912655453 ${sign*1.051103648563867e-13}" rpy="0 0 0"/>
+        <mass value="0.03263560284613"/>
+        <inertia ixx="7.37834815005192e-06" iyy="1.0383077534448e-05" izz="4.49807884871523e-06" ixy="${sign*1.12569772770672e-09}" iyz="${sign*2.168404344971009e-19}" ixz="9.135651353298595e-17"/>
+      </inertial>
+      <visual>
+        <origin xyz="2.9e-05 0.404512 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque22122113"/>
+      </visual>
+      <collision>
+        <origin xyz="2.9e-05 0.404512 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-ex-al-interface_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-roll-al-mot_MIR1__3__1">
+      <inertial>
+        <origin xyz="-0.009005484461701413 -0.013346072568456768 ${sign*-0.0010043671574740468}" rpy="0 0 0"/>
+        <mass value="0.0163592682580457"/>
+        <inertia ixx="1.41414381295193e-06" iyy="2.28526033539264e-06" izz="2.94469554646152e-06" ixy="${sign*3.63221223720746e-10}" iyz="${sign*-1.74158485752437e-08}" ixz="1.306638481569978e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.008965 0.422015 ${sign*-0.058412}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.008965 0.422015 ${sign*-0.058412}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_shoulder-roll-al-mot_MIR1_1">
+      <inertial>
+        <origin xyz="-0.009005261669245517 -0.013346072651925167 ${sign*0.001003367157674212}" rpy="0 0 0"/>
+        <mass value="0.0163592682580457"/>
+        <inertia ixx="1.41414375770836e-06" iyy="2.28526039063642e-06" izz="2.94469554646066e-06" ixy="${sign*2.89492433457962e-10}" iyz="${sign*1.74158338957968e-08}" ixz="2.611579303630083e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.008965 0.422015 ${sign*-0.089589}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque245245245"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.008965 0.422015 ${sign*-0.089589}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/shoulder-roll-al-mot_MIR1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_2020_100mm__10__1">
+      <inertial>
+        <origin xyz="-1.910406007693991e-05 -0.05000005609485908 ${sign*9.899026043314052e-14}" rpy="0 0 0"/>
+        <mass value="0.0528977181003176"/>
+        <inertia ixx="4.62369301972403e-05" iyy="4.31101454850645e-06" izz="4.62369360830165e-05" ixy="${sign*-1.57072075706288e-08}" iyz="${sign*-1.084202172485504e-18}" ixz="-2.477121384465600e-18"/>
+      </inertial>
+      <visual>
+        <origin xyz="3.5e-05 0.422012 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__10__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque727161"/>
+      </visual>
+      <collision>
+        <origin xyz="3.5e-05 0.422012 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__10__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_top-bracket-servo-strap_1">
+      <inertial>
+        <origin xyz="-3.480379936662118e-05 -0.03585414266535236 ${sign*1.2044206411779279e-05}" rpy="0 0 0"/>
+        <mass value="0.0205660238032079"/>
+        <inertia ixx="5.87944436501297e-06" iyy="1.14010034883525e-05" izz="5.87934038930385e-06" ixy="${sign*1.99509727871528e-09}" iyz="${sign*3.933861699931263e-11}" ixz="-4.024916108303060e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="3.5e-05 0.422012 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/top-bracket-servo-strap_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="3.5e-05 0.422012 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/top-bracket-servo-strap_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_MG995_1">
+      <inertial>
+        <origin xyz="-0.009069915238274063 -0.023782577154890072 ${sign*-0.004850007599143107}" rpy="0 0 0"/>
+        <mass value="0.0550373197413074"/>
+        <inertia ixx="9.37608844869993e-06" iyy="9.18124723085222e-06" izz="1.49894160904034e-05" ixy="${sign*-1.57394769755329e-07}" iyz="${sign*-3.602280149520021e-12}" ixz="8.363090452903794e-12"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.019551 0.459003 ${sign*-0.05885}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque636363"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.019551 0.459003 ${sign*-0.05885}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_MG995__4__1">
+      <inertial>
+        <origin xyz="-0.004859144989096568 -0.023784135879376167 ${sign*0.009060775705327144}" rpy="0 0 0"/>
+        <mass value="0.0550373197413074"/>
+        <inertia ixx="1.49894152724917e-05" iyy="9.18113014278805e-06" izz="9.37620635469393e-06" ixy="${sign*-2.17962651605837e-09}" iyz="${sign*1.57321721989305e-07}" ixz="5.057487119527158e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.015199 0.45899 ${sign*-0.0544}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__4__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque636363"/>
+      </visual>
+      <collision>
+        <origin xyz="0.015199 0.45899 ${sign*-0.0544}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__4__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_MG995__3__1">
+      <inertial>
+        <origin xyz="0.009051637651431646 -0.023788680285102393 ${sign*0.004850007599340331}" rpy="0 0 0"/>
+        <mass value="0.0550373197413074"/>
+        <inertia ixx="9.37632420590362e-06" iyy="9.18101147362915e-06" izz="1.4989416090393e-05" ixy="${sign*1.57248601711623e-07}" iyz="${sign*3.596010642037406e-12}" ixz="8.365787277058844e-12"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.019649 0.458989 ${sign*-0.08915}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque636363"/>
+      </visual>
+      <collision>
+        <origin xyz="0.019649 0.458989 ${sign*-0.08915}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__3__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_MG995__5__1">
+      <inertial>
+        <origin xyz="0.00484086740225494 -0.023787121560615798 ${sign*-0.009060775705130114}" rpy="0 0 0"/>
+        <mass value="0.0550373197413074"/>
+        <inertia ixx="1.49894152778694e-05" iyy="9.18113013739395e-06" izz="9.37620635468872e-06" ixy="${sign*-2.17242822483314e-09}" iyz="${sign*-1.57321715721966e-07}" ixz="-6.730374879648521e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.015101 0.459002 ${sign*-0.0936}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__5__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque636363"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.015101 0.459002 ${sign*-0.0936}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__5__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_2020_100mm__11__1">
+      <inertial>
+        <origin xyz="-3.783053492940631e-05 -0.09998505258699814 ${sign*9.71445146547012e-14}" rpy="0 0 0"/>
+        <mass value="0.0528977181003175"/>
+        <inertia ixx="4.62369301973686e-05" iyy="4.31101454821388e-06" izz="4.62369360824562e-05" ixy="${sign*-1.57072074467329e-08}" iyz="${sign*-1.301042606982605e-18}" ixz="-2.478153705870066e-18"/>
+      </inertial>
+      <visual>
+        <origin xyz="3.5e-05 0.422012 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__11__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque727161"/>
+      </visual>
+      <collision>
+        <origin xyz="3.5e-05 0.422012 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__11__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_top-bracket-servo-strap__1__1">
+      <inertial>
+        <origin xyz="-1.6864267301180816e-05 0.009870051541510216 ${sign*-1.204420621642166e-05}" rpy="0 0 0"/>
+        <mass value="0.0205660238032079"/>
+        <inertia ixx="5.87944447517485e-06" iyy="1.14010033781921e-05" izz="5.87934038930558e-06" ixy="${sign*2.14211818608366e-09}" iyz="${sign*3.930844809808126e-11}" ixz="4.027862556956076e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="9.2e-05 0.571997 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/top-bracket-servo-strap__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="9.2e-05 0.571997 ${sign*-0.074}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/top-bracket-servo-strap__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_MG995__2__1">
+      <inertial>
+        <origin xyz="0.004858475699240385 0.02378402902103316 ${sign*0.009060775705325548}" rpy="0 0 0"/>
+        <mass value="0.0550373197413074"/>
+        <inertia ixx="1.49894152724726e-05" iyy="9.18113014278832e-06" izz="9.37620635469219e-06" ixy="${sign*-2.17962651616679e-09}" iyz="${sign*-1.57321721987354e-07}" ixz="-5.057487112750895e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.015063 0.561003 ${sign*-0.0544}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque636363"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.015063 0.561003 ${sign*-0.0544}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__2__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_MG995__6__1">
+      <inertial>
+        <origin xyz="0.009069245948417614 0.02378247029654812 ${sign*-0.004850007599145348}" rpy="0 0 0"/>
+        <mass value="0.0550373197413074"/>
+        <inertia ixx="9.37608844870513e-06" iyy="9.1812472308522e-06" izz="1.49894160904156e-05" ixy="${sign*-1.57394769755763e-07}" iyz="${sign*3.602281233722193e-12}" ixz="-8.363090561324012e-12"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.019687 0.56099 ${sign*-0.05885}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__6__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque636363"/>
+      </visual>
+      <collision>
+        <origin xyz="0.019687 0.56099 ${sign*-0.05885}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__6__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_MG995__1__1">
+      <inertial>
+        <origin xyz="-0.004841536692112472 0.02378701470227207 ${sign*-0.009060775705132404}" rpy="0 0 0"/>
+        <mass value="0.0550373197413074"/>
+        <inertia ixx="1.4989415277885e-05" iyy="9.18113013739433e-06" izz="9.37620635471301e-06" ixy="${sign*-2.17242822613418e-09}" iyz="${sign*1.57321715723701e-07}" ixz="6.730374902687818e-11"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.015237 0.560991 ${sign*-0.0936}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque636363"/>
+      </visual>
+      <collision>
+        <origin xyz="0.015237 0.560991 ${sign*-0.0936}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__1__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_MG995__7__1">
+      <inertial>
+        <origin xyz="-0.009052306941289648 0.023788573426757553 ${sign*0.004850007599338624}" rpy="0 0 0"/>
+        <mass value="0.0550373197413074"/>
+        <inertia ixx="9.3763242059175e-06" iyy="9.18101147362915e-06" izz="1.49894160903948e-05" ixy="${sign*1.57248601711732e-07}" iyz="${sign*-3.596012810441751e-12}" ixz="-8.365787385479061e-12"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.019513 0.561004 ${sign*-0.08915}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__7__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque636363"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.019513 0.561004 ${sign*-0.08915}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/MG995__7__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_multiplex-stack-flat_1">
+      <inertial>
+        <origin xyz="0.03332563082389307 7.422160111514309e-08 ${sign*0.0075024086533960616}" rpy="0 0 0"/>
+        <mass value="0.0230316741977128"/>
+        <inertia ixx="2.62674756784393e-06" iyy="2.82146827413748e-05" izz="3.05722999782589e-05" ixy="${sign*3.544631255138878e-11}" iyz="${sign*-6.821909248437563e-12}" ixz="-2.57062992390341e-08"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0345 0.07 ${sign*-0.095}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/multiplex-stack-flat_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque191191191"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0345 0.07 ${sign*-0.095}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/multiplex-stack-flat_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="${prefix}_2020_100mm__9__1">
+      <inertial>
+        <origin xyz="1.1509303757180628e-17 -1.666308025195601e-14 ${sign*0.050000000000000565}" rpy="0 0 0"/>
+        <mass value="0.0528977181003175"/>
+        <inertia ixx="4.62369360824171e-05" iyy="4.62369360816895e-05" izz="4.31100866363555e-06" ixy="${sign*-5.425554648957675e-17}" iyz="${sign*-2.197345496214465e-17}" ixz="-6.398843228155979e-20"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0 -0.0 ${sign*-0.01}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__9__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="opaque727161"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0 -0.0 ${sign*-0.01}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/2020_100mm__9__1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${prefix}_torso_connection" type="fixed">
+        <xacro:insert_block name="origin"/>
+        <parent link="${parent}"/>
+        <child link="${prefix}_2020_100mm__9__1"/>
+      </joint>
+    
+    <joint name="${prefix}_Rigid 2" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__9__1"/>
+      <child link="${prefix}_shoulder-roll-al-mot_MIR1__1__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 3" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__9__1"/>
+      <child link="${prefix}_shoulder-roll-al-mot_MIR1__2__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 4" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.1}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__9__1"/>
+      <child link="${prefix}_yaw-cap_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 5" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__9__1"/>
+      <child link="${prefix}_yaw-waist-adapter-motor-exal_MIR1_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 6" type="fixed">
+      <origin xyz="0.02 0.015588 ${sign*0.059}" rpy="0 0 0"/>
+      <parent link="${prefix}_yaw-waist-adapter-motor-exal_MIR1_1"/>
+      <child link="${prefix}_front-bearing-adapter-shoulder_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 7" type="fixed">
+      <origin xyz="-0.01 0.015588 ${sign*0.059}" rpy="0 0 0"/>
+      <parent link="${prefix}_yaw-waist-adapter-motor-exal_MIR1_1"/>
+      <child link="${prefix}_shoulder-ex-al-interface__2__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 8" type="continuous">
+      <origin xyz="-0.017 -0.015588 ${sign*-0.009}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-ex-al-interface__2__1"/>
+      <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__1__1"/>
+      <axis xyz="-1.0 -0.0 -0.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 9" type="fixed">
+      <origin xyz="-0.0375 -0.042 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__1__1"/>
+      <child link="${prefix}_shoulder-motor-bicep-rotor-bracket_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 10" type="fixed">
+      <origin xyz="0.0 -0.018 ${sign*-0.0015}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-motor-bicep-rotor-bracket_1"/>
+      <child link="${prefix}_bicep-rear-motor-adapter_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 11" type="fixed">
+      <origin xyz="0.038 0.0 ${sign*0.0255}" rpy="0 0 0"/>
+      <parent link="${prefix}_bicep-rear-motor-adapter_1"/>
+      <child link="${prefix}_bicep-shoulder-bracket-exal__1__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 12" type="fixed">
+      <origin xyz="0.038 0.0 ${sign*0.0055}" rpy="0 0 0"/>
+      <parent link="${prefix}_bicep-rear-motor-adapter_1"/>
+      <child link="${prefix}_bicep-shoulder-bracket-exal__2__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 13" type="fixed">
+      <origin xyz="-0.0135 -0.03 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_bicep-shoulder-bracket-exal__1__1"/>
+      <child link="${prefix}_2020_100mm__8___1__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 14" type="fixed">
+      <origin xyz="0.09 0.01 ${sign*-0.01}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__8___1__1"/>
+      <child link="${prefix}_yaw-waist-adapter-motor-exal_MIR1__5__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 15" type="fixed">
+      <origin xyz="0.09 0.0 ${sign*-0.01825}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__8___1__1"/>
+      <child link="${prefix}_bicep-shoulder-bracket-exal_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 16" type="fixed">
+      <origin xyz="-0.0075 0.03 ${sign*-0.00175}" rpy="0 0 0"/>
+      <parent link="${prefix}_bicep-shoulder-bracket-exal_1"/>
+      <child link="${prefix}_shoulder-front_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 17" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.02}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-front_1"/>
+      <child link="${prefix}_bicep-shoulder-bracket-exal__3__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 18" type="fixed">
+      <origin xyz="0.0075 0.018 ${sign*0.025}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-front_1"/>
+      <child link="${prefix}_shoulder-cap_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 19" type="fixed">
+      <origin xyz="0.0 0.042 ${sign*-0.029}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-cap_1"/>
+      <child link="${prefix}_shoulder-front-bearing-adapter_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 20" type="continuous">
+      <origin xyz="-0.003828 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-front-bearing-adapter_1"/>
+      <child link="${prefix}_skateboard-bearing__7__1"/>
+      <axis xyz="-1.0 -0.0 -0.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 21" type="fixed">
+      <origin xyz="-0.059 -0.01 ${sign*0.015588}" rpy="0 0 0"/>
+      <parent link="${prefix}_yaw-waist-adapter-motor-exal_MIR1__5__1"/>
+      <child link="${prefix}_shoulder-ex-al-interface__1__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 22" type="continuous">
+      <origin xyz="0.009 -0.017 ${sign*-0.015588}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-ex-al-interface__1__1"/>
+      <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1"/>
+      <axis xyz="-0.0 -1.0 0.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 23" type="fixed">
+      <origin xyz="0.033979 -0.0375 ${sign*-0.024687}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1"/>
+      <child link="${prefix}_bicep-rotational-cuff-second-motor-bracket_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 24" type="fixed">
+      <origin xyz="0.033979 -0.0375 ${sign*0.024687}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1"/>
+      <child link="${prefix}_arm-cuff-bicep-bracket_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 25" type="fixed">
+      <origin xyz="-0.033979 -0.022 ${sign*0.003313}" rpy="0 0 0"/>
+      <parent link="${prefix}_arm-cuff-bicep-bracket_1"/>
+      <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 26" type="fixed">
+      <origin xyz="0.0 -0.084 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
+      <child link="${prefix}_elbow-hangar_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 27" type="fixed">
+      <origin xyz="8.9e-05 -0.084 ${sign*-0.035}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
+      <child link="${prefix}_elbow-hangar1_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 28" type="fixed">
+      <origin xyz="-0.039972 -0.029106 ${sign*-0.035}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
+      <child link="${prefix}_power-mount-arm_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 29" type="fixed">
+      <origin xyz="-0.009055 -0.005478 ${sign*-0.0065}" rpy="0 0 0"/>
+      <parent link="${prefix}_power-mount-arm_1"/>
+      <child link="${prefix}_fan-mount_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 30" type="continuous">
+      <origin xyz="0.0 -0.042 ${sign*-0.037}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
+      <child link="${prefix}_bicep-motor-mate_1"/>
+      <axis xyz="-0.0 -0.0 -1.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 31" type="fixed">
+      <origin xyz="0.052346 -0.029323 ${sign*0.0025}" rpy="0 0 0"/>
+      <parent link="${prefix}_bicep-motor-mate_1"/>
+      <child link="${prefix}_6mm-bearing_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 32" type="continuous">
+      <origin xyz="0.0 0.0 ${sign*0.005}" rpy="0 0 0"/>
+      <parent link="${prefix}_6mm-bearing_1"/>
+      <child link="${prefix}_bicep_1"/>
+      <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 33" type="continuous">
+      <origin xyz="-0.006353 -0.049595 ${sign*-0.005}" rpy="0 0 0"/>
+      <parent link="${prefix}_bicep_1"/>
+      <child link="${prefix}_6mm-bearing__9__1"/>
+      <axis xyz="-0.0 -0.0 -1.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 34" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.005}" rpy="0 0 0"/>
+      <parent link="${prefix}_6mm-bearing__9__1"/>
+      <child link="${prefix}_straight-tendon_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 35" type="fixed">
+      <origin xyz="0.028008 -0.019576 ${sign*-0.0005}" rpy="0 0 0"/>
+      <parent link="${prefix}_elbow-hangar_1"/>
+      <child link="${prefix}_6mm-bearing__1__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 36" type="fixed">
+      <origin xyz="0.028008 -0.019576 ${sign*0.0005}" rpy="0 0 0"/>
+      <parent link="${prefix}_elbow-hangar1_1"/>
+      <child link="${prefix}_6mm-bearing__5__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 38" type="fixed">
+      <origin xyz="0.001348 -0.033353 ${sign*-0.0005}" rpy="0 0 0"/>
+      <parent link="${prefix}_elbow-hangar_1"/>
+      <child link="${prefix}_6mm-bearing__2__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 39" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*-0.005}" rpy="0 0 0"/>
+      <parent link="${prefix}_6mm-bearing__2__1"/>
+      <child link="${prefix}_elbow-bridge-rear__1__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 40" type="fixed">
+      <origin xyz="0.001348 -0.033353 ${sign*0.0005}" rpy="0 0 0"/>
+      <parent link="${prefix}_elbow-hangar1_1"/>
+      <child link="${prefix}_6mm-bearing__6__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 41" type="continuous">
+      <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_6mm-bearing__2__1"/>
+      <child link="${prefix}_elbow-rear-hanger__1__1"/>
+      <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 42" type="continuous">
+      <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_6mm-bearing__6__1"/>
+      <child link="${prefix}_elbow-rear-hanger_1"/>
+      <axis xyz="-0.0 -0.0 -1.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 43" type="continuous">
+      <origin xyz="-0.065182 -0.031627 ${sign*-0.005}" rpy="0 0 0"/>
+      <parent link="${prefix}_straight-tendon_1"/>
+      <child link="${prefix}_6mm-bearing__7__1"/>
+      <axis xyz="-0.0 -0.0 -1.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 44" type="continuous">
+      <origin xyz="-0.065182 -0.031627 ${sign*0.029}" rpy="0 0 0"/>
+      <parent link="${prefix}_straight-tendon_1"/>
+      <child link="${prefix}_6mm-bearing__4__1"/>
+      <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 45" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_6mm-bearing__4__1"/>
+      <child link="${prefix}_forearm-elbow-motor-bracket-inner2_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 46" type="fixed">
+      <origin xyz="0.032237 -0.023681 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_forearm-elbow-motor-bracket-inner2_1"/>
+      <child link="${prefix}_6mm-bearing__3__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 48" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*-0.005}" rpy="0 0 0"/>
+      <parent link="${prefix}_6mm-bearing__3__1"/>
+      <child link="${prefix}_elbow-bridge-rear_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 49" type="fixed">
+      <origin xyz="0.042237 -0.023679 ${sign*0.0115}" rpy="0 0 0"/>
+      <parent link="${prefix}_forearm-elbow-motor-bracket-inner2_1"/>
+      <child link="${prefix}_second-forearm-motor-strap_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 50" type="fixed">
+      <origin xyz="-0.010084 -0.024793 ${sign*0.000944}" rpy="0 0 0"/>
+      <parent link="${prefix}_second-forearm-motor-strap_1"/>
+      <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 51" type="fixed">
+      <origin xyz="0.021 -8e-06 ${sign*-0.064631}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1"/>
+      <child link="${prefix}_fore-arm-bicep-motor-attatch_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 52" type="fixed">
+      <origin xyz="-0.010917 0.024801 ${sign*0.006687}" rpy="0 0 0"/>
+      <parent link="${prefix}_fore-arm-bicep-motor-attatch_1"/>
+      <child link="${prefix}_forearm-elbow-motor-bracket-inner_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 53" type="fixed">
+      <origin xyz="-0.01 4e-06 ${sign*0.0115}" rpy="0 0 0"/>
+      <parent link="${prefix}_forearm-elbow-motor-bracket-inner_1"/>
+      <child link="${prefix}_6mm-bearing__8__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Revolute 55" type="continuous">
+      <origin xyz="-0.012993 -0.036995 ${sign*-0.039944}" rpy="0 0 0"/>
+      <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1"/>
+      <child link="${prefix}_shoulder-ex-al-interface_1"/>
+      <axis xyz="-0.000375 -1.0 -0.0"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 56" type="fixed">
+      <origin xyz="0.008994 -0.017503 ${sign*-0.015588}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-ex-al-interface_1"/>
+      <child link="${prefix}_shoulder-roll-al-mot_MIR1__3__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 57" type="fixed">
+      <origin xyz="0.008994 -0.017503 ${sign*0.015589}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-ex-al-interface_1"/>
+      <child link="${prefix}_shoulder-roll-al-mot_MIR1_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 58" type="fixed">
+      <origin xyz="-6e-06 -0.0175 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_shoulder-ex-al-interface_1"/>
+      <child link="${prefix}_2020_100mm__10__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 59" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__10__1"/>
+      <child link="${prefix}_top-bracket-servo-strap_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 60" type="fixed">
+      <origin xyz="0.019586 -0.036991 ${sign*-0.01515}" rpy="0 0 0"/>
+      <parent link="${prefix}_top-bracket-servo-strap_1"/>
+      <child link="${prefix}_MG995_1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 61" type="fixed">
+      <origin xyz="-0.015164 -0.036978 ${sign*-0.0196}" rpy="0 0 0"/>
+      <parent link="${prefix}_top-bracket-servo-strap_1"/>
+      <child link="${prefix}_MG995__4__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 62" type="fixed">
+      <origin xyz="-0.019614 -0.036977 ${sign*0.01515}" rpy="0 0 0"/>
+      <parent link="${prefix}_top-bracket-servo-strap_1"/>
+      <child link="${prefix}_MG995__3__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 63" type="fixed">
+      <origin xyz="0.015136 -0.03699 ${sign*0.0196}" rpy="0 0 0"/>
+      <parent link="${prefix}_top-bracket-servo-strap_1"/>
+      <child link="${prefix}_MG995__5__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 64" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__10__1"/>
+      <child link="${prefix}_2020_100mm__11__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 65" type="fixed">
+      <origin xyz="-5.7e-05 -0.149985 ${sign*0.0}" rpy="0 0 0"/>
+      <parent link="${prefix}_2020_100mm__11__1"/>
+      <child link="${prefix}_top-bracket-servo-strap__1__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 66" type="fixed">
+      <origin xyz="0.015155 0.010994 ${sign*-0.0196}" rpy="0 0 0"/>
+      <parent link="${prefix}_top-bracket-servo-strap__1__1"/>
+      <child link="${prefix}_MG995__2__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 67" type="fixed">
+      <origin xyz="-0.019595 0.011007 ${sign*-0.01515}" rpy="0 0 0"/>
+      <parent link="${prefix}_top-bracket-servo-strap__1__1"/>
+      <child link="${prefix}_MG995__6__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 68" type="fixed">
+      <origin xyz="-0.015145 0.011006 ${sign*0.0196}" rpy="0 0 0"/>
+      <parent link="${prefix}_top-bracket-servo-strap__1__1"/>
+      <child link="${prefix}_MG995__1__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 69" type="fixed">
+      <origin xyz="0.019605 0.010993 ${sign*0.01515}" rpy="0 0 0"/>
+      <parent link="${prefix}_top-bracket-servo-strap__1__1"/>
+      <child link="${prefix}_MG995__7__1"/>
+    </joint>
+    
+    <joint name="${prefix}_Rigid 70" type="fixed">
+      <origin xyz="-0.008 -0.01 ${sign*0.011}" rpy="0 0 0"/>
+      <parent link="${prefix}_bicep-shoulder-bracket-exal__1__1"/>
+      <child link="${prefix}_multiplex-stack-flat_1"/>
+    </joint>
+    
+    <!-- <joint name="${prefix}_Rigid 1" type="fixed">
+      <origin xyz="0.0 0.0 ${sign*0.01}" rpy="0 0 0"/>
+      <parent link="${prefix}_base_link"/>
+      <child link="${prefix}_2020_100mm__9__1"/>
+    </joint> -->
+
+
+    <gazebo>
+        <plugin name="gazebo_ros" filename="libgazebo_ros_api_plugin.so"/>
+        <joint name="${prefix}_Revolute37_gz" type="revolute">
+          <pose relative_to="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1">0.02809 -0.1631 ${sign*0.0} 0 0 0</pose>
+          <parent>${prefix}_straight-tendon_1</parent>
+          <child>${prefix}_6mm-bearing__5__1</child>
+  
+          <axis>
+            <xyz> 0 0 1</xyz>
+          </axis>
+          <limit>
+            <lower>${-PI}</lower>
+            <upper>${PI}</upper>
+            <effort>100.0</effort>
+            <velocity>10.0</velocity>
+          </limit>
+          <!-- <dynamics>
+            <damping>10.0</damping>
+            <friction>0.50</friction>
+          </dynamics> -->
+        </joint>
+
+        <joint name="${prefix}_Revolute47_gz" type="revolute">
+            <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.01161 -0.05887 ${sign*-0.034} 0 0 0</pose>
+            <!-- <pose relative_to="${prefix}_elbow-rear-hanger_1">0.01163 -0.05886 0 0 0 0</pose> -->
+            <parent>${prefix}_elbow-rear-hanger_1</parent>
+            <child>${prefix}_6mm-bearing__8__1</child>
+    
+            <axis>
+              <xyz> 0 0 1</xyz>
+            </axis>
+            <limit>
+              <lower>${-PI}</lower>
+              <upper>${PI}</upper>
+              <!-- <effort>0.0</effort>
+              <velocity>0.0</velocity> -->
+            </limit>
+            <!-- <dynamics>
+              <damping>1.0</damping>
+              <friction>0.5</friction>
+            </dynamics> -->
           </joint>
-        
-        <joint name="${prefix}_Rigid 2" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__9__1"/>
-          <child link="${prefix}_shoulder-roll-al-mot_MIR1__1__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 3" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__9__1"/>
-          <child link="${prefix}_shoulder-roll-al-mot_MIR1__2__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 4" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.1}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__9__1"/>
-          <child link="${prefix}_yaw-cap_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 5" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__9__1"/>
-          <child link="${prefix}_yaw-waist-adapter-motor-exal_MIR1_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 6" type="fixed">
-          <origin xyz="-0.021006 0.014204 ${sign*0.059}" rpy="0 0 0"/>
-          <parent link="${prefix}_yaw-waist-adapter-motor-exal_MIR1_1"/>
-          <child link="${prefix}_front-bearing-adapter-shoulder_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 7" type="fixed">
-          <origin xyz="-0.011735 -0.014328 ${sign*0.059}" rpy="0 0 0"/>
-          <parent link="${prefix}_yaw-waist-adapter-motor-exal_MIR1_1"/>
-          <child link="${prefix}_shoulder-ex-al-interface__2__1"/>
-        </joint>
-        
-        <joint name="${prefix}_pitch" type="revolute">
-          <origin xyz="0.020078 -0.011351 ${sign*-0.009}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-ex-al-interface__2__1"/>
-          <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__1__1"/>
-          <axis xyz="0.309017 -0.951057 -0.0"/>
-          <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 9" type="fixed">
-          <origin xyz="0.051533 -0.022685 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__1__1"/>
-          <child link="${prefix}_shoulder-motor-bicep-rotor-bracket_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 10" type="fixed">
-          <origin xyz="0.017119 0.005562 ${sign*-0.0015}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-motor-bicep-rotor-bracket_1"/>
-          <child link="${prefix}_bicep-rear-motor-adapter_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 11" type="fixed">
-          <origin xyz="-0.011743 0.03614 ${sign*0.0255}" rpy="0 0 0"/>
-          <parent link="${prefix}_bicep-rear-motor-adapter_1"/>
-          <child link="${prefix}_bicep-shoulder-bracket-exal__1__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 12" type="fixed">
-          <origin xyz="-0.011743 0.03614 ${sign*0.0055}" rpy="0 0 0"/>
-          <parent link="${prefix}_bicep-rear-motor-adapter_1"/>
-          <child link="${prefix}_bicep-shoulder-bracket-exal__2__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 13" type="fixed">
-          <origin xyz="0.032704 -0.003569 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_bicep-shoulder-bracket-exal__1__1"/>
-          <child link="${prefix}_2020_100mm__8__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 14" type="fixed">
-          <origin xyz="-0.037322 0.082505 ${sign*-0.01}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__8__1"/>
-          <child link="${prefix}_yaw-waist-adapter-motor-exal_MIR1__5__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 15" type="fixed">
-          <origin xyz="-0.027812 0.085595 ${sign*-0.01825}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__8__1"/>
-          <child link="${prefix}_bicep-shoulder-bracket-exal_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 16" type="fixed">
-          <origin xyz="-0.026214 -0.016403 ${sign*-0.00175}" rpy="0 0 0"/>
-          <parent link="${prefix}_bicep-shoulder-bracket-exal_1"/>
-          <child link="${prefix}_shoulder-front_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 17" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.02}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-front_1"/>
-          <child link="${prefix}_bicep-shoulder-bracket-exal__3__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 18" type="fixed">
-          <origin xyz="-0.019436 0.001571 ${sign*0.025}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-front_1"/>
-          <child link="${prefix}_shoulder-cap_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 19" type="fixed">
-          <origin xyz="-0.039945 -0.012979 ${sign*-0.029}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-cap_1"/>
-          <child link="${prefix}_shoulder-front-bearing-adapter_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Revolute 20" type="fixed">
-          <origin xyz="0.001183 -0.003641 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-front-bearing-adapter_1"/>
-          <child link="${prefix}_skateboard-bearing__7__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 21" type="fixed">
-          <origin xyz="0.027742 -0.053022 ${sign*0.015588}" rpy="0 0 0"/>
-          <parent link="${prefix}_yaw-waist-adapter-motor-exal_MIR1__5__1"/>
-          <child link="${prefix}_shoulder-ex-al-interface__1__1"/>
-        </joint>
-        
-        <joint name="${prefix}_roll" type="revolute">
-          <origin xyz="0.013387 0.013813 ${sign*-0.015588}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-ex-al-interface__1__1"/>
-          <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1"/>
-          <axis xyz="0.951057 0.309017 0.0"/>
-          <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 23" type="fixed">
-          <origin xyz="0.025165 0.043904 ${sign*-0.024687}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1"/>
-          <child link="${prefix}_bicep-rotational-cuff-second-motor-bracket_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 24" type="fixed">
-          <origin xyz="0.025165 0.043904 ${sign*0.024687}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1"/>
-          <child link="${prefix}_arm-cuff-bicep-bracket_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 25" type="fixed">
-          <origin xyz="0.031423 -0.025518 ${sign*0.003313}" rpy="0 0 0"/>
-          <parent link="${prefix}_arm-cuff-bicep-bracket_1"/>
-          <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 26" type="fixed">
-          <origin xyz="0.079889 0.025958 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
-          <child link="${prefix}_elbow-hangar_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 27" type="fixed">
-          <origin xyz="0.079861 0.026042 ${sign*-0.035}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
-          <child link="${prefix}_elbow-hangar1_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 28" type="fixed">
-          <origin xyz="0.040033 -0.029021 ${sign*-0.035}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
-          <child link="${prefix}_power-mount-arm_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 29" type="fixed">
-          <origin xyz="0.008009 -0.006919 ${sign*-0.0065}" rpy="0 0 0"/>
-          <parent link="${prefix}_power-mount-arm_1"/>
-          <child link="${prefix}_fan-mount_1"/>
-        </joint>
-        
-        <joint name="${prefix}_elbow_joint" type="revolute">
-          <origin xyz="0.039944 0.012979 ${sign*-0.037}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__2__1"/>
-          <child link="${prefix}_bicep-motor-mate_1"/>
-          <axis xyz="0.0 0.0 ${sign * -1.0}"/>
-          <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 31" type="fixed">
-          <origin xyz="0.011713 0.058846 ${sign*0.0025}" rpy="0 0 0"/>
-          <parent link="${prefix}_bicep-motor-mate_1"/>
-          <child link="${prefix}_6mm-bearing_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Revolute32" type="revolute">
-            <origin xyz="0.0 0.0 ${sign*0.005}" rpy="0 0 0"/>
-            <parent link="${prefix}_6mm-bearing_1"/>
-            <child link="${prefix}_bicep_1"/>
-            <axis xyz="0.0 0.0 1.0"/>
-            <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+    
+          <joint name="${prefix}_Recolute48_gz" type="revolute">
+          <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.01161 -0.05887 ${sign*0.0} 0 0 0</pose>
+              <parent>${prefix}_elbow-rear-hanger__1__1</parent>
+              <child>${prefix}_6mm-bearing__3__1</child>
+    
+            <axis>
+              <xyz> 0 0 -1</xyz>
+            </axis>
+            <limit>
+              <lower>${-PI}</lower>
+              <upper>${PI}</upper>
+              <!-- <effort>0.0</effort>
+              <velocity>0.0</velocity> -->
+            </limit>
+    
+            <!-- <dynamics>
+              <damping>2.0</damping>
+              <friction>0.10</friction>
+            </dynamics> -->
           </joint>
-        
-        <joint name="${prefix}_Revolute 33" type="continuous">
-          <origin xyz="0.04913 0.009283 ${sign*-0.005}" rpy="0 0 0"/>
-          <parent link="${prefix}_bicep_1"/>
-          <child link="${prefix}_6mm-bearing__9__1"/>
-          <axis xyz="0.0 0.0 -1.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 34" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.005}" rpy="0 0 0"/>
-          <parent link="${prefix}_6mm-bearing__9__1"/>
-          <child link="${prefix}_straight-tendon_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 35" type="fixed">
-          <origin xyz="0.009962 0.032686 ${sign*-0.0005}" rpy="0 0 0"/>
-          <parent link="${prefix}_elbow-hangar_1"/>
-          <child link="${prefix}_6mm-bearing__1__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 36" type="fixed">
-          <origin xyz="0.009963 0.032687 ${sign*0.0005}" rpy="0 0 0"/>
-          <parent link="${prefix}_elbow-hangar1_1"/>
-          <child link="${prefix}_6mm-bearing__5__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 38" type="fixed">
-          <origin xyz="0.031304 0.011589 ${sign*-0.0005}" rpy="0 0 0"/>
-          <parent link="${prefix}_elbow-hangar_1"/>
-          <child link="${prefix}_6mm-bearing__2__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 39" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*-0.005}" rpy="0 0 0"/>
-          <parent link="${prefix}_6mm-bearing__2__1"/>
-          <child link="${prefix}_elbow-bridge-rear__1__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 40" type="fixed">
-          <origin xyz="0.031304 0.011589 ${sign*0.0005}" rpy="0 0 0"/>
-          <parent link="${prefix}_elbow-hangar1_1"/>
-          <child link="${prefix}_6mm-bearing__6__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Revolute 41" type="continuous">
-          <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_6mm-bearing__2__1"/>
-          <child link="${prefix}_elbow-rear-hanger__1__1"/>
-          <axis xyz="-0.0 -0.0 1.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Revolute 42" type="continuous">
-          <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_6mm-bearing__6__1"/>
-          <child link="${prefix}_elbow-rear-hanger_1"/>
-          <axis xyz="0.0 0.0 -1.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Revolute 43" type="continuous">
-          <origin xyz="0.050222 -0.052218 ${sign*-0.005}" rpy="0 0 0"/>
-          <parent link="${prefix}_straight-tendon_1"/>
-          <child link="${prefix}_6mm-bearing__7__1"/>
-          <axis xyz="0.0 0.0 -1.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Revolute 44" type="continuous">
-          <origin xyz="0.050222 -0.052218 ${sign*0.029}" rpy="0 0 0"/>
-          <parent link="${prefix}_straight-tendon_1"/>
-          <child link="${prefix}_6mm-bearing__4__1"/>
-          <axis xyz="-0.0 -0.0 1.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 45" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_6mm-bearing__4__1"/>
-          <child link="${prefix}_forearm-elbow-motor-bracket-inner2_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 46" type="fixed">
-          <origin xyz="0.01256 0.037977 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_forearm-elbow-motor-bracket-inner2_1"/>
-          <child link="${prefix}_6mm-bearing__3__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 48" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*-0.005}" rpy="0 0 0"/>
-          <parent link="${prefix}_6mm-bearing__3__1"/>
-          <child link="${prefix}_elbow-bridge-rear_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 49" type="fixed">
-          <origin xyz="0.009468 0.047487 ${sign*0.0115}" rpy="0 0 0"/>
-          <parent link="${prefix}_forearm-elbow-motor-bracket-inner2_1"/>
-          <child link="${prefix}_second-forearm-motor-strap_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 50" type="fixed">
-          <origin xyz="0.026695 -0.00193 ${sign*0.000944}" rpy="0 0 0"/>
-          <parent link="${prefix}_second-forearm-motor-strap_1"/>
-          <child link="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 51" type="fixed">
-          <origin xyz="-0.006482 0.019975 ${sign*-0.064631}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1"/>
-          <child link="${prefix}_fore-arm-bicep-motor-attatch_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 52" type="fixed">
-          <origin xyz="-0.020213 -0.018046 ${sign*0.006687}" rpy="0 0 0"/>
-          <parent link="${prefix}_fore-arm-bicep-motor-attatch_1"/>
-          <child link="${prefix}_forearm-elbow-motor-bracket-inner_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 53" type="fixed">
-          <origin xyz="0.003086 -0.009512 ${sign*0.0115}" rpy="0 0 0"/>
-          <parent link="${prefix}_forearm-elbow-motor-bracket-inner_1"/>
-          <child link="${prefix}_6mm-bearing__8__1"/>
-        </joint>
-        
-        <joint name="${prefix}_wrist_roll" type="revolute">
-          <origin xyz="0.0392 -0.000924 ${sign*-0.039944}" rpy="0 0 0"/>
-          <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1__4__1"/>
-          <child link="${prefix}_shoulder-ex-al-interface_1"/>
-          <axis xyz="0.951172 0.308661 0.0"/>
-          <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 56" type="fixed">
-          <origin xyz="0.013867 0.013962 ${sign*-0.015588}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-ex-al-interface_1"/>
-          <child link="${prefix}_shoulder-roll-al-mot_MIR1__3__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 57" type="fixed">
-          <origin xyz="0.013867 0.013962 ${sign*0.015589}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-ex-al-interface_1"/>
-          <child link="${prefix}_shoulder-roll-al-mot_MIR1_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 58" type="fixed">
-          <origin xyz="0.016645 0.005401 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_shoulder-ex-al-interface_1"/>
-          <child link="${prefix}_2020_100mm__10__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 59" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__10__1"/>
-          <child link="${prefix}_top-bracket-servo-strap_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 60" type="fixed">
-          <origin xyz="0.029129 0.030059 ${sign*-0.01515}" rpy="0 0 0"/>
-          <parent link="${prefix}_top-bracket-servo-strap_1"/>
-          <child link="${prefix}_MG995_1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 61" type="fixed">
-          <origin xyz="0.039855 -0.002994 ${sign*-0.0196}" rpy="0 0 0"/>
-          <parent link="${prefix}_top-bracket-servo-strap_1"/>
-          <child link="${prefix}_MG995__4__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 62" type="fixed">
-          <origin xyz="0.041228 -0.007227 ${sign*0.01515}" rpy="0 0 0"/>
-          <parent link="${prefix}_top-bracket-servo-strap_1"/>
-          <child link="${prefix}_MG995__3__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 63" type="fixed">
-          <origin xyz="0.030502 0.025826 ${sign*0.0196}" rpy="0 0 0"/>
-          <parent link="${prefix}_top-bracket-servo-strap_1"/>
-          <child link="${prefix}_MG995__5__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 64" type="fixed">
-          <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__10__1"/>
-          <child link="${prefix}_2020_100mm__11__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 65" type="fixed">
-          <origin xyz="0.142662 0.046295 ${sign*0.0}" rpy="0 0 0"/>
-          <parent link="${prefix}_2020_100mm__11__1"/>
-          <child link="${prefix}_top-bracket-servo-strap__1__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 66" type="fixed">
-          <origin xyz="-0.015139 0.011015 ${sign*-0.0196}" rpy="0 0 0"/>
-          <parent link="${prefix}_top-bracket-servo-strap__1__1"/>
-          <child link="${prefix}_MG995__2__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 67" type="fixed">
-          <origin xyz="-0.004413 -0.022039 ${sign*-0.01515}" rpy="0 0 0"/>
-          <parent link="${prefix}_top-bracket-servo-strap__1__1"/>
-          <child link="${prefix}_MG995__6__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 68" type="fixed">
-          <origin xyz="-0.005787 -0.017806 ${sign*0.0196}" rpy="0 0 0"/>
-          <parent link="${prefix}_top-bracket-servo-strap__1__1"/>
-          <child link="${prefix}_MG995__1__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 69" type="fixed">
-          <origin xyz="-0.016513 0.015247 ${sign*0.01515}" rpy="0 0 0"/>
-          <parent link="${prefix}_top-bracket-servo-strap__1__1"/>
-          <child link="${prefix}_MG995__7__1"/>
-        </joint>
-        
-        <joint name="${prefix}_Rigid 70" type="fixed">
-          <origin xyz="0.011983 -0.004518 ${sign*0.011}" rpy="0 0 0"/>
-          <parent link="${prefix}_bicep-shoulder-bracket-exal__1__1"/>
-          <child link="${prefix}_multiplex-stack-flat_1"/>
-        </joint>
 
-        <gazebo>
-            <plugin name="gazebo_ros" filename="libgazebo_ros_api_plugin.so"/>
-            <joint name="${prefix}_Revolute37_gz" type="revolute">
-              <pose relative_to="${prefix}_RMD-X8-Pro_MIR8_MIR1__3__1">0.1464 0.07711 ${sign*-0.0065} 0 0 0</pose>
-              <parent>${prefix}_straight-tendon_1</parent>
-              <child>${prefix}_6mm-bearing__5__1</child>
-      
-              <axis>
-                <xyz> 0 0 1</xyz>
-              </axis>
-              <limit>
-                <lower>${-PI}</lower>
-                <upper>${PI}</upper>
-                <effort>100.0</effort>
-                <velocity>10.0</velocity>
-              </limit>
-              <dynamics>
-                <damping>10.0</damping>
-                <friction>0.50</friction>
-              </dynamics>
-            </joint>
-            
-            <joint name="${prefix}_Revolute47_gz" type="revolute">
-              <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.05237 0.02931 ${sign*-0.029} 0 0 0</pose>
-              <!-- <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.07143 -0.002652 ${sign*-0.029} 0 0 0</pose> -->
-              <parent>${prefix}_elbow-rear-hanger_1</parent>
-              <child>${prefix}_6mm-bearing__8__1</child>
-      
-              <axis>
-                <xyz> 0 0 1</xyz>
-              </axis>
-              <limit>
-                <lower>${-PI}</lower>
-                <upper>${PI}</upper>
-              </limit>
-              <dynamics>
-                <damping>1.0</damping>
-                <friction>0.5</friction>
-              </dynamics>
-            </joint>
-      
-            
-            <joint name="${prefix}_Recolute48_gz" type="revolute">
-              <pose relative_to="${prefix}_elbow-rear-hanger__1__1">0.05237 0.02932 ${sign*-0.005} 0 0 0</pose>
-                <parent>${prefix}_elbow-rear-hanger__1__1</parent>
-                <child>${prefix}_6mm-bearing__3__1</child>
-      
-              <axis>
-                <xyz> 0 0 -1</xyz>
-              </axis>
-              <limit>
-                <lower>${-PI}</lower>
-                <upper>${PI}</upper>
-              </limit>
-      
-              <dynamics>
-                <damping>2.0</damping>
-                <friction>0.10</friction>
-              </dynamics>
-            </joint>
 
-          </gazebo>
-        
-
+    </gazebo>
     </xacro:macro>
 </robot>
