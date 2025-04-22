@@ -23,7 +23,7 @@
             <xacro:arm_ros2_control prefix="LH"></xacro:arm_ros2_control>  
             
             <xacro:leg_ros2_control prefix="RL"></xacro:leg_ros2_control>
-            <xacro:leg_ros2_control prefix="LL"></xacro:leg_ros2_control>
+            <!-- <xacro:leg_ros2_control prefix="LL"></xacro:leg_ros2_control> -->
             
             <xacro:pelvicgirdle_ros2_control prefix="PG"></xacro:pelvicgirdle_ros2_control>
         </ros2_control>

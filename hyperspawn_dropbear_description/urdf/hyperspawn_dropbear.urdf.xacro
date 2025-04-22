@@ -25,7 +25,7 @@
     <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/battery.xacro"/>
 
     <!-- ros2 control -->
-    <!-- <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/ros2_control/hyperspawn_dropbear.ros2_control.xacro"/> -->
+    <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/ros2_control/hyperspawn_dropbear.ros2_control.xacro"/>
 
 
     <!-- World Link -->
@@ -86,9 +86,9 @@
     </xacro:leg_macro> -->
 
     <!-- Left Leg -->
-    <xacro:leg_macro prefix = "LL" folder = "left_leg" parent = "PG_motor-yaw-cap__1__1" sign = "-1">
+    <!-- <xacro:leg_macro prefix = "LL" folder = "left_leg" parent = "PG_motor-yaw-cap__1__1" sign = "-1">
         <origin xyz="0 0 0" rpy="${-1/18 * PI} 0 0"/>
-    </xacro:leg_macro>
+    </xacro:leg_macro> -->
 
     <!-- <xacro:leg_macro prefix = "LL" folder = "leftleg" parent = "RL_base_link" sign = "-1">
         <origin xyz="0.0 0.2 0.0" rpy="${4/9 * PI} 0 0"/>
