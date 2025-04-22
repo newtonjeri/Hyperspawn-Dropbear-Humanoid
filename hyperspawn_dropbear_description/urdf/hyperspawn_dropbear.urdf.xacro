@@ -25,13 +25,8 @@
     <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/battery.xacro"/>
 
     <!-- ros2 control -->
-    <!-- <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/ros2_control/hyperspawn_dropbear_description.ros2_control.xacro"/> -->
+    <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/ros2_control/hyperspawn_dropbear.ros2_control.xacro"/>
 
-    <gazebo>
-        <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-          <robotNamespace>/</robotNamespace>
-        </plugin>
-      </gazebo>
 
     <!-- World Link -->
     <link name="sim_world"/>
@@ -42,7 +37,7 @@
 
     <!-- base_link to world joint -->
     <joint name="base_link_sim_world_joint" type="fixed">
-        <origin xyz="0.0 0.0 1.5" rpy="${PI/2} 0.0 0.0"/>
+        <origin xyz="0.0 0.0 1.4" rpy="${PI/2} 0.0 0.0"/>
         <!-- <origin xyz="0.0 0.0 1.4" rpy="${0} 0.0 0.0"/> -->
         <parent link="sim_world"/>
         <!-- Torso Base link -->
