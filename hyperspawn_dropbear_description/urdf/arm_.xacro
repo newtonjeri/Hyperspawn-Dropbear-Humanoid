@@ -1880,10 +1880,10 @@
                 <effort>100.0</effort>
                 <velocity>10.0</velocity>
               </limit>
-              <dynamics>
+              <!-- <dynamics>
                 <damping>10.0</damping>
                 <friction>0.50</friction>
-              </dynamics>
+              </dynamics> -->
             </joint>
             
             <joint name="${prefix}_Revolute47_gz" type="revolute">
@@ -1899,10 +1899,10 @@
                 <lower>${-PI}</lower>
                 <upper>${PI}</upper>
               </limit>
-              <dynamics>
+              <!-- <dynamics>
                 <damping>1.0</damping>
                 <friction>0.5</friction>
-              </dynamics>
+              </dynamics> -->
             </joint>
       
             
@@ -1919,10 +1919,10 @@
                 <upper>${PI}</upper>
               </limit>
       
-              <dynamics>
+              <!-- <dynamics>
                 <damping>2.0</damping>
                 <friction>0.10</friction>
-              </dynamics>
+              </dynamics> -->
             </joint>
 
           </gazebo>
