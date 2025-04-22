@@ -25,7 +25,7 @@
     <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/battery.xacro"/>
 
     <!-- ros2 control -->
-    <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/ros2_control/hyperspawn_dropbear.ros2_control.xacro"/>
+    <!-- <xacro:include filename="$(find hyperspawn_dropbear_description)/urdf/ros2_control/hyperspawn_dropbear.ros2_control.xacro"/> -->
 
 
     <!-- World Link -->
