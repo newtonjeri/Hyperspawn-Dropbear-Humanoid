@@ -28,8 +28,8 @@
 <material name="opaque13110895">
   <color rgba="0.5137254901960784 0.4235294117647059 0.37254901960784315 1.0"/>
 </material>
-<material name="opaque2550255">
-  <color rgba="1.0 0.0 1.0 1.0"/>
+<material name="steel_satin">
+  <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
 </material>
 
 </robot>
