@@ -3,7 +3,7 @@
 
   <xacro:macro name="leg_macro" params="prefix folder parent sign *origin">
 
-<!-- <link name="${prefix}_base_link">
+<link name="${prefix}_base_link">
   <inertial>
     <origin xyz="-2.137404171899072e-14 0 ${sign*0.005}" rpy="0 0 0"/>
     <mass value="0.15083462441733"/>
@@ -22,7 +22,7 @@
       <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
-</link> -->
+</link>
 
 <link name="${prefix}_RMD-X10-S2_MIR4__3_Stator_1">
   <inertial>
@@ -2346,7 +2346,7 @@
   <parent link="${prefix}_RMD-X10-S2_MIR4__3_Rotor_1"/>
   <child link="${prefix}_RMD-X10-S2_MIR4__3_Stator_1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="10.0"/>
 </joint>
 
 <joint name="${prefix}_Rigid 3" type="fixed">
@@ -2408,7 +2408,7 @@
   <parent link="${prefix}_RMD-X10-S2_MIR4Stator_1"/>
   <child link="${prefix}_RMD-X10-S2_MIR4Rotor_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>>
+  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
 </joint>
 
 <joint name="${prefix}_Rigid 14" type="fixed">
@@ -2495,20 +2495,20 @@
   <child link="${prefix}_bearingstrap__1__1"/>
 </joint>
 
-<joint name="${prefix}_Revolute28" type="revolute">
+<joint name="${prefix}_Revolute28" type="continuous">
   <origin xyz="0.001021 -0.014965 ${sign*-0.01}" rpy="0 0 0"/>
   <parent link="${prefix}_bearingstrap__1__1"/>
   <child link="${prefix}_skateboard-bearing__13__1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
-<joint name="${prefix}_Revolute29" type="revolute">
+<joint name="${prefix}_Revolute29" type="continuous">
   <origin xyz="0.001021 -0.014965 ${sign*0.01}" rpy="0 0 0"/>
   <parent link="${prefix}_bearingstrap__1__1"/>
   <child link="${prefix}_skateboard-bearing__14__1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
 <joint name="${prefix}_Rigid 30" type="fixed">
@@ -2529,20 +2529,20 @@
   <child link="${prefix}_skateboard-bearing__15__1"/>
 </joint>
 
-<joint name="${prefix}_Revolute33" type="revolute">
+<joint name="${prefix}_Revolute33" type="continuous">
   <origin xyz="0.0 0.0 ${sign*0.0005}" rpy="0 0 0"/>
   <parent link="${prefix}_skateboard-bearing__15__1"/>
   <child link="${prefix}_bearingstrap_1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
-<joint name="${prefix}_Revolute34" type="revolute">
+<joint name="${prefix}_Revolute34" type="continuous">
   <origin xyz="0.0 0.0 ${sign*0.02}" rpy="0 0 0"/>
   <parent link="${prefix}_bearingstrap_1"/>
   <child link="${prefix}_skateboard-bearing_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
 <joint name="${prefix}_Rigid 35" type="fixed">
@@ -2557,20 +2557,20 @@
   <child link="${prefix}_skateboard-bearing__8__1"/>
 </joint>
 
-<joint name="${prefix}_Revolute37" type="revolute">
+<joint name="${prefix}_Revolute37" type="continuous">
   <origin xyz="0.0 0.0 ${sign*0.000335}" rpy="0 0 0"/>
   <parent link="${prefix}_skateboard-bearing__8__1"/>
   <child link="${prefix}_bearingstrap-inner-thigh_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
-<joint name="${prefix}_Revolute38" type="revolute">
+<joint name="${prefix}_Revolute38" type="continuous">
   <origin xyz="0.0 0.0 ${sign*-0.02}" rpy="0 0 0"/>
   <parent link="${prefix}_bearingstrap-inner-thigh_1"/>
   <child link="${prefix}_skateboard-bearing__9__1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
 <joint name="${prefix}_Rigid 40" type="fixed">
@@ -2609,36 +2609,36 @@
   <child link="${prefix}_double-bracket_1"/>
 </joint>
 
-<joint name="${prefix}_Revolute46" type="revolute">
+<joint name="${prefix}_Revolute46" type="continuous">
   <origin xyz="-0.000105 -0.015 ${sign*0.01}" rpy="0 0 0"/>
   <parent link="${prefix}_double-bracket_1"/>
   <child link="${prefix}_skateboard-bearing__11__1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
-<joint name="${prefix}_Revolute47" type="revolute">
+<joint name="${prefix}_Revolute47" type="continuous">
   <origin xyz="-0.060103 -0.014581 ${sign*0.01}" rpy="0 0 0"/>
   <parent link="${prefix}_double-bracket_1"/>
   <child link="${prefix}_skateboard-bearing__20__1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
-<joint name="${prefix}_Revolute48" type="revolute">
+<joint name="${prefix}_Revolute48" type="continuous">
   <origin xyz="-0.000105 -0.015 ${sign*-0.01}" rpy="0 0 0"/>
   <parent link="${prefix}_double-bracket_1"/>
   <child link="${prefix}_skateboard-bearing__10__1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
-<joint name="${prefix}_Revolute49" type="revolute">
+<joint name="${prefix}_Revolute49" type="continuous">
   <origin xyz="-0.060103 -0.014581 ${sign*-0.01}" rpy="0 0 0"/>
   <parent link="${prefix}_double-bracket_1"/>
   <child link="${prefix}_skateboard-bearing__16__1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
 <!-- <joint name="${prefix}_Rigid 50" type="fixed">
@@ -2683,12 +2683,12 @@
   <child link="${prefix}_skateboard-bearing__12__1"/>
 </joint>
 
-<joint name="${prefix}_Revolute57" type="revolute">
+<joint name="${prefix}_Revolute57" type="continuous">
   <origin xyz="0.0 0.0 ${sign*0.0}" rpy="0 0 0"/>
   <parent link="${prefix}_skateboard-bearing__19__1"/>
   <child link="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
 <joint name="${prefix}_Rigid 58" type="fixed">
@@ -2795,12 +2795,12 @@
   <child link="${prefix}_motor-calf-exal-mount_2"/>
 </joint>
 
-<joint name="${prefix}_Revolute81" type="revolute">
+<joint name="${prefix}_Revolute81" type="continuous">
   <origin xyz="-0.023945 -0.033572 ${sign*0.008354}" rpy="0 0 0"/>
   <parent link="${prefix}_RMD-X8-Pro_MIR8_MIR1_1"/>
   <child link="${prefix}_calf-motor-driver-ext_2"/>
   <axis xyz="-0.004243 0.173596 0.984808"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
 <joint name="${prefix}_Rigid 82" type="fixed">
@@ -2833,12 +2833,12 @@
   <child link="${prefix}_ankle-side-bracket_1"/>
 </joint>
 
-<joint name="${prefix}_Revolute87" type="revolute">
+<joint name="${prefix}_Revolute87" type="continuous">
   <origin xyz="0.000885 -0.036193 ${sign*-0.003771}" rpy="0 0 0"/>
   <parent link="${prefix}_ankle-thick_1"/>
   <child link="${prefix}_basis_left_1"/>
   <axis xyz="0.004243 -0.173596 -0.984808"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
 <joint name="${prefix}_Revolute88" type="revolute">
@@ -2849,12 +2849,12 @@
   <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
 </joint>
 
-<joint name="${prefix}_Revolute89" type="revolute">
+<joint name="${prefix}_Revolute89" type="continuous">
   <origin xyz="-0.01765 -0.038762 ${sign*0.016911}" rpy="0 0 0"/>
   <parent link="${prefix}_basis_left_1"/>
   <child link="${prefix}_skateboard-bearing_left_1"/>
   <axis xyz="-0.998253 -0.058776 0.00606"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
 <joint name="${prefix}_Rigid 90" type="fixed">
@@ -2977,20 +2977,19 @@
   <child link="${prefix}_ankle-motor-driver-bracket_left_1"/>
 </joint>
 
-<joint name="${prefix}_Revolute111" type="revolute">
+<joint name="${prefix}_Revolute111" type="continuous">
   <origin xyz="0.039873 0.005664 ${sign*0.026589}" rpy="0 0 0"/>
   <parent link="${prefix}_calf-motor-driver-ext_2"/>
   <child link="${prefix}_210mm-tie-rod_v1_1"/>
   <axis xyz="-0.004243 0.173596 0.984808"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
+  
 </joint>
 
-<joint name="${prefix}_Revolute112" type="revolute">
+<joint name="${prefix}_Revolute112" type="continuous">
   <origin xyz="0.036763 -0.020444 ${sign*-0.023655}" rpy="0 0 0"/>
   <parent link="${prefix}_calf-motor-driver-ext_1"/>
   <child link="${prefix}_290mm-tie-rod_v1_1"/>
   <axis xyz="0.004243 -0.173596 -0.984808"/>
-  <limit upper="${PI}" lower="${-PI}" velocity="10.0" effort="100.0"/>
 </joint>
 
 <!-- <joint name="${prefix}_Revolute113" type="revolute">
@@ -3066,28 +3065,16 @@
         <child>${prefix}_thigh-bracket_1</child>
     </joint>
 
-  <joint name="${prefix}_Revolute71gz" type="revolute">
-          <pose relative_to="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1">-0.06009 -0.001384 ${sign*0.0} 0 0 0</pose>
+    <joint name="${prefix}_Revolute71gz" type="revolute">
+          <pose relative_to="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1">-0.06009 -0.001384 ${sign*-0.007} 0 0 0</pose>
           <parent>${prefix}_double-bracket-10deg_MIR_MIR_MIR_1</parent>
           <child>${prefix}_skateboard-bearing__17__1</child>
           <axis>
               <xyz> 0 0 1</xyz>
           </axis>
-          <limit>
-              <lower>${-PI}</lower>
-              <upper>${PI}</upper>
-              <effort>10.0</effort>
-              <velocity>10.0</velocity>
-          </limit>
-          <!-- <dynamics>
-              <damping>10.0</damping>
-              <friction>0.1</friction>
-          </dynamics> -->
-
       </joint>
-
       
-
+ 
     <joint name="${prefix}_Revolute72gz" type="revolute">
         <pose relative_to="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1">0.00 0.00 ${sign*-0.02} 0 0 0</pose>
         <parent>${prefix}_double-bracket-10deg_MIR_MIR_MIR_1</parent>
@@ -3096,19 +3083,10 @@
         <axis>
             <xyz> 0 0 1</xyz>
         </axis>
-        <limit>
-            <lower>${-PI}</lower>
-            <upper>${PI}</upper>
-            <effort>10.0</effort>
-            <velocity>10.0</velocity>
-        </limit>
-        <!-- <dynamics>
-            <damping>10.0</damping>
-            <friction>0.1</friction>
-        </dynamics> -->
 
     </joint>
 
+    
     <joint name="${prefix}_Revolute73gz" type="revolute">
         <pose relative_to="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1">-0.06009 -0.001384 ${sign*-0.02} 0 0 0</pose>
         <parent>${prefix}_double-bracket-10deg_MIR_MIR_MIR_1</parent>
@@ -3117,18 +3095,9 @@
         <axis>
             <xyz> 0 0 1</xyz>
         </axis>
-        <limit>
-            <lower>${-PI}</lower>
-            <upper>${PI}</upper>
-            <effort>10.0</effort>
-            <velocity>10.0</velocity>
-        </limit>
-        <!-- <dynamics>
-            <damping>10.0</damping>
-            <friction>0.1</friction>
-        </dynamics> -->
     </joint>
 
+    
     <joint name="${prefix}_Revolute113gz" type="revolute">
         <pose relative_to="${prefix}_heel-top_MIRleft_1">-0.01732 -0.2851 ${sign*0.05018} ${sign*PI/-18} 0 0</pose>
         <parent>${prefix}_heel-top_MIRleft_1</parent>
@@ -3137,19 +3106,10 @@
         <axis>
             <xyz> 0 0 1</xyz>
         </axis>
-        <limit>
-            <lower>${-PI}</lower>
-            <upper>${PI}</upper>
-            <effort>10.0</effort>
-            <velocity>10.0</velocity>
-        </limit>
-        <!-- <dynamics>
-            <damping>10.0</damping>
-            <friction>0.10</friction>
-        </dynamics> -->
-
     </joint>
 
+    
+  
     <joint name="${prefix}_Revolute114gz" type="revolute">
         <pose relative_to="${prefix}_heel-topleft_1">-0.02305 -0.2048 ${sign*0.03904} ${sign*PI/-18} 0 0</pose>
         <parent>${prefix}_heel-topleft_1</parent>
@@ -3157,17 +3117,7 @@
 
         <axis>
             <xyz> 0 0 1</xyz>
-        </axis>
-        <limit>
-            <lower>${-PI}</lower>
-            <upper>${PI}</upper>
-            <effort>10.0</effort>
-            <velocity>10.0</velocity>
-        </limit>
-        <!-- <dynamics>
-            <damping>0.0</damping>
-            <friction>0.0</friction>
-        </dynamics> -->
+        </axis> 
     </joint>
     
 </gazebo>
