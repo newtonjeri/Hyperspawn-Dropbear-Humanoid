@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 60
+    update_rate: 1000
     
     stewart_slider_controller:
       type: position_controllers/JointGroupPositionController
@@ -177,8 +177,8 @@ right_leg_hip_joint_controller:
     state_interfaces:
       - position
 
-    open_loop_control: true
-    allow_integration_in_goal_trajectories: true
+    # open_loop_control: true
+    # allow_integration_in_goal_trajectories: true
 
 
 right_leg_knee_controller:
