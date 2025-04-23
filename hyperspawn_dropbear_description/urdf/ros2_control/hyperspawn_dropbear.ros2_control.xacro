@@ -18,14 +18,14 @@
                 <plugin>gazebo_ros2_control/GazeboSystem</plugin>
             </hardware>
             
-            <!-- <xacro:stewart_platform_ros2_control prefix="head"></xacro:stewart_platform_ros2_control> -->
-            <!-- <xacro:arm_ros2_control prefix="RH"></xacro:arm_ros2_control>  -->
-            <!-- <xacro:arm_ros2_control prefix="LH"></xacro:arm_ros2_control>   -->
+            <xacro:stewart_platform_ros2_control prefix="head"></xacro:stewart_platform_ros2_control>
+            <xacro:arm_ros2_control prefix="RH"></xacro:arm_ros2_control> 
+            <xacro:arm_ros2_control prefix="LH"></xacro:arm_ros2_control>  
              
-            <!-- <xacro:pelvicgirdle_ros2_control prefix="PG"></xacro:pelvicgirdle_ros2_control> -->
+            <xacro:pelvicgirdle_ros2_control prefix="PG"></xacro:pelvicgirdle_ros2_control>
             
-            <xacro:leg_ros2_control prefix="RL"></xacro:leg_ros2_control>
-            <!-- <xacro:leg_ros2_control prefix="LL"></xacro:leg_ros2_control> -->
+            <!-- <xacro:leg_ros2_control prefix="RL"></xacro:leg_ros2_control>
+            <xacro:leg_ros2_control prefix="LL"></xacro:leg_ros2_control> -->
             
         </ros2_control>
 
