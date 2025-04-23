@@ -60,20 +60,38 @@ def generate_launch_description():
         ],
         output='screen',)
     
-    # gazebo spawn entity
+    # Add delay for Gazebo to initialize
+    from launch.actions import TimerAction
     spawn_entity = Node(
         package="gazebo_ros",
         executable="spawn_entity.py",
-        arguments=["-entity", "hyperspawn_dropbear_humanoid", "-topic", "robot_description"],
-        output="screen",
+        arguments=[
+            "-entity", "hyperspawn_dropbear_humanoid",
+            "-topic", "/robot_description",
+        ],
+        output="screen"
     )
+
+    delayed_spawn_entity = TimerAction(
+        period=5.0,
+        actions=[spawn_entity]
+    )
+    
+    # gazebo spawn entity
+    # spawn_entity = Node(
+    #     package="gazebo_ros",
+    #     executable="spawn_entity.py",
+    #     arguments=["-entity", "hyperspawn_dropbear_humanoid", "-topic", "robot_description"],
+    #     output="screen",
+    # )
 
     return LaunchDescription([
         model_args,
         robot_state_publisher,
         start_gazebo_server_cmd,
         start_gazebo_client_cmd,
-        spawn_entity,
+        delayed_spawn_entity,
+        # spawn_entity,
     ])
 
 
