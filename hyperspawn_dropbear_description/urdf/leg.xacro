@@ -3,7 +3,7 @@
 
   <xacro:macro name="leg_macro" params="prefix folder parent sign *origin">
 
-<link name="${prefix}_base_link">
+<!-- <link name="${prefix}_base_link">
   <inertial>
     <origin xyz="-2.137404171899072e-14 0 ${sign*0.005}" rpy="0 0 0"/>
     <mass value="0.15083462441733"/>
@@ -22,7 +22,7 @@
       <mesh filename="package://hyperspawn_dropbear_description/meshes/${folder}/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
-</link>
+</link> -->
 
 <link name="${prefix}_RMD-X10-S2_MIR4__3_Stator_1">
   <inertial>
@@ -3047,32 +3047,32 @@
 
 <gazebo>
     <joint name="${prefix}_Rigid46gz" type="fixed">
-        <pose relative_to="${prefix}_skateboard-bearing__14__1">-0.01038 0.04119 ${sign*0.0} 0 0 0</pose>
+        <pose relative_to="${prefix}_conjstraint-knee-test-oute_MIR_1">0.0 0 0 0 0 0</pose>
         <parent>${prefix}_conjstraint-knee-test-oute_MIR_1</parent>
         <child>${prefix}_skateboard-bearing__11__1</child>
     </joint>
 
+
     <joint name="${prefix}_Rigid47gz" type="fixed">
-        <pose relative_to="${prefix}_skateboard-bearing__13__1">0.1 0.04774 ${sign*0.0} 0 0 0 0 0 0</pose>
+        <pose relative_to="${prefix}_conjstraint-knee-test-oute_1">0 0 0 0 0 0</pose>
         <parent>${prefix}_conjstraint-knee-test-oute_1</parent>
         <child>${prefix}_skateboard-bearing__10__1</child>
     </joint>
-    
- 
+
     <joint name="${prefix}_Rigid48gz" type="fixed">
         <pose relative_to="${prefix}_double-bracket_1">0.02024 0.04916 ${sign*-0.03511} 0 0 0</pose>
         <parent>${prefix}_double-bracket_1</parent>
         <child>${prefix}_thigh-bracket_1</child>
     </joint>
 
-    <joint name="${prefix}_Revolute71gz" type="revolute">
+    <!-- <joint name="${prefix}_Revolute71gz" type="revolute">
           <pose relative_to="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1">-0.06009 -0.001384 ${sign*-0.007} 0 0 0</pose>
           <parent>${prefix}_double-bracket-10deg_MIR_MIR_MIR_1</parent>
           <child>${prefix}_skateboard-bearing__17__1</child>
           <axis>
               <xyz> 0 0 1</xyz>
           </axis>
-      </joint>
+      </joint> -->
       
  
     <joint name="${prefix}_Revolute72gz" type="revolute">
@@ -3088,10 +3088,21 @@
 
     
     <joint name="${prefix}_Revolute73gz" type="revolute">
-        <pose relative_to="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1">-0.06009 -0.001384 ${sign*-0.02} 0 0 0</pose>
-        <parent>${prefix}_double-bracket-10deg_MIR_MIR_MIR_1</parent>
-        <child>${prefix}_skateboard-bearing__12__1</child>
+        <pose relative_to="${prefix}_skateboard-bearing__12__1">-0.06009 -0.001384 ${sign*0.02} 0 0 0</pose>
+        <parent>${prefix}_skateboard-bearing__12__1</parent>
+        <child>${prefix}_double-bracket-10deg_MIR_MIR_MIR_1</child>
 
+        <axis>
+            <xyz> 0 0 1</xyz>
+        </axis>
+    </joint>
+
+
+    <joint name="${prefix}_Bearing17_12_Revolutegz" type="revolute">
+        <!-- <pose relative_to="${prefix}_skateboard-bearing__12__1">-0.012 0.02561 ${sign*0.01} 0 0 0</pose> -->
+        <pose relative_to="${prefix}_skateboard-bearing__12__1">0.025 -0.05433 ${sign*-0.01} 0 0 0</pose>
+        <parent>${prefix}_skateboard-bearing__12__1</parent>
+        <child>${prefix}_skateboard-bearing__17__1</child>
         <axis>
             <xyz> 0 0 1</xyz>
         </axis>
