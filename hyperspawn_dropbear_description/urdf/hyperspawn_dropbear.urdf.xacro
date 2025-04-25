@@ -29,7 +29,7 @@
 
 
     <!-- World Link -->
-    <link name="sim_world"/>
+    <link name="world"/>
 
     <!-- Torso macro -->
      <xacro:torso_macro prefix="torso">
@@ -39,7 +39,7 @@
     <joint name="base_link_sim_world_joint" type="fixed">
         <origin xyz="0.0 0.0 1.4" rpy="${PI/2} 0.0 0.0"/>
         <!-- <origin xyz="0.0 0.0 1.4" rpy="${5/9 * PI} 0.0 0.0"/> -->
-        <parent link="sim_world"/>
+        <parent link="world"/>
         <!-- Torso Base link -->
         <child link="torso_base_link"/>
         <!-- <child link="RL_base_link"/> -->
