@@ -51,8 +51,8 @@
     <xacro:joint prefix="${prefix}" name="Revolute87" min_value="-${PI}" max_value="${PI}" command_interface="position">
     </xacro:joint>
 
-    <!-- <xacro:joint prefix="${prefix}" name="Revolute88" min_value="-${PI}" max_value="${PI}" command_interface="effort">
-    </xacro:joint> -->
+    <xacro:joint prefix="${prefix}" name="Revolute88" min_value="-${PI}" max_value="${PI}" command_interface="effort">
+    </xacro:joint>
 
     <!-- <xacro:joint prefix="${prefix}" name="Revolute89" min_value="-${PI}" max_value="${PI}">
     </xacro:joint> -->
