@@ -3065,15 +3065,14 @@
         <child>${prefix}_thigh-bracket_1</child>
     </joint>
 
-    <!-- <joint name="${prefix}_Revolute71gz" type="revolute">
+    <joint name="${prefix}_Revolute71gz" type="revolute">
           <pose relative_to="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1">-0.06009 -0.001384 ${sign*-0.007} 0 0 0</pose>
           <parent>${prefix}_double-bracket-10deg_MIR_MIR_MIR_1</parent>
           <child>${prefix}_skateboard-bearing__17__1</child>
           <axis>
               <xyz> 0 0 1</xyz>
           </axis>
-      </joint> -->
-      
+      </joint>
  
     <joint name="${prefix}_Revolute72gz" type="revolute">
         <pose relative_to="${prefix}_double-bracket-10deg_MIR_MIR_MIR_1">0.00 0.00 ${sign*-0.02} 0 0 0</pose>
@@ -3092,17 +3091,6 @@
         <parent>${prefix}_skateboard-bearing__12__1</parent>
         <child>${prefix}_double-bracket-10deg_MIR_MIR_MIR_1</child>
 
-        <axis>
-            <xyz> 0 0 1</xyz>
-        </axis>
-    </joint>
-
-
-    <joint name="${prefix}_Bearing17_12_Revolutegz" type="revolute">
-        <!-- <pose relative_to="${prefix}_skateboard-bearing__12__1">-0.012 0.02561 ${sign*0.01} 0 0 0</pose> -->
-        <pose relative_to="${prefix}_skateboard-bearing__12__1">0.025 -0.05433 ${sign*-0.01} 0 0 0</pose>
-        <parent>${prefix}_skateboard-bearing__12__1</parent>
-        <child>${prefix}_skateboard-bearing__17__1</child>
         <axis>
             <xyz> 0 0 1</xyz>
         </axis>
